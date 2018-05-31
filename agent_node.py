@@ -20,7 +20,7 @@ class AgentNode:
         self.ssid = ''
 
         #associated nodes
-        self.a_nodes = []
+        self.a_nodes = set()
 
         #this indicates if the node is associated to a network
         self.current_ap = None
@@ -69,7 +69,7 @@ class AgentNode:
                     'type':'response'}
 
         if len(self.a_nodes)<self.max_connections:
-            self.a_nodes.append(request['sender'])
+            self.a_nodes.add(request['sender'])
             response['params']='accept'
         else:
             response['params']='refuse'
@@ -86,17 +86,20 @@ class AgentNode:
             if m['type'] == 'response':
                 if m['params']=='accept':
                     self.current_ap = self.candidate
+        
    
     def send(self,message_queue):
         for m in self.message_out:
-            m['timestamp'] = self.timestamp
+            m['timestamp'] = self.timestamp+1
             message_queue.append(m)
+        self.message_out.clear()
 
     def receive(self,message_queue):
-        received_indexes = []
+        self.message_in.clear()
+        
         for i in range(len(message_queue)):
             m = message_queue[i]
-            if m['receiver'] == self.address:
+            if m['receiver'] == self.address and m['timestamp']==self.timestamp:
                 self.message_in.append(m)
         
                 
@@ -110,12 +113,17 @@ class AgentNode:
                 min_dist = 100
                 self.candidate = None
                 for n in self.networks:
+                    #connect to closest access point
+                    if n[1] == self.address:
+                        continue
                     if n[2] < min_dist:
                         self.candidate = n
+                        
                 if self.candidate is not None:
                     self.connect(n)
                 else:
                     self.set_access_point('Node=%d'%randint(0,256))
+                    
 
     def run(self,message_queue,visibility_list,timer):
         '''function to be called in the main loop'''
@@ -125,6 +133,9 @@ class AgentNode:
         self.deliberate(visibility_list)
         self.send(message_queue)
 
+    def connected(self):
+        return self.current_ap != None
+    
     def __eq__(self,n):
         return self.__hash__() == n.__hash__()
 
@@ -142,29 +153,35 @@ class AgentNode:
 if __name__=='__main__':
     message_queue = []
     timer = 0
-    ag1 = AgentNode()
-    ag1.is_sta = True
+    ag1 = AgentNode(0,0,0)
+    ag1.set_station()
     ag2 = AgentNode(1,1,1)
+    ag2.set_station()
     ag3 = AgentNode(2,2,2)
-    ag2.set_access_point('test')
-    vlist = [(ag2,3),(ag3,2)]
-    ag1.scan(vlist)
-    print(ag1.networks)
-    print('---------------------------------------------')
-    ag1.run(message_queue,vlist,timer)
-    ag2.run(message_queue,vlist,timer)
+    ag3.set_station()
+    vlist = [(ag2,3),(ag3,2),(ag1,2)]
+    while True:
+        print('---------------------------------------------')
+        ag1.run(message_queue,vlist,timer)
+        print('agent 1:')
+        print(ag1.message_in)
+        print(ag1.message_out)
+        
+        print('connected= {}'.format(ag1.connected()))
+        print('nodes: '+str(ag1.a_nodes))
+        ag2.run(message_queue,vlist,timer)
+        print('agent 2:')
+        print(ag2.message_in)
+        print(ag2.message_out)
+        print('connected= {}'.format(ag2.connected()))
+        print('nodes: '+str(ag2.a_nodes))
+        ag3.run(message_queue,vlist,timer)
+        print('agent 3:')
+        print(ag3.message_in)
+        print(ag3.message_out)
+        print('connected= {}'.format(ag3.connected()))
+        print('nodes: '+str(ag3.a_nodes))
+        message_queue = list(filter(lambda m: m['timestamp'] > timer, message_queue))
+        timer+=1
+        input()
     
-    timer+=1
-    for m in message_queue:
-        if m['timestamp'] < timer:
-            del(m)
-    print(message_queue)
-    print('---------------------------------------------')
-    ag1.run(message_queue,vlist,timer)
-    ag2.run(message_queue,vlist,timer)
-    timer+=1
-    for m in message_queue:
-        if m['timestamp'] < timer:
-            message_queue.remove(m)
-    print(message_queue)
-    print('---------------------------------------------')
