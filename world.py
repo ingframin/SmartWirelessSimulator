@@ -144,6 +144,7 @@ class World:
         #Load agent nodes
         for ag in agents:
             a = AgentNode(address=ag['mac'], x=ag['x'], y=ag['y'])
+            a.set_station()
             self.add_node(a)
         #Load walls
         for wl in walls:
@@ -155,6 +156,10 @@ class World:
         if type(self.grid[Node(node.x,node.y)]) in (WallNode,AgentNode):
             raise Exception("Cell already occupied!")
         self.grid[Node(node.x,node.y)] = node
+
+    def kill_node(self,node):
+        self.grid.nodes.pop(Node(node.x,node.y))
+        
 
     def get_node(self,addr):
         for n in self.grid.nodes:
