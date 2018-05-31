@@ -10,14 +10,15 @@ wrld = World()
 wrld.load('config1.cfg')
 f = open('log.txt','w')
 
-while True:
-    
+while running:
         
     print(wrld)
     nodes = wrld.list_nodes()
     for n in nodes:
         n.run(message_queue,wrld.visibility(n),timer)
-        
+        if n.address == 2:
+            n.ping(4)
+            
     if timer == 10:
         wrld.kill_node(nodes[4])
         
@@ -32,4 +33,7 @@ while True:
         
     message_queue = list(filter(lambda m: m['timestamp'] > timer, message_queue))
     timer += 1
-    input()
+    cmd = input('>>')
+    if 'quit' in cmd:
+        running = False
+        

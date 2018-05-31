@@ -1,4 +1,3 @@
-from collections import deque
 from random import randint
 
 class AgentNode:
@@ -39,7 +38,6 @@ class AgentNode:
         #ping message register
         self.pings = []
         
-
     def scan(self,visibility_list):
         '''scan the visible nodes to discover available networks'''
         for v in visibility_list:
@@ -88,7 +86,7 @@ class AgentNode:
 
     def pong(self):
         '''answer to ping'''
-        pm = {'sender':self.address, 'type':'ping'}
+        pm = {'sender':self.address, 'type':'pong'}
         for m in self.pings:
             if m['sender'] != self.address:
                 pm['receiver'] = m['sender']
@@ -110,6 +108,10 @@ class AgentNode:
                 self.pong()
                 self.pings = list(filter(lambda m:m['sender']==self.address,self.pings))
                 
+            if m['type'] == 'pong':
+                for p in self.pings:
+                    if p['receiver'] == m['sender']:
+                        self.pings.remove(p)
    
     def send(self,message_queue):
         for m in self.message_out:

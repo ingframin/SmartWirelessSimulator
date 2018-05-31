@@ -4,7 +4,9 @@ from collections import namedtuple
 from itertools import product
 from config_parser import *
 
-#Nodes do not share any parental relations, I am relying on duck-typing
+#Nodes do not share any parental/inheritance relations,
+#I am relying on duck-typing
+
 class WallNode:
     def __init__(self,x,y):
         self.x = x
@@ -19,7 +21,6 @@ Node = namedtuple('Node', ['x', 'y'])
 
 def geom_distance(node1,node2):
         return math.sqrt((node2.x-node1.x)**2 + (node2.y-node1.y)**2)
-
 
 class Grid:
     def __init__(self,width,height):
@@ -89,7 +90,6 @@ class Grid:
         came_from = {}
         came_from[start]=None
 
-
         while len(frontier) > 0:
             
             current = frontier.pop(0)
@@ -113,14 +113,8 @@ class Grid:
                 step = came_from[step]
                 paths[a].append(step)
                 steps+=1
-                
-                
-                
-
-
+ 
         return came_from,paths
-
-
 
 class World:
 
