@@ -36,6 +36,10 @@ class AgentNode:
         #candidate network for association
         self.candidate = None
 
+        #ping message register
+        self.pings = []
+        
+
     def scan(self,visibility_list):
         '''scan the visible nodes to discover available networks'''
         for v in visibility_list:
@@ -76,6 +80,20 @@ class AgentNode:
 
         self.message_out.append(response)
 
+    def ping(self,addr):
+        '''check if another node is reachable'''
+        pm = {'sender':self.address,'receiver':addr,'type':'ping'}
+        self.pings.append(pm)
+        self.message_out.append(pm)
+
+    def pong(self):
+        '''answer to ping'''
+        pm = {'sender':self.address, 'type':'ping'}
+        for m in self.pings:
+            if m['sender'] != self.address:
+                pm['receiver'] = m['sender']
+                self.message_out.append(pm)
+            
     def process_input(self):
         for m in self.message_in:
             
@@ -86,7 +104,12 @@ class AgentNode:
             if m['type'] == 'response':
                 if m['params']=='accept':
                     self.current_ap = self.candidate
-        
+
+            if m['type'] == 'ping':
+                self.pings.append(m)
+                self.pong()
+                self.pings = list(filter(lambda m:m['sender']==self.address,self.pings))
+                
    
     def send(self,message_queue):
         for m in self.message_out:
@@ -101,14 +124,12 @@ class AgentNode:
             m = message_queue[i]
             if m['receiver'] == self.address and m['timestamp']==self.timestamp:
                 self.message_in.append(m)
-        
-                
-    
+     
     def deliberate(self,visibility_list):
         if self.is_sta:
-            if self.current_ap is not None:
-                return
-            else:
+
+            if not self.connected():
+                
                 self.scan(visibility_list)
                 min_dist = 100
                 self.candidate = None
@@ -121,9 +142,12 @@ class AgentNode:
                         
                 if self.candidate is not None:
                     self.connect(n)
+
                 else:
                     self.set_access_point('Node=%d'%randint(0,256))
-                    
+                
+        if self.is_ap:
+            pass
 
     def run(self,message_queue,visibility_list,timer):
         '''function to be called in the main loop'''
