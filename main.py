@@ -16,11 +16,6 @@ while running:
     nodes = wrld.list_nodes()
     for n in nodes:
         n.run(message_queue,wrld.visibility(n),timer)
-        if n.address == 2:
-            n.ping(4)
-            
-    if timer == 10:
-        wrld.kill_node(nodes[4])
         
     f.write(str(message_queue))
     for n in nodes:
@@ -28,6 +23,7 @@ while running:
         print('ap? '+str(n.is_ap))
         if n.is_ap:
             print('associated nodes = '+str(n.a_nodes))
+            print('pings list='+str(n.pings))
         print('input = '+str(n.message_in))
         print('output = '+str(n.message_out))
         
@@ -37,3 +33,4 @@ while running:
     if 'quit' in cmd:
         running = False
         
+f.close()

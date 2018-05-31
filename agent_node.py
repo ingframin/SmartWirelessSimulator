@@ -37,6 +37,8 @@ class AgentNode:
 
         #ping message register
         self.pings = []
+        #Message counter
+        self.m_count = 0
         
     def scan(self,visibility_list):
         '''scan the visible nodes to discover available networks'''
@@ -81,7 +83,6 @@ class AgentNode:
     def ping(self,addr):
         '''check if another node is reachable'''
         pm = {'sender':self.address,'receiver':addr,'type':'ping'}
-        self.pings.append(pm)
         self.message_out.append(pm)
 
     def pong(self):
@@ -90,6 +91,7 @@ class AgentNode:
         for m in self.pings:
             if m['sender'] != self.address:
                 pm['receiver'] = m['sender']
+                pm['ping_ID'] = m['ID']  
                 self.message_out.append(pm)
             
     def process_input(self):
@@ -106,20 +108,29 @@ class AgentNode:
             if m['type'] == 'ping':
                 self.pings.append(m)
                 self.pong()
-                self.pings = list(filter(lambda m:m['sender']==self.address,self.pings))
+                
                 
             if m['type'] == 'pong':
                 for p in self.pings:
                     if p['receiver'] == m['sender']:
                         self.pings.remove(p)
+        #After input queue is processed, it can be cleared
+        self.message_in.clear()
    
     def send(self,message_queue):
         for m in self.message_out:
+            m['ID'] = 'N{}-M{}'.format(self.address,self.m_count)
             m['timestamp'] = self.timestamp+1
             message_queue.append(m)
+            if m['type'] == 'ping':
+                self.pings.append(m)
+            self.m_count+=1
+            
+        #after sending, clear output buffer
         self.message_out.clear()
 
     def receive(self,message_queue):
+        '''reads in all the messages in message_queue directed to this node and puts them into message_in''' 
         self.message_in.clear()
         
         for i in range(len(message_queue)):
@@ -149,7 +160,19 @@ class AgentNode:
                     self.set_access_point('Node=%d'%randint(0,256))
                 
         if self.is_ap:
-            pass
+            #ping nodes to see if they are there
+            for n in self.a_nodes:
+                self.ping(n)
+
+            my_pings = [p['ID'] for p in filter(lambda m: m['sender']==self.address,self.pings)]
+            for pm in self.pings:
+                if pm['type'] == 'pong' and pm['ping_ID'] in my_pings:
+                    self.a_nodes.add(pm['sender'])
+                    my_pings.remove(pm['ping_ID'])
+
+            self.pings = list(filter(lambda m: m['ID'] in my_pings or m['sender'] != self.address, self.pings))
+            print("remaining pings ="+str(len(self.pings)))
+                    
 
     def run(self,message_queue,visibility_list,timer):
         '''function to be called in the main loop'''
