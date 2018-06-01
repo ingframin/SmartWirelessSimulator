@@ -1,23 +1,23 @@
 from world import *
 from agent_node import *
-from random import randint
+from random import randint,shuffle
 
 running = True
 timer = 0
 message_queue = []
 
 wrld = World()
-wrld.load('config1.cfg')
+wrld.load('config3.cfg')
 f = open('log.txt','w')
-
+nodes = wrld.list_nodes()
 while running:
-
-    print(wrld)
-    nodes = wrld.list_nodes()
+    shuffle(nodes)
+    print(wrld)    
     for n in nodes:
         n.run(message_queue,wrld.visibility(n),timer)
 
     f.write(str(message_queue))
+    
     for n in nodes:
         print('n= %d'%n.address)
         print('ap? '+str(n.is_ap))

@@ -33,7 +33,7 @@ class AgentNode:
         self.timestamp = 0
 
         #candidate network for association
-        self.candidate = None
+        self.candidates = []
 
         #ping message register
         self.pings = []
@@ -56,7 +56,7 @@ class AgentNode:
         self.is_sta = True
         self.current_ap = None
         self.networks = []
-        self.candidate = None
+        self.candidates = []
 
     def connect(self,network):
 
@@ -103,7 +103,12 @@ class AgentNode:
 
             if m['type'] == 'response':
                 if m['params']=='accept':
-                    self.current_ap = self.candidate
+                    try:
+                        self.current_ap = self.candidates.pop()
+                    except:
+                        print(self.current_ap)
+                if m['params']=='refuse':
+                    self.current_ap = None
 
             if m['type'] == 'ping':
                 self.pings.append(m)
@@ -142,19 +147,19 @@ class AgentNode:
         if self.is_sta:
 
             if not self.connected():
+                if len(self.candidates)==0:
+                    self.scan(visibility_list)
+                    min_dist = 100
+                    self.candidate = None
+                    for n in self.networks:
+                        #connect to closest access point
+                        if n[1] == self.address:
+                            continue
+                        if n[2] < min_dist:
+                            self.candidates.append(n)
 
-                self.scan(visibility_list)
-                min_dist = 100
-                self.candidate = None
-                for n in self.networks:
-                    #connect to closest access point
-                    if n[1] == self.address:
-                        continue
-                    if n[2] < min_dist:
-                        self.candidate = n
-
-                if self.candidate is not None:
-                    self.connect(n)
+                if len(self.candidates) > 0:
+                    self.connect(self.candidates[-1])
 
                 else:
                     self.set_access_point('Node=%d'%randint(0,256))
