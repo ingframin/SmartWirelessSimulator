@@ -12,6 +12,8 @@ class AgentNode:
         #maximum nodes associated to this node
         self.max_connections = max_connections
 
+        self.battery = 100.0
+
         #Mode: is_ap = Access Point;is_sta = Station
         #they can be true at the same time
         self.is_ap = False
@@ -42,24 +44,28 @@ class AgentNode:
 
     def scan(self,visibility_list):
         '''scan the visible nodes to discover available networks'''
+        self.battery -= 0.25
+        self.networks.clear()
         for v in visibility_list:
             if v[0].is_ap:
                 self.networks.append((v[0].ssid,v[0].address,v[1]))
+        #print("Visible Networks = "+repr(self.networks))
 
     def set_access_point(self,ssid):
         '''turn on access point mode'''
+        self.battery -= 0.1
         self.is_ap = True
         self.ssid = ssid
 
     def set_station(self):
         '''turn on or reset station mode'''
+        self.battery -= 0.1
         self.is_sta = True
         self.current_ap = None
         self.networks = []
         self.candidates = []
 
     def connect(self,network):
-
         m = {'sender':self.address,'receiver':network[1],'type':'request','params':'connect'}
         self.message_out.append(m)
 
@@ -68,7 +74,8 @@ class AgentNode:
         self.current_ap = None
         self.message_out.append(m)
 
-    def process_connections(self,request):
+    def process_connection(self,request):
+        self.battery -= 0.1
         response = {'sender':self.address,'receiver':request['sender'],
                     'type':'response'}
 
@@ -89,27 +96,16 @@ class AgentNode:
         '''answer to ping'''
         pm = {'sender':self.address, 'type':'pong'}
         for m in self.pings:
+            self.battery -= 0.01
             if m['sender'] != self.address:
                 pm['receiver'] = m['sender']
                 pm['ping_ID'] = m['ID']
                 self.message_out.append(pm)
+        self.pings.clear()
 
     def process_input(self):
         for m in self.message_in:
-
-            if m['type'] == 'request':
-                if m['params']=='connect':
-                    self.process_connections(m)
-
-            if m['type'] == 'response':
-                if m['params']=='accept':
-                    try:
-                        self.current_ap = self.candidates.pop()
-                    except:
-                        print(self.current_ap)
-                if m['params']=='refuse':
-                    self.current_ap = None
-
+            self.battery -= 0.01
             if m['type'] == 'ping':
                 self.pings.append(m)
                 self.pong()
@@ -119,11 +115,27 @@ class AgentNode:
                 for p in self.pings:
                     if p['receiver'] == m['sender']:
                         self.pings.remove(p)
+
+            if m['type'] == 'request':
+                if m['params']=='connect':
+                    self.process_connection(m)
+
+            if m['type'] == 'response':
+                if m['params']=='accept':
+                    try:
+                        self.current_ap = self.candidates[-1]
+                    except:
+                        print(self.current_ap)
+                if m['params']=='refuse':
+                    self.current_ap = None
+
+
         #After input queue is processed, it can be = []ed
         self.message_in = []
 
     def send(self,message_queue):
         for m in self.message_out:
+            self.battery -= 0.2
             m['ID'] = 'N{}-M{}'.format(self.address,self.m_count)
             m['timestamp'] = self.timestamp+1
             message_queue.append(m)
@@ -135,22 +147,30 @@ class AgentNode:
         self.message_out = []
 
     def receive(self,message_queue):
-        '''reads in all the messages in message_queue directed to this node and puts them into message_in'''
+        '''reads in all the messages in message_queue directed to this node and puts them into message_in
+        -1 is the broadcast address!!!'''
+
         self.message_in = []
 
         for i in range(len(message_queue)):
+            self.battery -= 0.2
             m = message_queue[i]
-            if m['receiver'] == self.address and m['timestamp']==self.timestamp:
+            if (m['receiver'] == self.address or m['receiver']== -1) and m['timestamp']==self.timestamp:
                 self.message_in.append(m)
 
-    def deliberate(self,visibility_list):
+    def execute(self,visibility_list):
         if self.is_sta:
+            self.scan(visibility_list)
+            if self.connected():
+                #print("Connected to "+repr(self.current_ap))
+                if self.current_ap not in self.networks:
+                    print("AP Disappeared!")
+                    self.current_ap = None
 
             if not self.connected():
                 if len(self.candidates)==0:
-                    self.scan(visibility_list)
+
                     min_dist = 100
-                    self.candidate = None
                     for n in self.networks:
                         #connect to closest access point
                         if n[1] == self.address:
@@ -162,7 +182,7 @@ class AgentNode:
                     self.connect(self.candidates[-1])
 
                 else:
-                    self.set_access_point('Node=%d'%randint(0,256))
+                    self.set_access_point('Node=%d'%self.address)
 
         if self.is_ap:
             #ping nodes to see if they are there
@@ -176,7 +196,7 @@ class AgentNode:
                     my_pings.remove(pm['ping_ID'])
 
             self.pings = list(filter(lambda m: m['ID'] in my_pings or m['sender'] != self.address, self.pings))
-            print("remaining pings ="+str(len(self.pings)))
+            #print("remaining pings ="+str(len(self.pings)))
 
 
     def run(self,message_queue,visibility_list,timer):
@@ -184,7 +204,7 @@ class AgentNode:
         self.timestamp = timer
         self.receive(message_queue)
         self.process_input()
-        self.deliberate(visibility_list)
+        self.execute(visibility_list)
         self.send(message_queue)
 
     def connected(self):
@@ -216,6 +236,8 @@ if __name__=='__main__':
     vlist = [(ag2,3),(ag3,2),(ag1,2)]
     while True:
         print('---------------------------------------------')
+        print(message_queue)
+        print('---------------------------------------------')
         ag1.run(message_queue,vlist,timer)
         print('agent 1:')
         print(ag1.message_in)
@@ -235,6 +257,7 @@ if __name__=='__main__':
         print(ag3.message_out)
         print('connected= {}'.format(ag3.connected()))
         print('nodes: '+str(ag3.a_nodes))
-        message_queue = list(filter(lambda m: m['timestamp'] > timer, message_queue))
         timer+=1
+        message_queue = list(filter(lambda m: m['timestamp'] == timer, message_queue))
+
         input()

@@ -152,9 +152,9 @@ class World:
         self.grid[Node(node.x,node.y)] = node
 
     def kill_node(self,node):
+        print(repr(self.grid.nodes[Node(node.x,node.y)]))
         self.grid.nodes.pop(Node(node.x,node.y))
-        
-
+            
     def get_node(self,addr):
         for n in self.grid.nodes:
             if self.grid[n].address == addr:
