@@ -16,7 +16,7 @@ class AgentNode:
 
         #Mode: is_ap = Access Point;is_sta = Station
         #they can be true at the same time
-        self.is_ap = True
+        self.is_ap = False
         self.is_sta = False
         self.ssid = ''
 
@@ -41,6 +41,7 @@ class AgentNode:
         self.pings = []
         #Message counter
         self.m_count = 0
+        self.no_conns = 0
 
     def scan(self,visibility_list):
         '''scan the visible nodes to discover available networks'''
@@ -56,6 +57,7 @@ class AgentNode:
         self.battery -= 0.1
         self.is_ap = True
         self.ssid = ssid
+        self.no_conns = 0
 
     def set_station(self):
         '''turn on or reset station mode'''
@@ -84,6 +86,9 @@ class AgentNode:
             response['params']='accept'
         else:
             response['params']='refuse'
+        if self.current_ap != None:
+            if self.current_ap[1] in self.a_nodes:
+                response['params']='refuse'
 
         self.message_out.append(response)
 
@@ -103,7 +108,7 @@ class AgentNode:
                 self.message_out.append(pm)
         self.pings.clear()
 
-    def reactive(self):
+    def process_input(self):
         for m in self.message_in:
             self.battery -= 0.01
             if m['type'] == 'ping':
@@ -139,8 +144,8 @@ class AgentNode:
             m['ID'] = 'N{}-M{}'.format(self.address,self.m_count)
             m['timestamp'] = self.timestamp+1
             message_queue.append(m)
-            if m['type'] == 'ping':
-                self.pings.append(m)
+            # if m['type'] == 'ping':
+            #     self.pings.append(m)
             self.m_count+=1
 
         #after sending, = [] output buffer
@@ -165,7 +170,7 @@ class AgentNode:
                 #print("Connected to "+repr(self.current_ap))
                 if self.current_ap not in self.networks:
                     print("AP Disappeared!")
-                    self.current_ap = None
+                    self.set_station()
 
             if not self.connected():
                 if len(self.candidates)==0:
@@ -185,25 +190,40 @@ class AgentNode:
                     self.set_access_point('Node=%d'%self.address)
 
         if self.is_ap:
+            if len(self.a_nodes) == 0:
+                self.no_conns += 1
+                print(self.no_conns)
+
+            if self.no_conns > 3:
+                self.is_ap = False
+                self.no_conns = 0
+            if self.current_ap != None:
+                if self.current_ap[1] in self.a_nodes:
+                    try:
+                        self.a_nodes.remove(self.current_ap)
+                    except:
+                        pass
+
+
             #ping nodes to see if they are there
-            for n in self.a_nodes:
-                self.ping(n)
-
-            my_pings = [p['ID'] for p in filter(lambda m: m['sender']==self.address,self.pings)]
-            for pm in self.pings:
-                if pm['type'] == 'pong' and pm['ping_ID'] in my_pings:
-                    self.a_nodes.add(pm['sender'])
-                    my_pings.remove(pm['ping_ID'])
-
-            self.pings = list(filter(lambda m: m['ID'] in my_pings or m['sender'] != self.address, self.pings))
-            #print("remaining pings ="+str(len(self.pings)))
+            # for n in self.a_nodes:
+            #     self.ping(n)
+            #
+            # my_pings = [p['ID'] for p in filter(lambda m: m['sender']==self.address,self.pings)]
+            # for pm in self.pings:
+            #     if pm['type'] == 'pong' and pm['ping_ID'] in my_pings:
+            #         self.a_nodes.add(pm['sender'])
+            #         my_pings.remove(pm['ping_ID'])
+            #
+            # self.pings = list(filter(lambda m: m['ID'] in my_pings or m['sender'] != self.address, self.pings))
+            # #print("remaining pings ="+str(len(self.pings)))
 
 
     def run(self,message_queue,visibility_list,timer):
         '''function to be called in the main loop'''
         self.timestamp = timer
         self.receive(message_queue)
-        self.reacticve()
+        self.process_input()
         self.execute(visibility_list)
         self.send(message_queue)
 
@@ -220,6 +240,10 @@ class AgentNode:
         return 'Agent: address=%d, x=%d, y=%d'%(self.address,self.x,self.y)
 
     def __str__(self):
+        if self.is_ap and self.is_sta:
+            return 'H'
+        if self.is_sta and not self.is_ap:
+            return 'S'
         return 'A'
 
 
