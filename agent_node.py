@@ -16,7 +16,7 @@ class AgentNode:
 
         #Mode: is_ap = Access Point;is_sta = Station
         #they can be true at the same time
-        self.is_ap = False
+        self.is_ap = True
         self.is_sta = False
         self.ssid = ''
 
@@ -103,7 +103,7 @@ class AgentNode:
                 self.message_out.append(pm)
         self.pings.clear()
 
-    def process_input(self):
+    def reactive(self):
         for m in self.message_in:
             self.battery -= 0.01
             if m['type'] == 'ping':
@@ -203,7 +203,7 @@ class AgentNode:
         '''function to be called in the main loop'''
         self.timestamp = timer
         self.receive(message_queue)
-        self.process_input()
+        self.reacticve()
         self.execute(visibility_list)
         self.send(message_queue)
 
