@@ -5,21 +5,21 @@ from time import gmtime, strftime
 
 running = True
 timer = 0
-message_queue = []
-
+current_queue = []
+next_queue = []
 wrld = World()
-wrld.load('config2.cfg')
+wrld.load('config3.cfg')
 f = open('log'+strftime("%d-%m-%Y %H:%M:%S", gmtime())+'.txt','w')
 #nodes = wrld.list_nodes()
 while running:
     print('timestamp = %d'%timer)
     print('timestamp = %d'%timer, file=f)
-    print('------------------------------------------------------------------------')
-    print(message_queue)
+    print('----------------------Current queue-------------------------------------')
+    print(current_queue)
     print('------------------------------------------------------------------------')
     print(wrld)
-    print('------------------------------------------------------------------------',file=f)
-    print(message_queue,file=f)
+    print('-----------------------Current queue------------------------------------',file=f)
+    print(current_queue,file=f)
     print('------------------------------------------------------------------------',file=f)
     print(wrld,file=f)
     nodes = wrld.list_nodes()
@@ -27,11 +27,16 @@ while running:
         break
     shuffle(nodes)
     for n in nodes:
-        n.run(message_queue,wrld.visibility(n),timer)
+        n.run(current_queue,next_queue,wrld.visibility(n),timer)
         # print(n.candidates)
-
-    f.write(str(message_queue))
-
+    print('-----------------------Next queue---------------------------------------',file=f)
+    print(next_queue,file=f)
+    print('------------------------------------------------------------------------',file=f)
+    
+    print('-----------------------Next queue---------------------------------------')
+    print(next_queue)
+    print('------------------------------------------------------------------------')
+    
     for n in nodes:
         print('n= %d'%n.address)
         print('ap? '+str(n.is_ap))
@@ -57,14 +62,15 @@ while running:
         if n.battery <= 0:
            wrld.kill_node(n)
 
-    message_queue = list(filter(lambda m: m['timestamp'] > timer, message_queue))
+    current_queue = next_queue.copy()
+    next_queue.clear()
     timer += 1
-    # cmd = str(input('>>'))
-    # if 'quit' in cmd:
-    #     running = False
-    # if 'kill' in cmd:
-    #     cs = cmd.split()
-    #     n = wrld.get_node(int(cs[1]))
-    #     wrld.kill_node(n)
+##    cmd = str(input('>>'))
+##    if 'quit' in cmd:
+##        running = False
+##    if 'kill' in cmd:
+##        cs = cmd.split()
+##        n = wrld.get_node(int(cs[1]))
+##        wrld.kill_node(n)
 
 f.close()

@@ -219,13 +219,13 @@ class AgentNode:
             # #print("remaining pings ="+str(len(self.pings)))
 
 
-    def run(self,message_queue,visibility_list,timer):
+    def run(self,message_queue,next_queue,visibility_list,timer):
         '''function to be called in the main loop'''
         self.timestamp = timer
         self.receive(message_queue)
         self.process_input()
         self.execute(visibility_list)
-        self.send(message_queue)
+        self.send(next_queue)
 
     def connected(self):
         return self.current_ap != None
@@ -250,6 +250,7 @@ class AgentNode:
 #############################################  Test  #########################################################
 if __name__=='__main__':
     message_queue = []
+    next_queue = []
     timer = 0
     ag1 = AgentNode(0,0,0)
     ag1.set_station()
@@ -262,26 +263,27 @@ if __name__=='__main__':
         print('---------------------------------------------')
         print(message_queue)
         print('---------------------------------------------')
-        ag1.run(message_queue,vlist,timer)
+        ag1.run(message_queue,next_queue,vlist,timer)
         print('agent 1:')
         print(ag1.message_in)
         print(ag1.message_out)
 
         print('connected= {}'.format(ag1.connected()))
         print('nodes: '+str(ag1.a_nodes))
-        ag2.run(message_queue,vlist,timer)
+        ag2.run(message_queue,next_queue,vlist,timer)
         print('agent 2:')
         print(ag2.message_in)
         print(ag2.message_out)
         print('connected= {}'.format(ag2.connected()))
         print('nodes: '+str(ag2.a_nodes))
-        ag3.run(message_queue,vlist,timer)
+        ag3.run(message_queue,next_queue,vlist,timer)
         print('agent 3:')
         print(ag3.message_in)
         print(ag3.message_out)
         print('connected= {}'.format(ag3.connected()))
         print('nodes: '+str(ag3.a_nodes))
         timer+=1
-        message_queue = list(filter(lambda m: m['timestamp'] == timer, message_queue))
+        message_queue = next_queue.copy()
+        next_queue.clear()
 
         input()
