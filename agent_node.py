@@ -188,6 +188,7 @@ class AgentNode:
 
                 else:
                     self.set_access_point('Node=%d'%self.address)
+                    return
 
         if self.is_ap:
             if len(self.a_nodes) == 0:
@@ -197,12 +198,15 @@ class AgentNode:
             if self.no_conns > 3:
                 self.is_ap = False
                 self.no_conns = 0
+
             if self.current_ap != None:
                 if self.current_ap[1] in self.a_nodes:
                     try:
                         self.a_nodes.remove(self.current_ap)
                     except:
                         pass
+            if not self.connected():
+                self.is_sta = False
 
 
             #ping nodes to see if they are there
