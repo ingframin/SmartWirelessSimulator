@@ -48,7 +48,9 @@ class AgentNode:
         '''scan the visible nodes to discover available networks'''
         self.battery -= 0.25
         self.networks.clear()
+
         for v in visibility_list:
+            
             if v[0].address in self.aps:
                 self.networks.append((v[0].ssid,v[0].address,v[1]))
         #print("Visible Networks = "+repr(self.networks))
@@ -135,7 +137,7 @@ class AgentNode:
                     self.current_ap = None
 
             if m['type']=='beacon':
-                self.aps.append(m['address'])
+                self.aps.append(m['sender'])
 
 
 
@@ -152,9 +154,9 @@ class AgentNode:
             # if m['type'] == 'ping':
             #     self.pings.append(m)
             self.m_count+=1
-
         #after sending, = [] output buffer
         self.message_out = []
+
 
     def receive(self,message_queue):
         '''reads in all the messages in message_queue directed to this node and puts them into message_in
@@ -182,6 +184,7 @@ class AgentNode:
                     self.set_station()
 
             if not self.connected():
+
                 if len(self.candidates)==0:
 
                     min_dist = 100
@@ -192,22 +195,24 @@ class AgentNode:
                         if n[2] < min_dist:
                             self.candidates.append(n)
 
+
+
                 if len(self.candidates) > 0:
                     self.connect(self.candidates[-1])
 
                 else:
                     self.set_access_point('Node=%d'%self.address)
-                    return
 
         if self.is_ap:
             self.send_beacon()
             if len(self.a_nodes) == 0:
                 self.no_conns += 1
-                print(self.no_conns)
+
 
             if self.no_conns > 3:
                 self.is_ap = False
                 self.no_conns = 0
+                self.set_station()
 
             if self.current_ap != None:
                 if self.current_ap[1] in self.a_nodes:
@@ -215,9 +220,6 @@ class AgentNode:
                         self.a_nodes.remove(self.current_ap)
                     except:
                         pass
-            if not self.connected():
-                self.is_sta = False
-
 
             #ping nodes to see if they are there
             # for n in self.a_nodes:
