@@ -24,21 +24,33 @@ The constraints are:
  be used as comments.
  
  Example:
+ 
  -------------------------------------------------------------------------------
+ 
  World parameters:
+ 
  {world: width= 10, height= 10, v_threshold= 5}
 
  Agents parameters:
+ 
  {agent: mac= 1, x= 2, y= 2}
+ 
  {agent: mac= 2, x= 5, y= 5}
+ 
  {agent: mac= 3, x= 8, y= 6}
+ 
  {agent: mac= 4, x= 1, y= 7}
 
  Walls:
+ 
  {wall: x= 3, y= 4}
+ 
  {wall: x= 4, y= 4}
+ `
  {wall: x= 5, y= 4}
+ 
  -------------------------------------------------------------------------------
+ 
  "World parameters:", "Agent parameters:" and "Walls:" are documentation strings
  ignored by the parser.
 
