@@ -50,7 +50,7 @@ class AgentNode:
         self.networks.clear()
 
         for v in visibility_list:
-            
+
             if v[0].address in self.aps:
                 self.networks.append((v[0].ssid,v[0].address,v[1]))
         #print("Visible Networks = "+repr(self.networks))
@@ -132,15 +132,12 @@ class AgentNode:
                     try:
                         self.current_ap = self.candidates[-1]
                     except:
-                        print(self.current_ap)
+                        print("Current AP="+str(self.current_ap))
                 if m['params']=='refuse':
                     self.current_ap = None
 
             if m['type']=='beacon':
                 self.aps.append(m['sender'])
-
-
-
 
         #After input queue is processed, it can be = []ed
         self.message_in = []
@@ -202,6 +199,7 @@ class AgentNode:
 
                 else:
                     self.set_access_point('Node=%d'%self.address)
+
 
         if self.is_ap:
             self.send_beacon()

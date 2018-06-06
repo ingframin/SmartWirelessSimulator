@@ -2,26 +2,51 @@ from world import *
 from agent_node import *
 from random import randint,shuffle
 from time import gmtime, strftime
+import sys
+
+
+config_file = None
+debug_mode = False
+
+try:
+    config_file = sys.argv[1]
+except:
+    print('config file missing!')
+    exit(0)
+
+try:
+    if sys.argv[2] == 'debug':
+        debug_mode = True
+    print('commads:')
+    print('Hit Enter to advance one step')
+    print('Type quit to exit')
+    print('Type kill n to remove a node (e.g. kill 1 to kill node number 1)')
+except:
+    pass
+
 
 running = True
 timer = 0
 current_queue = []
 next_queue = []
 wrld = World()
-wrld.load('config1.cfg')
-f = open('log'+strftime("%d-%m-%Y %H:%M:%S", gmtime())+'.txt','w')
+wrld.load(config_file+'.cfg')
+f = open(config_file+'-'+strftime("%d-%m-%Y %H:%M:%S", gmtime())+'.txt','w')
 #nodes = wrld.list_nodes()
 node_vis={}
 while running:
+    print("World map:")
+    print(wrld)
+    print('------------------------------------------------------------------------')
     print('timestamp = %d'%timer)
     print('timestamp = %d'%timer, file=f)
     print('----------------------Current queue-------------------------------------')
     print(current_queue)
     print('------------------------------------------------------------------------')
-    print(wrld)
     print('-----------------------Current queue------------------------------------',file=f)
     print(current_queue,file=f)
     print('------------------------------------------------------------------------',file=f)
+    print("World map:",file=f)
     print(wrld,file=f)
     nodes = wrld.list_nodes()
     if len(nodes)==0:
@@ -69,12 +94,14 @@ while running:
     current_queue = next_queue.copy()
     next_queue.clear()
     timer += 1
-    cmd = str(input('>>'))
-    if 'quit' in cmd:
-        running = False
-    if 'kill' in cmd:
-        cs = cmd.split()
-        n = wrld.get_node(int(cs[1]))
-        wrld.kill_node(n)
+
+    if debug_mode:
+        cmd = str(input('>>'))
+        if 'quit' in cmd:
+            running = False
+        if 'kill' in cmd:
+            cs = cmd.split()
+            n = wrld.get_node(int(cs[1]))
+            wrld.kill_node(n)
 
 f.close()
