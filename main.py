@@ -29,7 +29,7 @@ while running:
     #shuffle(nodes)
     for n in nodes:
         node_vis[n.address]=wrld.visibility(n)
-        
+
     for n in nodes:
         n.run(current_queue,next_queue,node_vis[n.address],timer)
         # print(n.candidates)

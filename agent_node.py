@@ -9,6 +9,7 @@ class AgentNode:
         self.y = y
         #available networks
         self.networks = []
+        self.aps = []
         #maximum nodes associated to this node
         self.max_connections = max_connections
 
@@ -48,7 +49,7 @@ class AgentNode:
         self.battery -= 0.25
         self.networks.clear()
         for v in visibility_list:
-            if v[0].is_ap:
+            if v[0].address in self.aps:
                 self.networks.append((v[0].ssid,v[0].address,v[1]))
         #print("Visible Networks = "+repr(self.networks))
 
@@ -115,7 +116,6 @@ class AgentNode:
                 self.pings.append(m)
                 self.pong()
 
-
             if m['type'] == 'pong':
                 for p in self.pings:
                     if p['receiver'] == m['sender']:
@@ -133,6 +133,11 @@ class AgentNode:
                         print(self.current_ap)
                 if m['params']=='refuse':
                     self.current_ap = None
+
+            if m['type']=='beacon':
+                self.aps.append(m['address'])
+
+
 
 
         #After input queue is processed, it can be = []ed
@@ -160,8 +165,12 @@ class AgentNode:
         for i in range(len(message_queue)):
             self.battery -= 0.2
             m = message_queue[i]
-            if (m['receiver'] == self.address or m['receiver']== -1) and m['timestamp']==self.timestamp:
+            if (m['receiver'] == self.address or m['receiver']== -1):
                 self.message_in.append(m)
+
+    def send_beacon(self):
+        bm = {'sender':self.address,'receiver':-1,'type':'beacon','SSID':self.ssid}
+        self.message_out.append(bm)
 
     def execute(self,visibility_list):
         if self.is_sta:
@@ -191,6 +200,7 @@ class AgentNode:
                     return
 
         if self.is_ap:
+            self.send_beacon()
             if len(self.a_nodes) == 0:
                 self.no_conns += 1
                 print(self.no_conns)
