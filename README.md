@@ -24,6 +24,7 @@ The constraints are:
  be used as comments.
 
  Example:
+<<<<<<< HEAD
 
  -------------------------------------------------------------------------------
  ```
@@ -33,19 +34,38 @@ The constraints are:
 
  Agents parameters:
 
+=======
+ 
+ -------------------------------------------------------------------------------
+ ```
+ World parameters:
+ 
+ {world: width= 10, height= 10, v_threshold= 5}
+
+ Agents parameters:
+ 
+>>>>>>> a52e5865ec6d904105e12e4f167e9fbec2df1187
  {agent: mac= 1, x= 2, y= 2}
  {agent: mac= 2, x= 5, y= 5}
  {agent: mac= 3, x= 8, y= 6}
  {agent: mac= 4, x= 1, y= 7}
 
  Walls:
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> a52e5865ec6d904105e12e4f167e9fbec2df1187
  {wall: x= 3, y= 4}
  {wall: x= 4, y= 4}
  {wall: x= 5, y= 4}
  ```
  -------------------------------------------------------------------------------
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> a52e5865ec6d904105e12e4f167e9fbec2df1187
  "World parameters:", "Agent parameters:" and "Walls:" are documentation strings
  ignored by the parser.
 
@@ -58,7 +78,11 @@ The constraints are:
  All other text will be ignored.
 
  The simulation ends automatically when no nodes are present anymore.
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> a52e5865ec6d904105e12e4f167e9fbec2df1187
  -------------------------------------------------------------------------------
 License:
  See license.pdf
