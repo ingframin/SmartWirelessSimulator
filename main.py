@@ -41,10 +41,10 @@ while running:
     print('timestamp = %d'%timer)
     print('timestamp = %d'%timer, file=f)
     print('----------------------Current queue-------------------------------------')
-    print(current_queue)
+    print('\n'.join([str(m) for m in current_queue]))
     print('------------------------------------------------------------------------')
     print('-----------------------Current queue------------------------------------',file=f)
-    print(current_queue,file=f)
+    print('\n'.join([str(m) for m in current_queue]),file=f)
     print('------------------------------------------------------------------------',file=f)
     print("World map:",file=f)
     print(wrld,file=f)
@@ -59,11 +59,11 @@ while running:
         n.run(current_queue,next_queue,node_vis[n.address],timer)
         # print(n.candidates)
     print('-----------------------Next queue---------------------------------------',file=f)
-    print(next_queue,file=f)
+    print('\n'.join([str(m) for m in next_queue]),file=f)
     print('------------------------------------------------------------------------',file=f)
 
     print('-----------------------Next queue---------------------------------------')
-    print(next_queue)
+    print('\n'.join([str(m) for m in next_queue]))
     print('------------------------------------------------------------------------')
 
     for n in nodes:
