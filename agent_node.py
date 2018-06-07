@@ -203,16 +203,10 @@ class AgentNode:
 
                 else:
                     self.set_access_point('Node=%d'%self.address)
-                    #return -- this doesn't work
-                    #it's a bug, I am still working on it
-
-        #print("is Ap?"+str(self.is_ap))
 
         if self.is_ap:
             #intentions when in AP mode
             self.send_beacon()
-            # print(self.a_nodes)
-
             if len(self.a_nodes) == 0:
                 self.no_conns += 1
 
@@ -223,13 +217,13 @@ class AgentNode:
                     self.set_station()
 
         if self.is_ap and self.is_sta:
-            if self.current_ap != None and len(self.a_nodes) == 1:
-                self.is_ap = False
-                self.a_nodes.clear()
-                self.ssid = ''
-                self.no_conns = 0
-                self.set_station()
-
+            if self.current_ap != None:
+                if len(self.a_nodes) == 1:
+                    self.is_ap = False
+                    self.a_nodes.clear()
+                    self.ssid = ''
+                    self.no_conns = 0
+                    self.set_station()
 
     def run(self,message_queue,next_queue,visibility_list,timer):
         '''function to be called in the main loop'''
@@ -238,7 +232,6 @@ class AgentNode:
         self.react()
         self.execute(visibility_list)
         self.send(next_queue)
-
 
     def connected(self):
         '''is the node connected?'''
