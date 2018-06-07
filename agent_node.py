@@ -29,6 +29,7 @@ class AgentNode:
 
         #input message queue
         self.message_in = []
+
         #output message queue
         self.message_out = []
 
@@ -40,6 +41,7 @@ class AgentNode:
 
         #ping message register
         self.pings = []
+
         #Message counter
         self.m_count = 0
         self.no_conns = 0
@@ -53,7 +55,6 @@ class AgentNode:
 
             if v[0].address in self.aps:
                 self.networks.append((v[0].ssid,v[0].address,v[1]))
-        #print("Visible Networks = "+repr(self.networks))
 
     def set_access_point(self,ssid):
         '''turn on access point mode'''
@@ -61,6 +62,7 @@ class AgentNode:
         self.is_ap = True
         self.ssid = ssid
         self.no_conns = 0
+        self.a_nodes.clear()
 
     def set_station(self):
         '''turn on or reset station mode'''
@@ -71,10 +73,14 @@ class AgentNode:
         self.candidates = []
 
     def connect(self,network):
+        '''when in station mode, connect to the network passed as parameter'''
+        self.battery -= 0.1
         m = {'sender':self.address,'receiver':network[1],'type':'request','params':'connect'}
         self.message_out.append(m)
 
     def disconnect(self):
+        '''disconnect from current network'''
+        self.battery -= 0.1
         m = {'sender':self.address,'receiver':self.current_ap[0],'type':'request','params':'disconnect'}
         self.current_ap = None
         self.message_out.append(m)
@@ -89,9 +95,6 @@ class AgentNode:
             response['params']='accept'
         else:
             response['params']='refuse'
-        if self.current_ap != None:
-            if self.current_ap[1] in self.a_nodes:
-                response['params']='refuse'
 
         self.message_out.append(response)
 
@@ -111,7 +114,8 @@ class AgentNode:
                 self.message_out.append(pm)
         self.pings.clear()
 
-    def process_input(self):
+    def react(self):
+        '''Reactive part of the control loop'''
         for m in self.message_in:
             self.battery -= 0.01
             if m['type'] == 'ping':
@@ -129,9 +133,9 @@ class AgentNode:
 
             if m['type'] == 'response':
                 if m['params']=='accept':
-                    try:
+                    if len(self.candidates) > 1:
                         self.current_ap = self.candidates[-1]
-                    except:
+                    else:
                         print("Current AP="+str(self.current_ap))
                 if m['params']=='refuse':
                     self.current_ap = None
@@ -139,19 +143,17 @@ class AgentNode:
             if m['type']=='beacon':
                 self.aps.append(m['sender'])
 
-        #After input queue is processed, it can be = []ed
         self.message_in = []
 
     def send(self,message_queue):
+        '''flush output queue'''
         for m in self.message_out:
             self.battery -= 0.2
             m['ID'] = 'N{}-M{}'.format(self.address,self.m_count)
             m['timestamp'] = self.timestamp+1
             message_queue.append(m)
-            # if m['type'] == 'ping':
-            #     self.pings.append(m)
             self.m_count+=1
-        #after sending, = [] output buffer
+        #Clean up output queue
         self.message_out = []
 
 
@@ -168,17 +170,21 @@ class AgentNode:
                 self.message_in.append(m)
 
     def send_beacon(self):
+        '''When in AP mode, broadcast the SSID'''
         bm = {'sender':self.address,'receiver':-1,'type':'beacon','SSID':self.ssid}
         self.message_out.append(bm)
 
     def execute(self,visibility_list):
+        '''BDI part of the control loop'''
         if self.is_sta:
+            #Intentions when in station mode
             self.scan(visibility_list)
             if self.connected():
-                #print("Connected to "+repr(self.current_ap))
+
                 if self.current_ap not in self.networks:
                     print("AP Disappeared!")
                     self.set_station()
+
 
             if not self.connected():
 
@@ -192,56 +198,50 @@ class AgentNode:
                         if n[2] < min_dist:
                             self.candidates.append(n)
 
-
-
                 if len(self.candidates) > 0:
                     self.connect(self.candidates[-1])
 
                 else:
                     self.set_access_point('Node=%d'%self.address)
+                    #return -- this doesn't work
+                    #it's a bug, I am still working on it
 
+        #print("is Ap?"+str(self.is_ap))
 
         if self.is_ap:
+            #intentions when in AP mode
             self.send_beacon()
+            # print(self.a_nodes)
+
             if len(self.a_nodes) == 0:
                 self.no_conns += 1
 
+                if self.no_conns > 3:
+                    self.a_nodes.clear()
+                    self.is_ap = False
+                    self.no_conns = 0
+                    self.set_station()
 
-            if self.no_conns > 3:
+        if self.is_ap and self.is_sta:
+            if self.current_ap != None and len(self.a_nodes) == 1:
                 self.is_ap = False
+                self.a_nodes.clear()
+                self.ssid = ''
                 self.no_conns = 0
                 self.set_station()
-
-            if self.current_ap != None:
-                if self.current_ap[1] in self.a_nodes:
-                    try:
-                        self.a_nodes.remove(self.current_ap)
-                    except:
-                        pass
-
-            #ping nodes to see if they are there
-            # for n in self.a_nodes:
-            #     self.ping(n)
-            #
-            # my_pings = [p['ID'] for p in filter(lambda m: m['sender']==self.address,self.pings)]
-            # for pm in self.pings:
-            #     if pm['type'] == 'pong' and pm['ping_ID'] in my_pings:
-            #         self.a_nodes.add(pm['sender'])
-            #         my_pings.remove(pm['ping_ID'])
-            #
-            # self.pings = list(filter(lambda m: m['ID'] in my_pings or m['sender'] != self.address, self.pings))
-            # #print("remaining pings ="+str(len(self.pings)))
 
 
     def run(self,message_queue,next_queue,visibility_list,timer):
         '''function to be called in the main loop'''
         self.timestamp = timer
         self.receive(message_queue)
-        self.process_input()
+        self.react()
         self.execute(visibility_list)
         self.send(next_queue)
 
+
     def connected(self):
+        '''is the node connected?'''
         return self.current_ap != None
 
     def __eq__(self,n):
@@ -259,45 +259,3 @@ class AgentNode:
         if self.is_sta and not self.is_ap:
             return 'S'
         return 'A'
-
-
-#############################################  Test  #########################################################
-if __name__=='__main__':
-    message_queue = []
-    next_queue = []
-    timer = 0
-    ag1 = AgentNode(0,0,0)
-    ag1.set_station()
-    ag2 = AgentNode(1,1,1)
-    ag2.set_station()
-    ag3 = AgentNode(2,2,2)
-    ag3.set_station()
-    vlist = [(ag2,3),(ag3,2),(ag1,2)]
-    while True:
-        print('---------------------------------------------')
-        print(message_queue)
-        print('---------------------------------------------')
-        ag1.run(message_queue,next_queue,vlist,timer)
-        print('agent 1:')
-        print(ag1.message_in)
-        print(ag1.message_out)
-
-        print('connected= {}'.format(ag1.connected()))
-        print('nodes: '+str(ag1.a_nodes))
-        ag2.run(message_queue,next_queue,vlist,timer)
-        print('agent 2:')
-        print(ag2.message_in)
-        print(ag2.message_out)
-        print('connected= {}'.format(ag2.connected()))
-        print('nodes: '+str(ag2.a_nodes))
-        ag3.run(message_queue,next_queue,vlist,timer)
-        print('agent 3:')
-        print(ag3.message_in)
-        print(ag3.message_out)
-        print('connected= {}'.format(ag3.connected()))
-        print('nodes: '+str(ag3.a_nodes))
-        timer+=1
-        message_queue = next_queue.copy()
-        next_queue.clear()
-
-        input()
