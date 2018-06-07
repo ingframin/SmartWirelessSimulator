@@ -2,7 +2,7 @@ from random import randint
 
 class AgentNode:
     '''Base class for node agents'''
-    def __init__(self,address=0, x=0, y=0, max_connections=5):
+    def __init__(self,address=0, x=0, y=0):
         self.address = address
         #node position
         self.x = x
@@ -10,9 +10,7 @@ class AgentNode:
         #available networks
         self.networks = []
         self.aps = []
-        #maximum nodes associated to this node
-        self.max_connections = max_connections
-
+        #Battery level
         self.battery = 100.0
 
         #Mode: is_ap = Access Point;is_sta = Station
@@ -90,11 +88,8 @@ class AgentNode:
         response = {'sender':self.address,'receiver':request['sender'],
                     'type':'response'}
 
-        if len(self.a_nodes)<self.max_connections:
-            self.a_nodes.add(request['sender'])
-            response['params']='accept'
-        else:
-            response['params']='refuse'
+        self.a_nodes.add(request['sender'])
+        response['params']='accept'
 
         self.message_out.append(response)
 

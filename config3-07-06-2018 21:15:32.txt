@@ -1,0 +1,7664 @@
+timestamp = 0
+-----------------------Current queue------------------------------------
+
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_S__WS____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 1, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=1', 'ID': 'N1-M0', 'timestamp': 1}
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M0', 'timestamp': 1}
+{'sender': 3, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=3', 'ID': 'N3-M0', 'timestamp': 1}
+{'sender': 4, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=4', 'ID': 'N4-M0', 'timestamp': 1}
+{'sender': 5, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=5', 'ID': 'N5-M0', 'timestamp': 1}
+{'sender': 6, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=6', 'ID': 'N6-M0', 'timestamp': 1}
+{'sender': 7, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=7', 'ID': 'N7-M0', 'timestamp': 1}
+{'sender': 8, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=8', 'ID': 'N8-M0', 'timestamp': 1}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M0', 'timestamp': 1}
+------------------------------------------------------------------------
+n= 1
+ap? True
+Battery level= 99.350000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 99.350000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 3
+ap? True
+Battery level= 99.350000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 4
+ap? True
+Battery level= 99.350000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 5
+ap? True
+Battery level= 99.350000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 6
+ap? True
+Battery level= 99.350000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 7
+ap? True
+Battery level= 99.350000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 8
+ap? True
+Battery level= 99.350000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 99.350000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+timestamp = 1
+-----------------------Current queue------------------------------------
+{'sender': 1, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=1', 'ID': 'N1-M0', 'timestamp': 1}
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M0', 'timestamp': 1}
+{'sender': 3, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=3', 'ID': 'N3-M0', 'timestamp': 1}
+{'sender': 4, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=4', 'ID': 'N4-M0', 'timestamp': 1}
+{'sender': 5, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=5', 'ID': 'N5-M0', 'timestamp': 1}
+{'sender': 6, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=6', 'ID': 'N6-M0', 'timestamp': 1}
+{'sender': 7, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=7', 'ID': 'N7-M0', 'timestamp': 1}
+{'sender': 8, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=8', 'ID': 'N8-M0', 'timestamp': 1}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M0', 'timestamp': 1}
+------------------------------------------------------------------------
+World map:
+__________
+____H_____
+__H_______
+___H______
+___W______
+_H__WH____
+_____W__H_
+_H____W___
+___H___WH_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 1, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N1-M1', 'timestamp': 2}
+{'sender': 1, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=1', 'ID': 'N1-M2', 'timestamp': 2}
+{'sender': 2, 'receiver': 9, 'type': 'request', 'params': 'connect', 'ID': 'N2-M1', 'timestamp': 2}
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M2', 'timestamp': 2}
+{'sender': 3, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N3-M1', 'timestamp': 2}
+{'sender': 3, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=3', 'ID': 'N3-M2', 'timestamp': 2}
+{'sender': 4, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N4-M1', 'timestamp': 2}
+{'sender': 4, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=4', 'ID': 'N4-M2', 'timestamp': 2}
+{'sender': 5, 'receiver': 9, 'type': 'request', 'params': 'connect', 'ID': 'N5-M1', 'timestamp': 2}
+{'sender': 5, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=5', 'ID': 'N5-M2', 'timestamp': 2}
+{'sender': 6, 'receiver': 9, 'type': 'request', 'params': 'connect', 'ID': 'N6-M1', 'timestamp': 2}
+{'sender': 6, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=6', 'ID': 'N6-M2', 'timestamp': 2}
+{'sender': 7, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N7-M1', 'timestamp': 2}
+{'sender': 7, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=7', 'ID': 'N7-M2', 'timestamp': 2}
+{'sender': 8, 'receiver': 4, 'type': 'request', 'params': 'connect', 'ID': 'N8-M1', 'timestamp': 2}
+{'sender': 8, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=8', 'ID': 'N8-M2', 'timestamp': 2}
+{'sender': 9, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N9-M1', 'timestamp': 2}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M2', 'timestamp': 2}
+------------------------------------------------------------------------
+n= 1
+ap? True
+Battery level= 96.710000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 96.710000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 3
+ap? True
+Battery level= 96.710000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 4
+ap? True
+Battery level= 96.710000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 5
+ap? True
+Battery level= 96.710000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 6
+ap? True
+Battery level= 96.710000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 7
+ap? True
+Battery level= 96.710000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 8
+ap? True
+Battery level= 96.710000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 96.710000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+timestamp = 2
+-----------------------Current queue------------------------------------
+{'sender': 1, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N1-M1', 'timestamp': 2}
+{'sender': 1, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=1', 'ID': 'N1-M2', 'timestamp': 2}
+{'sender': 2, 'receiver': 9, 'type': 'request', 'params': 'connect', 'ID': 'N2-M1', 'timestamp': 2}
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M2', 'timestamp': 2}
+{'sender': 3, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N3-M1', 'timestamp': 2}
+{'sender': 3, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=3', 'ID': 'N3-M2', 'timestamp': 2}
+{'sender': 4, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N4-M1', 'timestamp': 2}
+{'sender': 4, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=4', 'ID': 'N4-M2', 'timestamp': 2}
+{'sender': 5, 'receiver': 9, 'type': 'request', 'params': 'connect', 'ID': 'N5-M1', 'timestamp': 2}
+{'sender': 5, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=5', 'ID': 'N5-M2', 'timestamp': 2}
+{'sender': 6, 'receiver': 9, 'type': 'request', 'params': 'connect', 'ID': 'N6-M1', 'timestamp': 2}
+{'sender': 6, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=6', 'ID': 'N6-M2', 'timestamp': 2}
+{'sender': 7, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N7-M1', 'timestamp': 2}
+{'sender': 7, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=7', 'ID': 'N7-M2', 'timestamp': 2}
+{'sender': 8, 'receiver': 4, 'type': 'request', 'params': 'connect', 'ID': 'N8-M1', 'timestamp': 2}
+{'sender': 8, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=8', 'ID': 'N8-M2', 'timestamp': 2}
+{'sender': 9, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N9-M1', 'timestamp': 2}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M2', 'timestamp': 2}
+------------------------------------------------------------------------
+World map:
+__________
+____H_____
+__H_______
+___H______
+___W______
+_H__WH____
+_____W__H_
+_H____W___
+___H___WH_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 1, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N1-M3', 'timestamp': 3}
+{'sender': 1, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=1', 'ID': 'N1-M4', 'timestamp': 3}
+{'sender': 2, 'receiver': 1, 'type': 'response', 'params': 'accept', 'ID': 'N2-M3', 'timestamp': 3}
+{'sender': 2, 'receiver': 3, 'type': 'response', 'params': 'accept', 'ID': 'N2-M4', 'timestamp': 3}
+{'sender': 2, 'receiver': 4, 'type': 'response', 'params': 'accept', 'ID': 'N2-M5', 'timestamp': 3}
+{'sender': 2, 'receiver': 7, 'type': 'response', 'params': 'accept', 'ID': 'N2-M6', 'timestamp': 3}
+{'sender': 2, 'receiver': 9, 'type': 'response', 'params': 'accept', 'ID': 'N2-M7', 'timestamp': 3}
+{'sender': 2, 'receiver': 9, 'type': 'request', 'params': 'connect', 'ID': 'N2-M8', 'timestamp': 3}
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M9', 'timestamp': 3}
+{'sender': 3, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N3-M3', 'timestamp': 3}
+{'sender': 3, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=3', 'ID': 'N3-M4', 'timestamp': 3}
+{'sender': 4, 'receiver': 8, 'type': 'response', 'params': 'accept', 'ID': 'N4-M3', 'timestamp': 3}
+{'sender': 4, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N4-M4', 'timestamp': 3}
+{'sender': 4, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=4', 'ID': 'N4-M5', 'timestamp': 3}
+{'sender': 5, 'receiver': 9, 'type': 'request', 'params': 'connect', 'ID': 'N5-M3', 'timestamp': 3}
+{'sender': 5, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=5', 'ID': 'N5-M4', 'timestamp': 3}
+{'sender': 6, 'receiver': 9, 'type': 'request', 'params': 'connect', 'ID': 'N6-M3', 'timestamp': 3}
+{'sender': 6, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=6', 'ID': 'N6-M4', 'timestamp': 3}
+{'sender': 7, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N7-M3', 'timestamp': 3}
+{'sender': 7, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=7', 'ID': 'N7-M4', 'timestamp': 3}
+{'sender': 8, 'receiver': 4, 'type': 'request', 'params': 'connect', 'ID': 'N8-M3', 'timestamp': 3}
+{'sender': 8, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=8', 'ID': 'N8-M4', 'timestamp': 3}
+{'sender': 9, 'receiver': 2, 'type': 'response', 'params': 'accept', 'ID': 'N9-M3', 'timestamp': 3}
+{'sender': 9, 'receiver': 5, 'type': 'response', 'params': 'accept', 'ID': 'N9-M4', 'timestamp': 3}
+{'sender': 9, 'receiver': 6, 'type': 'response', 'params': 'accept', 'ID': 'N9-M5', 'timestamp': 3}
+{'sender': 9, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N9-M6', 'timestamp': 3}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M7', 'timestamp': 3}
+------------------------------------------------------------------------
+n= 1
+ap? True
+Battery level= 92.270000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 90.720000 %
+Connected?False
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? True
+Battery level= 92.270000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 4
+ap? True
+Battery level= 91.960000 %
+Connected?False
+associated nodes = {8}
+pings list=[]
+input = []
+output = []
+n= 5
+ap? True
+Battery level= 92.270000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 6
+ap? True
+Battery level= 92.270000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 7
+ap? True
+Battery level= 92.270000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 8
+ap? True
+Battery level= 92.270000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 91.340000 %
+Connected?False
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 3
+-----------------------Current queue------------------------------------
+{'sender': 1, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N1-M3', 'timestamp': 3}
+{'sender': 1, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=1', 'ID': 'N1-M4', 'timestamp': 3}
+{'sender': 2, 'receiver': 1, 'type': 'response', 'params': 'accept', 'ID': 'N2-M3', 'timestamp': 3}
+{'sender': 2, 'receiver': 3, 'type': 'response', 'params': 'accept', 'ID': 'N2-M4', 'timestamp': 3}
+{'sender': 2, 'receiver': 4, 'type': 'response', 'params': 'accept', 'ID': 'N2-M5', 'timestamp': 3}
+{'sender': 2, 'receiver': 7, 'type': 'response', 'params': 'accept', 'ID': 'N2-M6', 'timestamp': 3}
+{'sender': 2, 'receiver': 9, 'type': 'response', 'params': 'accept', 'ID': 'N2-M7', 'timestamp': 3}
+{'sender': 2, 'receiver': 9, 'type': 'request', 'params': 'connect', 'ID': 'N2-M8', 'timestamp': 3}
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M9', 'timestamp': 3}
+{'sender': 3, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N3-M3', 'timestamp': 3}
+{'sender': 3, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=3', 'ID': 'N3-M4', 'timestamp': 3}
+{'sender': 4, 'receiver': 8, 'type': 'response', 'params': 'accept', 'ID': 'N4-M3', 'timestamp': 3}
+{'sender': 4, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N4-M4', 'timestamp': 3}
+{'sender': 4, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=4', 'ID': 'N4-M5', 'timestamp': 3}
+{'sender': 5, 'receiver': 9, 'type': 'request', 'params': 'connect', 'ID': 'N5-M3', 'timestamp': 3}
+{'sender': 5, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=5', 'ID': 'N5-M4', 'timestamp': 3}
+{'sender': 6, 'receiver': 9, 'type': 'request', 'params': 'connect', 'ID': 'N6-M3', 'timestamp': 3}
+{'sender': 6, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=6', 'ID': 'N6-M4', 'timestamp': 3}
+{'sender': 7, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N7-M3', 'timestamp': 3}
+{'sender': 7, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=7', 'ID': 'N7-M4', 'timestamp': 3}
+{'sender': 8, 'receiver': 4, 'type': 'request', 'params': 'connect', 'ID': 'N8-M3', 'timestamp': 3}
+{'sender': 8, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=8', 'ID': 'N8-M4', 'timestamp': 3}
+{'sender': 9, 'receiver': 2, 'type': 'response', 'params': 'accept', 'ID': 'N9-M3', 'timestamp': 3}
+{'sender': 9, 'receiver': 5, 'type': 'response', 'params': 'accept', 'ID': 'N9-M4', 'timestamp': 3}
+{'sender': 9, 'receiver': 6, 'type': 'response', 'params': 'accept', 'ID': 'N9-M5', 'timestamp': 3}
+{'sender': 9, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N9-M6', 'timestamp': 3}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M7', 'timestamp': 3}
+------------------------------------------------------------------------
+World map:
+__________
+____H_____
+__H_______
+___H______
+___W______
+_H__WH____
+_____W__H_
+_H____W___
+___H___WH_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 1, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=1', 'ID': 'N1-M5', 'timestamp': 4}
+{'sender': 2, 'receiver': 1, 'type': 'response', 'params': 'accept', 'ID': 'N2-M10', 'timestamp': 4}
+{'sender': 2, 'receiver': 3, 'type': 'response', 'params': 'accept', 'ID': 'N2-M11', 'timestamp': 4}
+{'sender': 2, 'receiver': 4, 'type': 'response', 'params': 'accept', 'ID': 'N2-M12', 'timestamp': 4}
+{'sender': 2, 'receiver': 7, 'type': 'response', 'params': 'accept', 'ID': 'N2-M13', 'timestamp': 4}
+{'sender': 2, 'receiver': 9, 'type': 'response', 'params': 'accept', 'ID': 'N2-M14', 'timestamp': 4}
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M15', 'timestamp': 4}
+{'sender': 3, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=3', 'ID': 'N3-M5', 'timestamp': 4}
+{'sender': 4, 'receiver': 8, 'type': 'response', 'params': 'accept', 'ID': 'N4-M6', 'timestamp': 4}
+{'sender': 4, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=4', 'ID': 'N4-M7', 'timestamp': 4}
+{'sender': 5, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=5', 'ID': 'N5-M5', 'timestamp': 4}
+{'sender': 6, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=6', 'ID': 'N6-M5', 'timestamp': 4}
+{'sender': 7, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=7', 'ID': 'N7-M5', 'timestamp': 4}
+{'sender': 8, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=8', 'ID': 'N8-M5', 'timestamp': 4}
+{'sender': 9, 'receiver': 2, 'type': 'response', 'params': 'accept', 'ID': 'N9-M8', 'timestamp': 4}
+{'sender': 9, 'receiver': 5, 'type': 'response', 'params': 'accept', 'ID': 'N9-M9', 'timestamp': 4}
+{'sender': 9, 'receiver': 6, 'type': 'response', 'params': 'accept', 'ID': 'N9-M10', 'timestamp': 4}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M11', 'timestamp': 4}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 86.220000 %
+Connected?False
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 83.220000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 86.220000 %
+Connected?False
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 85.600000 %
+Connected?False
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 86.220000 %
+Connected?False
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 86.220000 %
+Connected?False
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 86.220000 %
+Connected?False
+input = []
+output = []
+n= 8
+ap? True
+Battery level= 86.120000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 84.460000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 4
+-----------------------Current queue------------------------------------
+{'sender': 1, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=1', 'ID': 'N1-M5', 'timestamp': 4}
+{'sender': 2, 'receiver': 1, 'type': 'response', 'params': 'accept', 'ID': 'N2-M10', 'timestamp': 4}
+{'sender': 2, 'receiver': 3, 'type': 'response', 'params': 'accept', 'ID': 'N2-M11', 'timestamp': 4}
+{'sender': 2, 'receiver': 4, 'type': 'response', 'params': 'accept', 'ID': 'N2-M12', 'timestamp': 4}
+{'sender': 2, 'receiver': 7, 'type': 'response', 'params': 'accept', 'ID': 'N2-M13', 'timestamp': 4}
+{'sender': 2, 'receiver': 9, 'type': 'response', 'params': 'accept', 'ID': 'N2-M14', 'timestamp': 4}
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M15', 'timestamp': 4}
+{'sender': 3, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=3', 'ID': 'N3-M5', 'timestamp': 4}
+{'sender': 4, 'receiver': 8, 'type': 'response', 'params': 'accept', 'ID': 'N4-M6', 'timestamp': 4}
+{'sender': 4, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=4', 'ID': 'N4-M7', 'timestamp': 4}
+{'sender': 5, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=5', 'ID': 'N5-M5', 'timestamp': 4}
+{'sender': 6, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=6', 'ID': 'N6-M5', 'timestamp': 4}
+{'sender': 7, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=7', 'ID': 'N7-M5', 'timestamp': 4}
+{'sender': 8, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=8', 'ID': 'N8-M5', 'timestamp': 4}
+{'sender': 9, 'receiver': 2, 'type': 'response', 'params': 'accept', 'ID': 'N9-M8', 'timestamp': 4}
+{'sender': 9, 'receiver': 5, 'type': 'response', 'params': 'accept', 'ID': 'N9-M9', 'timestamp': 4}
+{'sender': 9, 'receiver': 6, 'type': 'response', 'params': 'accept', 'ID': 'N9-M10', 'timestamp': 4}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M11', 'timestamp': 4}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___H______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 1, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N1-M6', 'timestamp': 5}
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M16', 'timestamp': 5}
+{'sender': 3, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N3-M6', 'timestamp': 5}
+{'sender': 4, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N4-M8', 'timestamp': 5}
+{'sender': 5, 'receiver': 9, 'type': 'request', 'params': 'connect', 'ID': 'N5-M6', 'timestamp': 5}
+{'sender': 6, 'receiver': 9, 'type': 'request', 'params': 'connect', 'ID': 'N6-M6', 'timestamp': 5}
+{'sender': 7, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N7-M6', 'timestamp': 5}
+{'sender': 8, 'receiver': 4, 'type': 'request', 'params': 'connect', 'ID': 'N8-M6', 'timestamp': 5}
+{'sender': 8, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=8', 'ID': 'N8-M7', 'timestamp': 5}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M12', 'timestamp': 5}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 81.970000 %
+Connected?False
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 79.070000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 81.970000 %
+Connected?False
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 81.350000 %
+Connected?False
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 81.970000 %
+Connected?False
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 81.970000 %
+Connected?False
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 81.970000 %
+Connected?False
+input = []
+output = []
+n= 8
+ap? True
+Battery level= 81.670000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 80.310000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 5
+-----------------------Current queue------------------------------------
+{'sender': 1, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N1-M6', 'timestamp': 5}
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M16', 'timestamp': 5}
+{'sender': 3, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N3-M6', 'timestamp': 5}
+{'sender': 4, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N4-M8', 'timestamp': 5}
+{'sender': 5, 'receiver': 9, 'type': 'request', 'params': 'connect', 'ID': 'N5-M6', 'timestamp': 5}
+{'sender': 6, 'receiver': 9, 'type': 'request', 'params': 'connect', 'ID': 'N6-M6', 'timestamp': 5}
+{'sender': 7, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N7-M6', 'timestamp': 5}
+{'sender': 8, 'receiver': 4, 'type': 'request', 'params': 'connect', 'ID': 'N8-M6', 'timestamp': 5}
+{'sender': 8, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=8', 'ID': 'N8-M7', 'timestamp': 5}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M12', 'timestamp': 5}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___H______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 1, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N1-M7', 'timestamp': 6}
+{'sender': 2, 'receiver': 1, 'type': 'response', 'params': 'accept', 'ID': 'N2-M17', 'timestamp': 6}
+{'sender': 2, 'receiver': 3, 'type': 'response', 'params': 'accept', 'ID': 'N2-M18', 'timestamp': 6}
+{'sender': 2, 'receiver': 4, 'type': 'response', 'params': 'accept', 'ID': 'N2-M19', 'timestamp': 6}
+{'sender': 2, 'receiver': 7, 'type': 'response', 'params': 'accept', 'ID': 'N2-M20', 'timestamp': 6}
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M21', 'timestamp': 6}
+{'sender': 3, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N3-M7', 'timestamp': 6}
+{'sender': 4, 'receiver': 8, 'type': 'response', 'params': 'accept', 'ID': 'N4-M9', 'timestamp': 6}
+{'sender': 4, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N4-M10', 'timestamp': 6}
+{'sender': 5, 'receiver': 9, 'type': 'request', 'params': 'connect', 'ID': 'N5-M7', 'timestamp': 6}
+{'sender': 6, 'receiver': 9, 'type': 'request', 'params': 'connect', 'ID': 'N6-M7', 'timestamp': 6}
+{'sender': 7, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N7-M7', 'timestamp': 6}
+{'sender': 8, 'receiver': 4, 'type': 'request', 'params': 'connect', 'ID': 'N8-M8', 'timestamp': 6}
+{'sender': 8, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=8', 'ID': 'N8-M9', 'timestamp': 6}
+{'sender': 9, 'receiver': 5, 'type': 'response', 'params': 'accept', 'ID': 'N9-M13', 'timestamp': 6}
+{'sender': 9, 'receiver': 6, 'type': 'response', 'params': 'accept', 'ID': 'N9-M14', 'timestamp': 6}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M15', 'timestamp': 6}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 79.390000 %
+Connected?False
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 75.350000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 79.390000 %
+Connected?False
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 78.460000 %
+Connected?False
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 79.390000 %
+Connected?False
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 79.390000 %
+Connected?False
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 79.390000 %
+Connected?False
+input = []
+output = []
+n= 8
+ap? True
+Battery level= 78.890000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 77.210000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 6
+-----------------------Current queue------------------------------------
+{'sender': 1, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N1-M7', 'timestamp': 6}
+{'sender': 2, 'receiver': 1, 'type': 'response', 'params': 'accept', 'ID': 'N2-M17', 'timestamp': 6}
+{'sender': 2, 'receiver': 3, 'type': 'response', 'params': 'accept', 'ID': 'N2-M18', 'timestamp': 6}
+{'sender': 2, 'receiver': 4, 'type': 'response', 'params': 'accept', 'ID': 'N2-M19', 'timestamp': 6}
+{'sender': 2, 'receiver': 7, 'type': 'response', 'params': 'accept', 'ID': 'N2-M20', 'timestamp': 6}
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M21', 'timestamp': 6}
+{'sender': 3, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N3-M7', 'timestamp': 6}
+{'sender': 4, 'receiver': 8, 'type': 'response', 'params': 'accept', 'ID': 'N4-M9', 'timestamp': 6}
+{'sender': 4, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N4-M10', 'timestamp': 6}
+{'sender': 5, 'receiver': 9, 'type': 'request', 'params': 'connect', 'ID': 'N5-M7', 'timestamp': 6}
+{'sender': 6, 'receiver': 9, 'type': 'request', 'params': 'connect', 'ID': 'N6-M7', 'timestamp': 6}
+{'sender': 7, 'receiver': 2, 'type': 'request', 'params': 'connect', 'ID': 'N7-M7', 'timestamp': 6}
+{'sender': 8, 'receiver': 4, 'type': 'request', 'params': 'connect', 'ID': 'N8-M8', 'timestamp': 6}
+{'sender': 8, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=8', 'ID': 'N8-M9', 'timestamp': 6}
+{'sender': 9, 'receiver': 5, 'type': 'response', 'params': 'accept', 'ID': 'N9-M13', 'timestamp': 6}
+{'sender': 9, 'receiver': 6, 'type': 'response', 'params': 'accept', 'ID': 'N9-M14', 'timestamp': 6}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M15', 'timestamp': 6}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___H______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': 1, 'type': 'response', 'params': 'accept', 'ID': 'N2-M22', 'timestamp': 7}
+{'sender': 2, 'receiver': 3, 'type': 'response', 'params': 'accept', 'ID': 'N2-M23', 'timestamp': 7}
+{'sender': 2, 'receiver': 4, 'type': 'response', 'params': 'accept', 'ID': 'N2-M24', 'timestamp': 7}
+{'sender': 2, 'receiver': 7, 'type': 'response', 'params': 'accept', 'ID': 'N2-M25', 'timestamp': 7}
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M26', 'timestamp': 7}
+{'sender': 4, 'receiver': 8, 'type': 'response', 'params': 'accept', 'ID': 'N4-M11', 'timestamp': 7}
+{'sender': 8, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=8', 'ID': 'N8-M10', 'timestamp': 7}
+{'sender': 9, 'receiver': 5, 'type': 'response', 'params': 'accept', 'ID': 'N9-M16', 'timestamp': 7}
+{'sender': 9, 'receiver': 6, 'type': 'response', 'params': 'accept', 'ID': 'N9-M17', 'timestamp': 7}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M18', 'timestamp': 7}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 75.700000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 70.230000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 75.700000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 74.460000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 75.700000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 75.700000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 75.700000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 74.900000 %
+Connected?False
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 72.710000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 7
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': 1, 'type': 'response', 'params': 'accept', 'ID': 'N2-M22', 'timestamp': 7}
+{'sender': 2, 'receiver': 3, 'type': 'response', 'params': 'accept', 'ID': 'N2-M23', 'timestamp': 7}
+{'sender': 2, 'receiver': 4, 'type': 'response', 'params': 'accept', 'ID': 'N2-M24', 'timestamp': 7}
+{'sender': 2, 'receiver': 7, 'type': 'response', 'params': 'accept', 'ID': 'N2-M25', 'timestamp': 7}
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M26', 'timestamp': 7}
+{'sender': 4, 'receiver': 8, 'type': 'response', 'params': 'accept', 'ID': 'N4-M11', 'timestamp': 7}
+{'sender': 8, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=8', 'ID': 'N8-M10', 'timestamp': 7}
+{'sender': 9, 'receiver': 5, 'type': 'response', 'params': 'accept', 'ID': 'N9-M16', 'timestamp': 7}
+{'sender': 9, 'receiver': 6, 'type': 'response', 'params': 'accept', 'ID': 'N9-M17', 'timestamp': 7}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M18', 'timestamp': 7}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M27', 'timestamp': 8}
+{'sender': 8, 'receiver': 4, 'type': 'request', 'params': 'connect', 'ID': 'N8-M11', 'timestamp': 8}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M19', 'timestamp': 8}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 73.410000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 67.750000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 73.410000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 72.170000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 73.410000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 73.410000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 73.410000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 72.310000 %
+Connected?False
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 70.230000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 8
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M27', 'timestamp': 8}
+{'sender': 8, 'receiver': 4, 'type': 'request', 'params': 'connect', 'ID': 'N8-M11', 'timestamp': 8}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M19', 'timestamp': 8}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M28', 'timestamp': 9}
+{'sender': 4, 'receiver': 8, 'type': 'response', 'params': 'accept', 'ID': 'N4-M12', 'timestamp': 9}
+{'sender': 8, 'receiver': 4, 'type': 'request', 'params': 'connect', 'ID': 'N8-M12', 'timestamp': 9}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M20', 'timestamp': 9}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 72.540000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 66.680000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 72.540000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 70.990000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 72.540000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 72.540000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 72.540000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 71.140000 %
+Connected?False
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 69.160000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 9
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M28', 'timestamp': 9}
+{'sender': 4, 'receiver': 8, 'type': 'response', 'params': 'accept', 'ID': 'N4-M12', 'timestamp': 9}
+{'sender': 8, 'receiver': 4, 'type': 'request', 'params': 'connect', 'ID': 'N8-M12', 'timestamp': 9}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M20', 'timestamp': 9}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M29', 'timestamp': 10}
+{'sender': 4, 'receiver': 8, 'type': 'response', 'params': 'accept', 'ID': 'N4-M13', 'timestamp': 10}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M21', 'timestamp': 10}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 71.470000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 65.410000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 71.470000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 69.610000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 71.470000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 71.470000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 71.470000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 70.060000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 67.890000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 10
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M29', 'timestamp': 10}
+{'sender': 4, 'receiver': 8, 'type': 'response', 'params': 'accept', 'ID': 'N4-M13', 'timestamp': 10}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M21', 'timestamp': 10}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M30', 'timestamp': 11}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M22', 'timestamp': 11}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 70.600000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 64.340000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 70.600000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 68.740000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 70.600000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 70.600000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 70.600000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 69.180000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 66.820000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 11
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M30', 'timestamp': 11}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M22', 'timestamp': 11}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M31', 'timestamp': 12}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M23', 'timestamp': 12}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 69.930000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 63.470000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 69.930000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 68.070000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 69.930000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 69.930000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 69.930000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 68.510000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 65.950000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 12
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M31', 'timestamp': 12}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M23', 'timestamp': 12}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M32', 'timestamp': 13}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M24', 'timestamp': 13}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 69.260000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 62.600000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 69.260000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 67.400000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 69.260000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 69.260000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 69.260000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 67.840000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 65.080000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 13
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M32', 'timestamp': 13}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M24', 'timestamp': 13}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M33', 'timestamp': 14}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M25', 'timestamp': 14}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 68.590000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 61.730000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 68.590000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 66.730000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 68.590000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 68.590000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 68.590000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 67.170000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 64.210000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 14
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M33', 'timestamp': 14}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M25', 'timestamp': 14}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M34', 'timestamp': 15}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M26', 'timestamp': 15}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 67.920000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 60.860000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 67.920000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 66.060000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 67.920000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 67.920000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 67.920000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 66.500000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 63.340000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 15
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M34', 'timestamp': 15}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M26', 'timestamp': 15}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M35', 'timestamp': 16}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M27', 'timestamp': 16}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 67.250000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 59.990000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 67.250000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 65.390000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 67.250000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 67.250000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 67.250000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 65.830000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 62.470000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 16
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M35', 'timestamp': 16}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M27', 'timestamp': 16}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M36', 'timestamp': 17}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M28', 'timestamp': 17}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 66.580000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 59.120000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 66.580000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 64.720000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 66.580000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 66.580000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 66.580000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 65.160000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 61.600000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 17
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M36', 'timestamp': 17}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M28', 'timestamp': 17}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M37', 'timestamp': 18}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M29', 'timestamp': 18}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 65.910000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 58.250000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 65.910000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 64.050000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 65.910000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 65.910000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 65.910000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 64.490000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 60.730000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 18
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M37', 'timestamp': 18}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M29', 'timestamp': 18}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M38', 'timestamp': 19}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M30', 'timestamp': 19}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 65.240000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 57.380000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 65.240000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 63.380000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 65.240000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 65.240000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 65.240000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 63.820000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 59.860000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 19
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M38', 'timestamp': 19}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M30', 'timestamp': 19}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M39', 'timestamp': 20}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M31', 'timestamp': 20}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 64.570000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 56.510000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 64.570000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 62.710000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 64.570000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 64.570000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 64.570000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 63.150000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 58.990000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 20
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M39', 'timestamp': 20}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M31', 'timestamp': 20}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M40', 'timestamp': 21}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M32', 'timestamp': 21}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 63.900000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 55.640000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 63.900000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 62.040000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 63.900000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 63.900000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 63.900000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 62.480000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 58.120000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 21
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M40', 'timestamp': 21}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M32', 'timestamp': 21}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M41', 'timestamp': 22}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M33', 'timestamp': 22}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 63.230000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 54.770000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 63.230000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 61.370000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 63.230000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 63.230000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 63.230000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 61.810000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 57.250000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 22
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M41', 'timestamp': 22}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M33', 'timestamp': 22}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M42', 'timestamp': 23}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M34', 'timestamp': 23}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 62.560000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 53.900000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 62.560000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 60.700000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 62.560000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 62.560000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 62.560000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 61.140000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 56.380000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 23
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M42', 'timestamp': 23}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M34', 'timestamp': 23}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M43', 'timestamp': 24}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M35', 'timestamp': 24}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 61.890000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 53.030000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 61.890000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 60.030000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 61.890000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 61.890000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 61.890000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 60.470000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 55.510000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 24
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M43', 'timestamp': 24}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M35', 'timestamp': 24}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M44', 'timestamp': 25}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M36', 'timestamp': 25}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 61.220000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 52.160000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 61.220000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 59.360000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 61.220000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 61.220000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 61.220000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 59.800000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 54.640000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 25
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M44', 'timestamp': 25}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M36', 'timestamp': 25}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M45', 'timestamp': 26}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M37', 'timestamp': 26}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 60.550000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 51.290000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 60.550000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 58.690000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 60.550000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 60.550000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 60.550000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 59.130000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 53.770000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 26
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M45', 'timestamp': 26}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M37', 'timestamp': 26}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M46', 'timestamp': 27}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M38', 'timestamp': 27}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 59.880000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 50.420000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 59.880000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 58.020000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 59.880000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 59.880000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 59.880000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 58.460000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 52.900000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 27
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M46', 'timestamp': 27}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M38', 'timestamp': 27}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M47', 'timestamp': 28}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M39', 'timestamp': 28}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 59.210000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 49.550000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 59.210000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 57.350000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 59.210000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 59.210000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 59.210000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 57.790000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 52.030000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 28
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M47', 'timestamp': 28}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M39', 'timestamp': 28}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M48', 'timestamp': 29}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M40', 'timestamp': 29}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 58.540000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 48.680000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 58.540000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 56.680000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 58.540000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 58.540000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 58.540000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 57.120000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 51.160000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 29
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M48', 'timestamp': 29}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M40', 'timestamp': 29}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M49', 'timestamp': 30}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M41', 'timestamp': 30}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 57.870000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 47.810000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 57.870000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 56.010000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 57.870000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 57.870000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 57.870000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 56.450000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 50.290000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 30
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M49', 'timestamp': 30}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M41', 'timestamp': 30}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M50', 'timestamp': 31}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M42', 'timestamp': 31}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 57.200000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 46.940000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 57.200000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 55.340000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 57.200000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 57.200000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 57.200000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 55.780000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 49.420000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 31
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M50', 'timestamp': 31}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M42', 'timestamp': 31}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M51', 'timestamp': 32}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M43', 'timestamp': 32}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 56.530000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 46.070000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 56.530000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 54.670000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 56.530000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 56.530000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 56.530000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 55.110000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 48.550000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 32
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M51', 'timestamp': 32}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M43', 'timestamp': 32}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M52', 'timestamp': 33}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M44', 'timestamp': 33}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 55.860000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 45.200000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 55.860000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 54.000000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 55.860000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 55.860000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 55.860000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 54.440000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 47.680000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 33
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M52', 'timestamp': 33}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M44', 'timestamp': 33}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M53', 'timestamp': 34}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M45', 'timestamp': 34}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 55.190000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 44.330000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 55.190000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 53.330000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 55.190000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 55.190000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 55.190000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 53.770000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 46.810000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 34
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M53', 'timestamp': 34}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M45', 'timestamp': 34}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M54', 'timestamp': 35}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M46', 'timestamp': 35}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 54.520000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 43.460000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 54.520000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 52.660000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 54.520000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 54.520000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 54.520000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 53.100000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 45.940000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 35
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M54', 'timestamp': 35}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M46', 'timestamp': 35}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M55', 'timestamp': 36}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M47', 'timestamp': 36}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 53.850000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 42.590000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 53.850000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 51.990000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 53.850000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 53.850000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 53.850000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 52.430000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 45.070000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 36
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M55', 'timestamp': 36}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M47', 'timestamp': 36}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M56', 'timestamp': 37}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M48', 'timestamp': 37}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 53.180000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 41.720000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 53.180000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 51.320000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 53.180000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 53.180000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 53.180000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 51.760000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 44.200000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 37
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M56', 'timestamp': 37}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M48', 'timestamp': 37}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M57', 'timestamp': 38}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M49', 'timestamp': 38}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 52.510000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 40.850000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 52.510000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 50.650000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 52.510000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 52.510000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 52.510000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 51.090000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 43.330000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 38
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M57', 'timestamp': 38}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M49', 'timestamp': 38}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M58', 'timestamp': 39}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M50', 'timestamp': 39}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 51.840000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 39.980000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 51.840000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 49.980000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 51.840000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 51.840000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 51.840000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 50.420000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 42.460000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 39
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M58', 'timestamp': 39}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M50', 'timestamp': 39}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M59', 'timestamp': 40}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M51', 'timestamp': 40}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 51.170000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 39.110000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 51.170000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 49.310000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 51.170000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 51.170000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 51.170000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 49.750000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 41.590000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 40
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M59', 'timestamp': 40}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M51', 'timestamp': 40}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M60', 'timestamp': 41}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M52', 'timestamp': 41}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 50.500000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 38.240000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 50.500000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 48.640000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 50.500000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 50.500000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 50.500000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 49.080000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 40.720000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 41
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M60', 'timestamp': 41}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M52', 'timestamp': 41}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M61', 'timestamp': 42}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M53', 'timestamp': 42}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 49.830000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 37.370000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 49.830000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 47.970000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 49.830000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 49.830000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 49.830000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 48.410000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 39.850000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 42
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M61', 'timestamp': 42}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M53', 'timestamp': 42}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M62', 'timestamp': 43}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M54', 'timestamp': 43}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 49.160000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 36.500000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 49.160000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 47.300000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 49.160000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 49.160000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 49.160000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 47.740000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 38.980000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 43
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M62', 'timestamp': 43}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M54', 'timestamp': 43}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M63', 'timestamp': 44}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M55', 'timestamp': 44}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 48.490000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 35.630000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 48.490000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 46.630000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 48.490000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 48.490000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 48.490000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 47.070000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 38.110000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 44
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M63', 'timestamp': 44}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M55', 'timestamp': 44}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M64', 'timestamp': 45}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M56', 'timestamp': 45}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 47.820000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 34.760000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 47.820000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 45.960000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 47.820000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 47.820000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 47.820000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 46.400000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 37.240000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 45
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M64', 'timestamp': 45}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M56', 'timestamp': 45}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M65', 'timestamp': 46}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M57', 'timestamp': 46}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 47.150000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 33.890000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 47.150000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 45.290000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 47.150000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 47.150000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 47.150000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 45.730000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 36.370000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 46
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M65', 'timestamp': 46}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M57', 'timestamp': 46}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M66', 'timestamp': 47}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M58', 'timestamp': 47}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 46.480000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 33.020000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 46.480000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 44.620000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 46.480000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 46.480000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 46.480000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 45.060000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 35.500000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 47
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M66', 'timestamp': 47}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M58', 'timestamp': 47}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M67', 'timestamp': 48}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M59', 'timestamp': 48}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 45.810000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 32.150000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 45.810000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 43.950000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 45.810000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 45.810000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 45.810000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 44.390000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 34.630000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 48
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M67', 'timestamp': 48}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M59', 'timestamp': 48}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M68', 'timestamp': 49}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M60', 'timestamp': 49}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 45.140000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 31.280000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 45.140000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 43.280000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 45.140000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 45.140000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 45.140000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 43.720000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 33.760000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 49
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M68', 'timestamp': 49}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M60', 'timestamp': 49}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M69', 'timestamp': 50}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M61', 'timestamp': 50}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 44.470000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 30.410000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 44.470000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 42.610000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 44.470000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 44.470000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 44.470000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 43.050000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 32.890000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 50
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M69', 'timestamp': 50}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M61', 'timestamp': 50}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M70', 'timestamp': 51}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M62', 'timestamp': 51}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 43.800000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 29.540000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 43.800000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 41.940000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 43.800000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 43.800000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 43.800000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 42.380000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 32.020000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 51
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M70', 'timestamp': 51}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M62', 'timestamp': 51}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M71', 'timestamp': 52}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M63', 'timestamp': 52}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 43.130000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 28.670000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 43.130000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 41.270000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 43.130000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 43.130000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 43.130000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 41.710000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 31.150000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 52
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M71', 'timestamp': 52}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M63', 'timestamp': 52}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M72', 'timestamp': 53}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M64', 'timestamp': 53}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 42.460000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 27.800000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 42.460000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 40.600000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 42.460000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 42.460000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 42.460000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 41.040000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 30.280000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 53
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M72', 'timestamp': 53}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M64', 'timestamp': 53}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M73', 'timestamp': 54}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M65', 'timestamp': 54}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 41.790000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 26.930000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 41.790000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 39.930000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 41.790000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 41.790000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 41.790000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 40.370000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 29.410000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 54
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M73', 'timestamp': 54}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M65', 'timestamp': 54}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M74', 'timestamp': 55}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M66', 'timestamp': 55}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 41.120000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 26.060000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 41.120000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 39.260000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 41.120000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 41.120000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 41.120000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 39.700000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 28.540000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 55
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M74', 'timestamp': 55}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M66', 'timestamp': 55}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M75', 'timestamp': 56}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M67', 'timestamp': 56}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 40.450000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 25.190000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 40.450000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 38.590000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 40.450000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 40.450000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 40.450000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 39.030000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 27.670000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 56
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M75', 'timestamp': 56}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M67', 'timestamp': 56}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M76', 'timestamp': 57}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M68', 'timestamp': 57}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 39.780000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 24.320000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 39.780000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 37.920000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 39.780000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 39.780000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 39.780000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 38.360000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 26.800000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 57
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M76', 'timestamp': 57}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M68', 'timestamp': 57}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M77', 'timestamp': 58}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M69', 'timestamp': 58}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 39.110000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 23.450000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 39.110000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 37.250000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 39.110000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 39.110000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 39.110000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 37.690000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 25.930000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 58
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M77', 'timestamp': 58}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M69', 'timestamp': 58}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M78', 'timestamp': 59}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M70', 'timestamp': 59}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 38.440000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 22.580000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 38.440000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 36.580000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 38.440000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 38.440000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 38.440000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 37.020000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 25.060000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 59
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M78', 'timestamp': 59}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M70', 'timestamp': 59}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M79', 'timestamp': 60}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M71', 'timestamp': 60}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 37.770000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 21.710000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 37.770000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 35.910000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 37.770000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 37.770000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 37.770000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 36.350000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 24.190000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 60
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M79', 'timestamp': 60}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M71', 'timestamp': 60}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M80', 'timestamp': 61}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M72', 'timestamp': 61}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 37.100000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 20.840000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 37.100000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 35.240000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 37.100000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 37.100000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 37.100000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 35.680000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 23.320000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 61
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M80', 'timestamp': 61}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M72', 'timestamp': 61}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M81', 'timestamp': 62}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M73', 'timestamp': 62}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 36.430000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 19.970000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 36.430000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 34.570000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 36.430000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 36.430000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 36.430000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 35.010000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 22.450000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 62
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M81', 'timestamp': 62}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M73', 'timestamp': 62}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M82', 'timestamp': 63}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M74', 'timestamp': 63}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 35.760000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 19.100000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 35.760000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 33.900000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 35.760000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 35.760000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 35.760000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 34.340000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 21.580000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 63
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M82', 'timestamp': 63}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M74', 'timestamp': 63}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M83', 'timestamp': 64}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M75', 'timestamp': 64}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 35.090000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 18.230000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 35.090000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 33.230000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 35.090000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 35.090000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 35.090000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 33.670000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 20.710000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 64
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M83', 'timestamp': 64}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M75', 'timestamp': 64}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M84', 'timestamp': 65}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M76', 'timestamp': 65}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 34.420000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 17.360000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 34.420000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 32.560000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 34.420000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 34.420000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 34.420000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 33.000000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 19.840000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 65
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M84', 'timestamp': 65}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M76', 'timestamp': 65}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M85', 'timestamp': 66}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M77', 'timestamp': 66}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 33.750000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 16.490000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 33.750000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 31.890000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 33.750000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 33.750000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 33.750000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 32.330000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 18.970000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 66
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M85', 'timestamp': 66}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M77', 'timestamp': 66}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M86', 'timestamp': 67}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M78', 'timestamp': 67}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 33.080000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 15.620000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 33.080000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 31.220000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 33.080000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 33.080000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 33.080000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 31.660000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 18.100000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 67
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M86', 'timestamp': 67}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M78', 'timestamp': 67}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M87', 'timestamp': 68}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M79', 'timestamp': 68}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 32.410000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 14.750000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 32.410000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 30.550000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 32.410000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 32.410000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 32.410000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 30.990000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 17.230000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 68
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M87', 'timestamp': 68}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M79', 'timestamp': 68}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M88', 'timestamp': 69}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M80', 'timestamp': 69}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 31.740000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 13.880000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 31.740000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 29.880000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 31.740000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 31.740000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 31.740000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 30.320000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 16.360000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 69
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M88', 'timestamp': 69}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M80', 'timestamp': 69}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M89', 'timestamp': 70}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M81', 'timestamp': 70}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 31.070000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 13.010000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 31.070000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 29.210000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 31.070000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 31.070000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 31.070000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 29.650000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 15.490000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 70
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M89', 'timestamp': 70}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M81', 'timestamp': 70}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M90', 'timestamp': 71}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M82', 'timestamp': 71}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 30.400000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 12.140000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 30.400000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 28.540000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 30.400000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 30.400000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 30.400000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 28.980000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 14.620000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 71
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M90', 'timestamp': 71}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M82', 'timestamp': 71}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M91', 'timestamp': 72}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M83', 'timestamp': 72}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 29.730000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 11.270000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 29.730000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 27.870000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 29.730000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 29.730000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 29.730000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 28.310000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 13.750000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 72
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M91', 'timestamp': 72}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M83', 'timestamp': 72}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M92', 'timestamp': 73}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M84', 'timestamp': 73}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 29.060000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 10.400000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 29.060000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 27.200000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 29.060000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 29.060000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 29.060000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 27.640000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 12.880000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 73
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M92', 'timestamp': 73}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M84', 'timestamp': 73}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M93', 'timestamp': 74}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M85', 'timestamp': 74}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 28.390000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 9.530000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 28.390000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 26.530000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 28.390000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 28.390000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 28.390000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 26.970000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 12.010000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 74
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M93', 'timestamp': 74}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M85', 'timestamp': 74}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M94', 'timestamp': 75}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M86', 'timestamp': 75}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 27.720000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 8.660000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 27.720000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 25.860000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 27.720000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 27.720000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 27.720000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 26.300000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 11.140000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 75
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M94', 'timestamp': 75}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M86', 'timestamp': 75}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M95', 'timestamp': 76}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M87', 'timestamp': 76}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 27.050000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 7.790000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 27.050000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 25.190000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 27.050000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 27.050000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 27.050000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 25.630000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 10.270000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 76
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M95', 'timestamp': 76}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M87', 'timestamp': 76}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M96', 'timestamp': 77}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M88', 'timestamp': 77}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 26.380000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 6.920000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 26.380000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 24.520000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 26.380000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 26.380000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 26.380000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 24.960000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 9.400000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 77
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M96', 'timestamp': 77}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M88', 'timestamp': 77}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M97', 'timestamp': 78}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M89', 'timestamp': 78}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 25.710000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 6.050000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 25.710000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 23.850000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 25.710000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 25.710000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 25.710000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 24.290000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 8.530000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 78
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M97', 'timestamp': 78}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M89', 'timestamp': 78}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M98', 'timestamp': 79}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M90', 'timestamp': 79}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 25.040000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 5.180000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 25.040000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 23.180000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 25.040000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 25.040000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 25.040000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 23.620000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 7.660000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 79
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M98', 'timestamp': 79}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M90', 'timestamp': 79}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M99', 'timestamp': 80}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M91', 'timestamp': 80}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 24.370000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 4.310000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 24.370000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 22.510000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 24.370000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 24.370000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 24.370000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 22.950000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 6.790000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 80
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M99', 'timestamp': 80}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M91', 'timestamp': 80}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M100', 'timestamp': 81}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M92', 'timestamp': 81}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 23.700000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 3.440000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 23.700000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 21.840000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 23.700000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 23.700000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 23.700000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 22.280000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 5.920000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 81
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M100', 'timestamp': 81}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M92', 'timestamp': 81}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M101', 'timestamp': 82}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M93', 'timestamp': 82}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 23.030000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 2.570000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 23.030000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 21.170000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 23.030000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 23.030000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 23.030000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 21.610000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 5.050000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 82
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M101', 'timestamp': 82}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M93', 'timestamp': 82}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M102', 'timestamp': 83}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M94', 'timestamp': 83}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 22.360000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 1.700000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 22.360000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 20.500000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 22.360000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 22.360000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 22.360000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 20.940000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 4.180000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 83
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M102', 'timestamp': 83}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M94', 'timestamp': 83}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M103', 'timestamp': 84}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M95', 'timestamp': 84}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 21.690000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= 0.830000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 21.690000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 19.830000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 21.690000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 21.690000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 21.690000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 20.270000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 3.310000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 84
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M103', 'timestamp': 84}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M95', 'timestamp': 84}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__WH____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M104', 'timestamp': 85}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M96', 'timestamp': 85}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 21.020000 %
+Connected?True
+input = []
+output = []
+n= 2
+ap? True
+Battery level= -0.040000 %
+Connected?True
+associated nodes = {1, 3, 4, 7, 9}
+pings list=[]
+input = []
+output = []
+n= 3
+ap? False
+Battery level= 21.020000 %
+Connected?True
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 19.160000 %
+Connected?True
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 21.020000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 21.020000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? False
+Battery level= 21.020000 %
+Connected?True
+input = []
+output = []
+n= 8
+ap? False
+Battery level= 19.600000 %
+Connected?True
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 2.440000 %
+Connected?True
+associated nodes = {2, 5, 6}
+pings list=[]
+input = []
+output = []
+timestamp = 85
+-----------------------Current queue------------------------------------
+{'sender': 2, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=2', 'ID': 'N2-M104', 'timestamp': 85}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M96', 'timestamp': 85}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___S______
+___W______
+_H__W_____
+_____W__S_
+_S____W___
+___S___WS_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 1, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=1', 'ID': 'N1-M8', 'timestamp': 86}
+{'sender': 3, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=3', 'ID': 'N3-M8', 'timestamp': 86}
+{'sender': 4, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=4', 'ID': 'N4-M14', 'timestamp': 86}
+{'sender': 7, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=7', 'ID': 'N7-M8', 'timestamp': 86}
+{'sender': 8, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=8', 'ID': 'N8-M13', 'timestamp': 86}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M97', 'timestamp': 86}
+------------------------------------------------------------------------
+n= 1
+ap? True
+Battery level= 19.950000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 3
+ap? True
+Battery level= 19.950000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 4
+ap? True
+Battery level= 18.090000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 20.350000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 20.350000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? True
+Battery level= 19.950000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 8
+ap? True
+Battery level= 18.530000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 9
+ap? True
+Battery level= 1.370000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+timestamp = 86
+-----------------------Current queue------------------------------------
+{'sender': 1, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=1', 'ID': 'N1-M8', 'timestamp': 86}
+{'sender': 3, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=3', 'ID': 'N3-M8', 'timestamp': 86}
+{'sender': 4, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=4', 'ID': 'N4-M14', 'timestamp': 86}
+{'sender': 7, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=7', 'ID': 'N7-M8', 'timestamp': 86}
+{'sender': 8, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=8', 'ID': 'N8-M13', 'timestamp': 86}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M97', 'timestamp': 86}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__H_______
+___H______
+___W______
+_H__W_____
+_____W__H_
+_H____W___
+___S___WH_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 1, 'receiver': 9, 'type': 'request', 'params': 'connect', 'ID': 'N1-M9', 'timestamp': 87}
+{'sender': 1, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=1', 'ID': 'N1-M10', 'timestamp': 87}
+{'sender': 3, 'receiver': 7, 'type': 'request', 'params': 'connect', 'ID': 'N3-M9', 'timestamp': 87}
+{'sender': 3, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=3', 'ID': 'N3-M10', 'timestamp': 87}
+{'sender': 4, 'receiver': 8, 'type': 'request', 'params': 'connect', 'ID': 'N4-M15', 'timestamp': 87}
+{'sender': 4, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=4', 'ID': 'N4-M16', 'timestamp': 87}
+{'sender': 7, 'receiver': 3, 'type': 'request', 'params': 'connect', 'ID': 'N7-M9', 'timestamp': 87}
+{'sender': 7, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=7', 'ID': 'N7-M10', 'timestamp': 87}
+{'sender': 8, 'receiver': 4, 'type': 'request', 'params': 'connect', 'ID': 'N8-M14', 'timestamp': 87}
+{'sender': 8, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=8', 'ID': 'N8-M15', 'timestamp': 87}
+{'sender': 9, 'receiver': 6, 'type': 'request', 'params': 'connect', 'ID': 'N9-M98', 'timestamp': 87}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M99', 'timestamp': 87}
+------------------------------------------------------------------------
+n= 1
+ap? True
+Battery level= 17.940000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 3
+ap? True
+Battery level= 17.940000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 4
+ap? True
+Battery level= 16.080000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 18.840000 %
+Connected?True
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 18.840000 %
+Connected?True
+input = []
+output = []
+n= 7
+ap? True
+Battery level= 17.940000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 8
+ap? True
+Battery level= 16.520000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 9
+ap? True
+Battery level= -0.640000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+timestamp = 87
+-----------------------Current queue------------------------------------
+{'sender': 1, 'receiver': 9, 'type': 'request', 'params': 'connect', 'ID': 'N1-M9', 'timestamp': 87}
+{'sender': 1, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=1', 'ID': 'N1-M10', 'timestamp': 87}
+{'sender': 3, 'receiver': 7, 'type': 'request', 'params': 'connect', 'ID': 'N3-M9', 'timestamp': 87}
+{'sender': 3, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=3', 'ID': 'N3-M10', 'timestamp': 87}
+{'sender': 4, 'receiver': 8, 'type': 'request', 'params': 'connect', 'ID': 'N4-M15', 'timestamp': 87}
+{'sender': 4, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=4', 'ID': 'N4-M16', 'timestamp': 87}
+{'sender': 7, 'receiver': 3, 'type': 'request', 'params': 'connect', 'ID': 'N7-M9', 'timestamp': 87}
+{'sender': 7, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=7', 'ID': 'N7-M10', 'timestamp': 87}
+{'sender': 8, 'receiver': 4, 'type': 'request', 'params': 'connect', 'ID': 'N8-M14', 'timestamp': 87}
+{'sender': 8, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=8', 'ID': 'N8-M15', 'timestamp': 87}
+{'sender': 9, 'receiver': 6, 'type': 'request', 'params': 'connect', 'ID': 'N9-M98', 'timestamp': 87}
+{'sender': 9, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=9', 'ID': 'N9-M99', 'timestamp': 87}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__H_______
+___H______
+___W______
+____W_____
+_____W__H_
+_H____W___
+___S___WH_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 1, 'receiver': 9, 'type': 'request', 'params': 'connect', 'ID': 'N1-M11', 'timestamp': 88}
+{'sender': 1, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=1', 'ID': 'N1-M12', 'timestamp': 88}
+{'sender': 3, 'receiver': 7, 'type': 'response', 'params': 'accept', 'ID': 'N3-M11', 'timestamp': 88}
+{'sender': 3, 'receiver': 7, 'type': 'request', 'params': 'connect', 'ID': 'N3-M12', 'timestamp': 88}
+{'sender': 3, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=3', 'ID': 'N3-M13', 'timestamp': 88}
+{'sender': 4, 'receiver': 8, 'type': 'response', 'params': 'accept', 'ID': 'N4-M17', 'timestamp': 88}
+{'sender': 4, 'receiver': 8, 'type': 'request', 'params': 'connect', 'ID': 'N4-M18', 'timestamp': 88}
+{'sender': 4, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=4', 'ID': 'N4-M19', 'timestamp': 88}
+{'sender': 5, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=5', 'ID': 'N5-M8', 'timestamp': 88}
+{'sender': 6, 'receiver': 9, 'type': 'response', 'params': 'accept', 'ID': 'N6-M8', 'timestamp': 88}
+{'sender': 6, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=6', 'ID': 'N6-M9', 'timestamp': 88}
+{'sender': 7, 'receiver': 3, 'type': 'response', 'params': 'accept', 'ID': 'N7-M11', 'timestamp': 88}
+{'sender': 7, 'receiver': 3, 'type': 'request', 'params': 'connect', 'ID': 'N7-M12', 'timestamp': 88}
+{'sender': 7, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=7', 'ID': 'N7-M13', 'timestamp': 88}
+{'sender': 8, 'receiver': 4, 'type': 'response', 'params': 'accept', 'ID': 'N8-M16', 'timestamp': 88}
+{'sender': 8, 'receiver': 4, 'type': 'request', 'params': 'connect', 'ID': 'N8-M17', 'timestamp': 88}
+{'sender': 8, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=8', 'ID': 'N8-M18', 'timestamp': 88}
+------------------------------------------------------------------------
+n= 1
+ap? True
+Battery level= 14.730000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 3
+ap? True
+Battery level= 14.420000 %
+Connected?False
+associated nodes = {7}
+pings list=[]
+input = []
+output = []
+n= 4
+ap? True
+Battery level= 12.560000 %
+Connected?False
+associated nodes = {8}
+pings list=[]
+input = []
+output = []
+n= 5
+ap? True
+Battery level= 15.730000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 6
+ap? True
+Battery level= 15.420000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 7
+ap? True
+Battery level= 14.420000 %
+Connected?False
+associated nodes = {3}
+pings list=[]
+input = []
+output = []
+n= 8
+ap? True
+Battery level= 13.000000 %
+Connected?False
+associated nodes = {4}
+pings list=[]
+input = []
+output = []
+timestamp = 88
+-----------------------Current queue------------------------------------
+{'sender': 1, 'receiver': 9, 'type': 'request', 'params': 'connect', 'ID': 'N1-M11', 'timestamp': 88}
+{'sender': 1, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=1', 'ID': 'N1-M12', 'timestamp': 88}
+{'sender': 3, 'receiver': 7, 'type': 'response', 'params': 'accept', 'ID': 'N3-M11', 'timestamp': 88}
+{'sender': 3, 'receiver': 7, 'type': 'request', 'params': 'connect', 'ID': 'N3-M12', 'timestamp': 88}
+{'sender': 3, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=3', 'ID': 'N3-M13', 'timestamp': 88}
+{'sender': 4, 'receiver': 8, 'type': 'response', 'params': 'accept', 'ID': 'N4-M17', 'timestamp': 88}
+{'sender': 4, 'receiver': 8, 'type': 'request', 'params': 'connect', 'ID': 'N4-M18', 'timestamp': 88}
+{'sender': 4, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=4', 'ID': 'N4-M19', 'timestamp': 88}
+{'sender': 5, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=5', 'ID': 'N5-M8', 'timestamp': 88}
+{'sender': 6, 'receiver': 9, 'type': 'response', 'params': 'accept', 'ID': 'N6-M8', 'timestamp': 88}
+{'sender': 6, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=6', 'ID': 'N6-M9', 'timestamp': 88}
+{'sender': 7, 'receiver': 3, 'type': 'response', 'params': 'accept', 'ID': 'N7-M11', 'timestamp': 88}
+{'sender': 7, 'receiver': 3, 'type': 'request', 'params': 'connect', 'ID': 'N7-M12', 'timestamp': 88}
+{'sender': 7, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=7', 'ID': 'N7-M13', 'timestamp': 88}
+{'sender': 8, 'receiver': 4, 'type': 'response', 'params': 'accept', 'ID': 'N8-M16', 'timestamp': 88}
+{'sender': 8, 'receiver': 4, 'type': 'request', 'params': 'connect', 'ID': 'N8-M17', 'timestamp': 88}
+{'sender': 8, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=8', 'ID': 'N8-M18', 'timestamp': 88}
+------------------------------------------------------------------------
+World map:
+__________
+____H_____
+__H_______
+___H______
+___W______
+____W_____
+_____W__H_
+_H____W___
+___H___WH_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 1, 'receiver': 9, 'type': 'request', 'params': 'connect', 'ID': 'N1-M13', 'timestamp': 89}
+{'sender': 1, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=1', 'ID': 'N1-M14', 'timestamp': 89}
+{'sender': 3, 'receiver': 7, 'type': 'response', 'params': 'accept', 'ID': 'N3-M14', 'timestamp': 89}
+{'sender': 3, 'receiver': 7, 'type': 'request', 'params': 'connect', 'ID': 'N3-M15', 'timestamp': 89}
+{'sender': 3, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=3', 'ID': 'N3-M16', 'timestamp': 89}
+{'sender': 4, 'receiver': 8, 'type': 'response', 'params': 'accept', 'ID': 'N4-M20', 'timestamp': 89}
+{'sender': 4, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=4', 'ID': 'N4-M21', 'timestamp': 89}
+{'sender': 5, 'receiver': 4, 'type': 'request', 'params': 'connect', 'ID': 'N5-M9', 'timestamp': 89}
+{'sender': 5, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=5', 'ID': 'N5-M10', 'timestamp': 89}
+{'sender': 6, 'receiver': 1, 'type': 'request', 'params': 'connect', 'ID': 'N6-M10', 'timestamp': 89}
+{'sender': 6, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=6', 'ID': 'N6-M11', 'timestamp': 89}
+{'sender': 7, 'receiver': 3, 'type': 'response', 'params': 'accept', 'ID': 'N7-M14', 'timestamp': 89}
+{'sender': 7, 'receiver': 3, 'type': 'request', 'params': 'connect', 'ID': 'N7-M15', 'timestamp': 89}
+{'sender': 7, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=7', 'ID': 'N7-M16', 'timestamp': 89}
+{'sender': 8, 'receiver': 4, 'type': 'response', 'params': 'accept', 'ID': 'N8-M19', 'timestamp': 89}
+{'sender': 8, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=8', 'ID': 'N8-M20', 'timestamp': 89}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 10.410000 %
+Connected?False
+input = []
+output = []
+n= 3
+ap? True
+Battery level= 9.880000 %
+Connected?False
+associated nodes = {7}
+pings list=[]
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 8.220000 %
+Connected?False
+input = []
+output = []
+n= 5
+ap? True
+Battery level= 11.510000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 6
+ap? True
+Battery level= 11.200000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 7
+ap? True
+Battery level= 9.880000 %
+Connected?False
+associated nodes = {3}
+pings list=[]
+input = []
+output = []
+n= 8
+ap? True
+Battery level= 8.560000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+timestamp = 89
+-----------------------Current queue------------------------------------
+{'sender': 1, 'receiver': 9, 'type': 'request', 'params': 'connect', 'ID': 'N1-M13', 'timestamp': 89}
+{'sender': 1, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=1', 'ID': 'N1-M14', 'timestamp': 89}
+{'sender': 3, 'receiver': 7, 'type': 'response', 'params': 'accept', 'ID': 'N3-M14', 'timestamp': 89}
+{'sender': 3, 'receiver': 7, 'type': 'request', 'params': 'connect', 'ID': 'N3-M15', 'timestamp': 89}
+{'sender': 3, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=3', 'ID': 'N3-M16', 'timestamp': 89}
+{'sender': 4, 'receiver': 8, 'type': 'response', 'params': 'accept', 'ID': 'N4-M20', 'timestamp': 89}
+{'sender': 4, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=4', 'ID': 'N4-M21', 'timestamp': 89}
+{'sender': 5, 'receiver': 4, 'type': 'request', 'params': 'connect', 'ID': 'N5-M9', 'timestamp': 89}
+{'sender': 5, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=5', 'ID': 'N5-M10', 'timestamp': 89}
+{'sender': 6, 'receiver': 1, 'type': 'request', 'params': 'connect', 'ID': 'N6-M10', 'timestamp': 89}
+{'sender': 6, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=6', 'ID': 'N6-M11', 'timestamp': 89}
+{'sender': 7, 'receiver': 3, 'type': 'response', 'params': 'accept', 'ID': 'N7-M14', 'timestamp': 89}
+{'sender': 7, 'receiver': 3, 'type': 'request', 'params': 'connect', 'ID': 'N7-M15', 'timestamp': 89}
+{'sender': 7, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=7', 'ID': 'N7-M16', 'timestamp': 89}
+{'sender': 8, 'receiver': 4, 'type': 'response', 'params': 'accept', 'ID': 'N8-M19', 'timestamp': 89}
+{'sender': 8, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=8', 'ID': 'N8-M20', 'timestamp': 89}
+------------------------------------------------------------------------
+World map:
+__________
+____H_____
+__S_______
+___H______
+___W______
+____W_____
+_____W__H_
+_S____W___
+___H___WH_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 1, 'receiver': 6, 'type': 'response', 'params': 'accept', 'ID': 'N1-M15', 'timestamp': 90}
+{'sender': 1, 'receiver': 6, 'type': 'request', 'params': 'connect', 'ID': 'N1-M16', 'timestamp': 90}
+{'sender': 3, 'receiver': 7, 'type': 'response', 'params': 'accept', 'ID': 'N3-M17', 'timestamp': 90}
+{'sender': 3, 'receiver': 7, 'type': 'request', 'params': 'connect', 'ID': 'N3-M18', 'timestamp': 90}
+{'sender': 3, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=3', 'ID': 'N3-M19', 'timestamp': 90}
+{'sender': 4, 'receiver': 5, 'type': 'response', 'params': 'accept', 'ID': 'N4-M22', 'timestamp': 90}
+{'sender': 4, 'receiver': 8, 'type': 'request', 'params': 'connect', 'ID': 'N4-M23', 'timestamp': 90}
+{'sender': 5, 'receiver': 4, 'type': 'request', 'params': 'connect', 'ID': 'N5-M11', 'timestamp': 90}
+{'sender': 5, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=5', 'ID': 'N5-M12', 'timestamp': 90}
+{'sender': 6, 'receiver': 1, 'type': 'request', 'params': 'connect', 'ID': 'N6-M12', 'timestamp': 90}
+{'sender': 6, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=6', 'ID': 'N6-M13', 'timestamp': 90}
+{'sender': 7, 'receiver': 3, 'type': 'response', 'params': 'accept', 'ID': 'N7-M17', 'timestamp': 90}
+{'sender': 7, 'receiver': 3, 'type': 'request', 'params': 'connect', 'ID': 'N7-M18', 'timestamp': 90}
+{'sender': 7, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=7', 'ID': 'N7-M19', 'timestamp': 90}
+{'sender': 8, 'receiver': 4, 'type': 'request', 'params': 'connect', 'ID': 'N8-M21', 'timestamp': 90}
+{'sender': 8, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=8', 'ID': 'N8-M22', 'timestamp': 90}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 6.280000 %
+Connected?False
+input = []
+output = []
+n= 3
+ap? True
+Battery level= 5.540000 %
+Connected?False
+associated nodes = {7}
+pings list=[]
+input = []
+output = []
+n= 4
+ap? False
+Battery level= 4.080000 %
+Connected?False
+input = []
+output = []
+n= 5
+ap? True
+Battery level= 7.490000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 6
+ap? True
+Battery level= 7.180000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 7
+ap? True
+Battery level= 5.540000 %
+Connected?False
+associated nodes = {3}
+pings list=[]
+input = []
+output = []
+n= 8
+ap? True
+Battery level= 4.530000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+timestamp = 90
+-----------------------Current queue------------------------------------
+{'sender': 1, 'receiver': 6, 'type': 'response', 'params': 'accept', 'ID': 'N1-M15', 'timestamp': 90}
+{'sender': 1, 'receiver': 6, 'type': 'request', 'params': 'connect', 'ID': 'N1-M16', 'timestamp': 90}
+{'sender': 3, 'receiver': 7, 'type': 'response', 'params': 'accept', 'ID': 'N3-M17', 'timestamp': 90}
+{'sender': 3, 'receiver': 7, 'type': 'request', 'params': 'connect', 'ID': 'N3-M18', 'timestamp': 90}
+{'sender': 3, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=3', 'ID': 'N3-M19', 'timestamp': 90}
+{'sender': 4, 'receiver': 5, 'type': 'response', 'params': 'accept', 'ID': 'N4-M22', 'timestamp': 90}
+{'sender': 4, 'receiver': 8, 'type': 'request', 'params': 'connect', 'ID': 'N4-M23', 'timestamp': 90}
+{'sender': 5, 'receiver': 4, 'type': 'request', 'params': 'connect', 'ID': 'N5-M11', 'timestamp': 90}
+{'sender': 5, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=5', 'ID': 'N5-M12', 'timestamp': 90}
+{'sender': 6, 'receiver': 1, 'type': 'request', 'params': 'connect', 'ID': 'N6-M12', 'timestamp': 90}
+{'sender': 6, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=6', 'ID': 'N6-M13', 'timestamp': 90}
+{'sender': 7, 'receiver': 3, 'type': 'response', 'params': 'accept', 'ID': 'N7-M17', 'timestamp': 90}
+{'sender': 7, 'receiver': 3, 'type': 'request', 'params': 'connect', 'ID': 'N7-M18', 'timestamp': 90}
+{'sender': 7, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=7', 'ID': 'N7-M19', 'timestamp': 90}
+{'sender': 8, 'receiver': 4, 'type': 'request', 'params': 'connect', 'ID': 'N8-M21', 'timestamp': 90}
+{'sender': 8, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=8', 'ID': 'N8-M22', 'timestamp': 90}
+------------------------------------------------------------------------
+World map:
+__________
+____H_____
+__S_______
+___H______
+___W______
+____W_____
+_____W__H_
+_S____W___
+___H___WH_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 1, 'receiver': 6, 'type': 'response', 'params': 'accept', 'ID': 'N1-M17', 'timestamp': 91}
+{'sender': 1, 'receiver': 6, 'type': 'request', 'params': 'connect', 'ID': 'N1-M18', 'timestamp': 91}
+{'sender': 3, 'receiver': 7, 'type': 'response', 'params': 'accept', 'ID': 'N3-M20', 'timestamp': 91}
+{'sender': 3, 'receiver': 7, 'type': 'request', 'params': 'connect', 'ID': 'N3-M21', 'timestamp': 91}
+{'sender': 3, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=3', 'ID': 'N3-M22', 'timestamp': 91}
+{'sender': 4, 'receiver': 5, 'type': 'response', 'params': 'accept', 'ID': 'N4-M24', 'timestamp': 91}
+{'sender': 4, 'receiver': 8, 'type': 'response', 'params': 'accept', 'ID': 'N4-M25', 'timestamp': 91}
+{'sender': 4, 'receiver': 8, 'type': 'request', 'params': 'connect', 'ID': 'N4-M26', 'timestamp': 91}
+{'sender': 5, 'receiver': 4, 'type': 'request', 'params': 'connect', 'ID': 'N5-M13', 'timestamp': 91}
+{'sender': 5, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=5', 'ID': 'N5-M14', 'timestamp': 91}
+{'sender': 6, 'receiver': 1, 'type': 'response', 'params': 'accept', 'ID': 'N6-M14', 'timestamp': 91}
+{'sender': 6, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=6', 'ID': 'N6-M15', 'timestamp': 91}
+{'sender': 7, 'receiver': 3, 'type': 'response', 'params': 'accept', 'ID': 'N7-M20', 'timestamp': 91}
+{'sender': 7, 'receiver': 3, 'type': 'request', 'params': 'connect', 'ID': 'N7-M21', 'timestamp': 91}
+{'sender': 7, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=7', 'ID': 'N7-M22', 'timestamp': 91}
+{'sender': 8, 'receiver': 4, 'type': 'response', 'params': 'accept', 'ID': 'N8-M23', 'timestamp': 91}
+{'sender': 8, 'receiver': 4, 'type': 'request', 'params': 'connect', 'ID': 'N8-M24', 'timestamp': 91}
+{'sender': 8, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=8', 'ID': 'N8-M25', 'timestamp': 91}
+------------------------------------------------------------------------
+n= 1
+ap? False
+Battery level= 2.170000 %
+Connected?False
+input = []
+output = []
+n= 3
+ap? True
+Battery level= 1.220000 %
+Connected?False
+associated nodes = {7}
+pings list=[]
+input = []
+output = []
+n= 4
+ap? False
+Battery level= -0.340000 %
+Connected?False
+input = []
+output = []
+n= 5
+ap? False
+Battery level= 3.380000 %
+Connected?False
+input = []
+output = []
+n= 6
+ap? False
+Battery level= 3.060000 %
+Connected?False
+input = []
+output = []
+n= 7
+ap? True
+Battery level= 1.220000 %
+Connected?False
+associated nodes = {3}
+pings list=[]
+input = []
+output = []
+n= 8
+ap? True
+Battery level= 0.220000 %
+Connected?False
+associated nodes = {4}
+pings list=[]
+input = []
+output = []
+timestamp = 91
+-----------------------Current queue------------------------------------
+{'sender': 1, 'receiver': 6, 'type': 'response', 'params': 'accept', 'ID': 'N1-M17', 'timestamp': 91}
+{'sender': 1, 'receiver': 6, 'type': 'request', 'params': 'connect', 'ID': 'N1-M18', 'timestamp': 91}
+{'sender': 3, 'receiver': 7, 'type': 'response', 'params': 'accept', 'ID': 'N3-M20', 'timestamp': 91}
+{'sender': 3, 'receiver': 7, 'type': 'request', 'params': 'connect', 'ID': 'N3-M21', 'timestamp': 91}
+{'sender': 3, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=3', 'ID': 'N3-M22', 'timestamp': 91}
+{'sender': 4, 'receiver': 5, 'type': 'response', 'params': 'accept', 'ID': 'N4-M24', 'timestamp': 91}
+{'sender': 4, 'receiver': 8, 'type': 'response', 'params': 'accept', 'ID': 'N4-M25', 'timestamp': 91}
+{'sender': 4, 'receiver': 8, 'type': 'request', 'params': 'connect', 'ID': 'N4-M26', 'timestamp': 91}
+{'sender': 5, 'receiver': 4, 'type': 'request', 'params': 'connect', 'ID': 'N5-M13', 'timestamp': 91}
+{'sender': 5, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=5', 'ID': 'N5-M14', 'timestamp': 91}
+{'sender': 6, 'receiver': 1, 'type': 'response', 'params': 'accept', 'ID': 'N6-M14', 'timestamp': 91}
+{'sender': 6, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=6', 'ID': 'N6-M15', 'timestamp': 91}
+{'sender': 7, 'receiver': 3, 'type': 'response', 'params': 'accept', 'ID': 'N7-M20', 'timestamp': 91}
+{'sender': 7, 'receiver': 3, 'type': 'request', 'params': 'connect', 'ID': 'N7-M21', 'timestamp': 91}
+{'sender': 7, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=7', 'ID': 'N7-M22', 'timestamp': 91}
+{'sender': 8, 'receiver': 4, 'type': 'response', 'params': 'accept', 'ID': 'N8-M23', 'timestamp': 91}
+{'sender': 8, 'receiver': 4, 'type': 'request', 'params': 'connect', 'ID': 'N8-M24', 'timestamp': 91}
+{'sender': 8, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=8', 'ID': 'N8-M25', 'timestamp': 91}
+------------------------------------------------------------------------
+World map:
+__________
+____S_____
+__S_______
+___H______
+___W______
+____W_____
+_____W__H_
+______W___
+___S___WH_
+________W_
+
+-----------------------Next queue---------------------------------------
+{'sender': 1, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=1', 'ID': 'N1-M19', 'timestamp': 92}
+{'sender': 3, 'receiver': 7, 'type': 'response', 'params': 'accept', 'ID': 'N3-M23', 'timestamp': 92}
+{'sender': 3, 'receiver': 7, 'type': 'request', 'params': 'connect', 'ID': 'N3-M24', 'timestamp': 92}
+{'sender': 3, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=3', 'ID': 'N3-M25', 'timestamp': 92}
+{'sender': 5, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=5', 'ID': 'N5-M15', 'timestamp': 92}
+{'sender': 6, 'receiver': 1, 'type': 'response', 'params': 'accept', 'ID': 'N6-M16', 'timestamp': 92}
+{'sender': 6, 'receiver': 1, 'type': 'request', 'params': 'connect', 'ID': 'N6-M17', 'timestamp': 92}
+{'sender': 7, 'receiver': 3, 'type': 'response', 'params': 'accept', 'ID': 'N7-M23', 'timestamp': 92}
+{'sender': 7, 'receiver': 3, 'type': 'request', 'params': 'connect', 'ID': 'N7-M24', 'timestamp': 92}
+{'sender': 7, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=7', 'ID': 'N7-M25', 'timestamp': 92}
+{'sender': 8, 'receiver': 4, 'type': 'response', 'params': 'accept', 'ID': 'N8-M26', 'timestamp': 92}
+{'sender': 8, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=8', 'ID': 'N8-M27', 'timestamp': 92}
+------------------------------------------------------------------------
+n= 1
+ap? True
+Battery level= -2.140000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 3
+ap? True
+Battery level= -3.500000 %
+Connected?False
+associated nodes = {7}
+pings list=[]
+input = []
+output = []
+n= 5
+ap? True
+Battery level= -0.830000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+n= 6
+ap? False
+Battery level= -1.460000 %
+Connected?False
+input = []
+output = []
+n= 7
+ap? True
+Battery level= -3.500000 %
+Connected?False
+associated nodes = {3}
+pings list=[]
+input = []
+output = []
+n= 8
+ap? True
+Battery level= -4.400000 %
+Connected?False
+associated nodes = set()
+pings list=[]
+input = []
+output = []
+timestamp = 92
+-----------------------Current queue------------------------------------
+{'sender': 1, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=1', 'ID': 'N1-M19', 'timestamp': 92}
+{'sender': 3, 'receiver': 7, 'type': 'response', 'params': 'accept', 'ID': 'N3-M23', 'timestamp': 92}
+{'sender': 3, 'receiver': 7, 'type': 'request', 'params': 'connect', 'ID': 'N3-M24', 'timestamp': 92}
+{'sender': 3, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=3', 'ID': 'N3-M25', 'timestamp': 92}
+{'sender': 5, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=5', 'ID': 'N5-M15', 'timestamp': 92}
+{'sender': 6, 'receiver': 1, 'type': 'response', 'params': 'accept', 'ID': 'N6-M16', 'timestamp': 92}
+{'sender': 6, 'receiver': 1, 'type': 'request', 'params': 'connect', 'ID': 'N6-M17', 'timestamp': 92}
+{'sender': 7, 'receiver': 3, 'type': 'response', 'params': 'accept', 'ID': 'N7-M23', 'timestamp': 92}
+{'sender': 7, 'receiver': 3, 'type': 'request', 'params': 'connect', 'ID': 'N7-M24', 'timestamp': 92}
+{'sender': 7, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=7', 'ID': 'N7-M25', 'timestamp': 92}
+{'sender': 8, 'receiver': 4, 'type': 'response', 'params': 'accept', 'ID': 'N8-M26', 'timestamp': 92}
+{'sender': 8, 'receiver': -1, 'type': 'beacon', 'SSID': 'Node=8', 'ID': 'N8-M27', 'timestamp': 92}
+------------------------------------------------------------------------
+World map:
+__________
+__________
+__________
+__________
+___W______
+____W_____
+_____W____
+______W___
+_______W__
+________W_
+
