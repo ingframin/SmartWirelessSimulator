@@ -1,6 +1,86 @@
 from random import randint
 from random import shuffle
 
+#Not active yet, started refactoring
+class AccessPointComponent:
+
+    def __init__(self,ssid,max_cons = 5):
+        self.ssid = ssid
+        self.max_cons = max_cons
+        self.a_nodes = set()
+
+    def send_beacon(self, address):
+        '''Broadcast the SSID'''
+        message = {'sender':address,'receiver':-1,'type':'beacon','SSID':self.ssid}
+        return message
+
+    def process_connection_request(self,address,request):
+        '''Process connection requests and decide to accept or refuse'''
+        response = {'sender':address,'receiver':request['sender'],
+                    'type':'response'}
+        
+        if len(self.a_nodes) < self.max_cons:
+            self.a_nodes.add(request['sender'])
+            response['params']='accept'
+        else:
+            response['params']='refuse'
+        
+        return response
+
+    def reset(self):
+        self.ssid = ''
+        self.a_nodes.clear()
+
+    def set_ssid(self,ssid):
+        self.ssid = ssid
+
+class StationComponent:
+    
+    def __init__(self):
+        #available networks
+        self.networks = []
+        #this indicates if the node is associated to a network
+        self.current_ap = None
+        self.wait_response = False
+        
+
+    def scan(self, visible_aps):
+        '''Adds the visible access points to the available network list.
+        Each ap is represented as a dictionary with 3 fields:
+        - ssid
+        - address
+        - distance
+        it's up to the AgentNode to remove its address'''
+
+        self.networks.clear()
+
+        for v in visible_aps:
+
+            self.networks.append((v['ssid'], v['address'], v['distance']))
+
+    def connection_request(self):
+        '''tries to connect to all avilable networks'''
+        request = {'receiver':self.networks[-1],'type':'request','params':'connect'}
+        self.wait_response = True
+        return request
+    
+    def connection_response(self,response):
+        
+        if response['params']=='accept':
+            self.current_ap = self.networks[-1]
+            self.wait_response = False
+            return
+        else:
+            self.wait_response = False
+            self.networks.pop()
+
+    
+    def connected(self):
+        return self.current_ap != None
+
+
+########################################################################################################
+
 class AgentNode:
     '''Base class for node agents'''
     def __init__(self,address=0, x=0, y=0):
@@ -8,6 +88,7 @@ class AgentNode:
         #node position
         self.x = x
         self.y = y
+
         #available networks
         self.networks = []
         self.aps = []
@@ -135,16 +216,17 @@ class AgentNode:
 
             if m['type'] == 'response':
                 if m['params']=='accept':
-                    if len(self.candidates) > 1:
+                    try:
                         self.current_ap = self.candidates[-1]
-                    else:
-                        print("Current AP="+str(self.current_ap))
+                    except:
+                        print('---no candidates available for connection---')
                 if m['params']=='refuse':
                     try:
                         self.candidates.pop()
+                        print("candidates="+str(self.candidates))
                         self.connect(self.candidates[-1])
                     except:
-                        pass
+                        print("candidates="+str(self.candidates))
 
             if m['type']=='beacon':
                 self.aps.append(m['sender'])
@@ -202,7 +284,7 @@ class AgentNode:
 
                 if len(self.candidates)==0:
                     self.scan(visibility_list)
-                    min_dist = 100
+                    
                     for n in self.networks:
                         #connect to closest access point
                         if n[1] == self.address:
