@@ -1,4 +1,5 @@
 from random import randint
+from random import shuffle
 
 class AgentNode:
     '''Base class for node agents'''
@@ -21,6 +22,8 @@ class AgentNode:
 
         #associated nodes
         self.a_nodes = set()
+        #max connections
+        self.max_cons = 5
 
         #this indicates if the node is associated to a network
         self.current_ap = None
@@ -43,6 +46,7 @@ class AgentNode:
         #Message counter
         self.m_count = 0
         self.no_conns = 0
+        self.bid = 0
 
     def scan(self,visibility_list):
         '''scan the visible nodes to discover available networks'''
@@ -87,9 +91,11 @@ class AgentNode:
         self.battery -= 0.1
         response = {'sender':self.address,'receiver':request['sender'],
                     'type':'response'}
-
-        self.a_nodes.add(request['sender'])
-        response['params']='accept'
+        if len(self.a_nodes)<self.max_cons:
+            self.a_nodes.add(request['sender'])
+            response['params']='accept'
+        else:
+            response['params']='refuse'
 
         self.message_out.append(response)
 
@@ -111,6 +117,7 @@ class AgentNode:
 
     def react(self):
         '''Reactive part of the control loop'''
+        self.aps.clear()
         for m in self.message_in:
             self.battery -= 0.01
             if m['type'] == 'ping':
@@ -133,10 +140,21 @@ class AgentNode:
                     else:
                         print("Current AP="+str(self.current_ap))
                 if m['params']=='refuse':
-                    self.current_ap = None
+                    try:
+                        self.candidates.pop()
+                        self.connect(self.candidates[-1])
+                    except:
+                        pass
 
             if m['type']=='beacon':
                 self.aps.append(m['sender'])
+
+            if m['type'] == 'solve_deadlock':
+                if m['params'] > self.bid:
+                    self.a_nodes.clear()
+                    self.is_ap = False
+                    self.no_conns = 0
+                    self.set_station()
 
         self.message_in = []
 
@@ -173,27 +191,27 @@ class AgentNode:
         '''BDI part of the control loop'''
         if self.is_sta:
             #Intentions when in station mode
-            self.scan(visibility_list)
+
             if self.connected():
 
-                if self.current_ap not in self.networks:
+                if self.current_ap not in self.networks or self.current_ap[1] not in self.aps:
                     print("AP Disappeared!")
                     self.set_station()
-
 
             if not self.connected():
 
                 if len(self.candidates)==0:
-
+                    self.scan(visibility_list)
                     min_dist = 100
                     for n in self.networks:
                         #connect to closest access point
                         if n[1] == self.address:
                             continue
-                        if n[2] < min_dist:
-                            self.candidates.append(n)
+
+                        self.candidates.append(n)
 
                 if len(self.candidates) > 0:
+                    #shuffle(self.candidates)
                     self.connect(self.candidates[-1])
 
                 else:
@@ -213,12 +231,20 @@ class AgentNode:
 
         if self.is_ap and self.is_sta:
             if self.current_ap != None:
-                if len(self.a_nodes) == 1:
-                    self.is_ap = False
+
+                if len(self.a_nodes)<2:
+                    # m = {'sender':self.address,'receiver':self.current_ap[-1]}
+                    # m['type'] = 'solve_deadlock'
+                    # self.bid = randint(0,255)
+                    # print(self.bid)
+                    # m['params']=self.bid
+                    #self.message_out.append(m)
                     self.a_nodes.clear()
-                    self.ssid = ''
+                    self.is_ap = False
                     self.no_conns = 0
                     self.set_station()
+
+
 
     def run(self,message_queue,next_queue,visibility_list,timer):
         '''function to be called in the main loop'''
