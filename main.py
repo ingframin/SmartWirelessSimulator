@@ -31,7 +31,7 @@ current_queue = []
 next_queue = []
 wrld = World()
 wrld.load(config_file+'.cfg')
-f = open(config_file+'-'+strftime("%d-%m-%Y %H:%M:%S", gmtime())+'.txt','w')
+f = open(config_file+'-'+strftime("%d-%m-%Y %H_%M_%S", gmtime())+'.txt','w')
 #nodes = wrld.list_nodes()
 node_vis={}
 while running:
