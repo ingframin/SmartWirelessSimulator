@@ -318,18 +318,20 @@ class AgentNode:
 
         if self.is_ap and self.is_sta:
             if self.current_ap != None:
+                pass
 
-                if len(self.a_nodes)<2:
-                    # m = {'sender':self.address,'receiver':self.current_ap[-1]}
-                    # m['type'] = 'solve_deadlock'
-                    # self.bid = randint(0,255)
-                    # print(self.bid)
-                    # m['params']=self.bid
-                    #self.message_out.append(m)
-                    self.a_nodes.clear()
-                    self.is_ap = False
-                    self.no_conns = 0
-                    self.set_station()
+                #if len(self.a_nodes)==0 or (len(self.a_nodes)==1 and self.current_ap[1] in self.a_nodes) :
+                # if len(self.a_nodes)==0:
+                #     # m = {'sender':self.address,'receiver':self.current_ap[-1]}
+                #     # m['type'] = 'solve_deadlock'
+                #     # self.bid = randint(0,255)
+                #     # print(self.bid)
+                #     # m['params']=self.bid
+                #     #self.message_out.append(m)
+                #     self.a_nodes.clear()
+                #     self.is_ap = False
+                #     self.no_conns = 0
+                #     self.set_station()
 
 
 
