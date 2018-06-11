@@ -281,7 +281,12 @@ class AgentNode:
                     self.set_station()
 
             if not self.connected():
-
+                #Here is where the selection criteria goes
+                #Here there should be a function that selects the best criteria
+                #depending on the configuration.
+                #The same criterium is not always good. Sometimes it prolongs the life of the system, 
+                #sometims it shortens it.
+                #Apply strategy pattern. Find algorithm to select the strategy.
                 if len(self.candidates)==0:
                     self.scan(visibility_list)
                     
