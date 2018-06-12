@@ -20,7 +20,7 @@ class WallNode:
 Node = namedtuple('Node', ['x', 'y'])
 
 def geom_distance(node1,node2):
-        return math.sqrt((node2.x-node1.x)**2 + (node2.y-node1.y)**2)
+        return sqrt((node2.x-node1.x)**2 + (node2.y-node1.y)**2)
 
 class Grid:
     def __init__(self,width,height):
