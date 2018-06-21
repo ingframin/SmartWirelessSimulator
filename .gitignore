@@ -40,3 +40,6 @@ Thumbs.db
 #Python cache
 #############
 __pycache__
+__pycache__/agent_node.cpython-36.pyc
+__pycache__/config_parser.cpython-36.pyc
+__pycache__/world.cpython-36.pyc
