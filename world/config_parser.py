@@ -1,8 +1,10 @@
 import re
-AGENT = re.compile('\{agent:\s*mac\s*=\s*[0-9]*,\s*x\s*=\s*[0-9]*,\s*y\s*=\s*[0-9]*\s*\}')
-WORLD = re.compile('\{world:\s*width=\s*[0-9]*,\s*height=\s*[0-9]*,\s*v_threshold=\s*[0-9]*\s*\}')
-WALL = re.compile('\{wall:\s*x=\s*[0-9]*,\s*y=\s*[0-9]*\s*\}')
-
+AGENT = re.compile(r'\{agent:\s*mac\s*=\s*[0-9]*,\s*x\s*=\s*[0-9]*,\s*y\s*=\s*[0-9]*\s*\}')
+WORLD = re.compile(r'\{world:\s*width=\s*[0-9]*,\s*height=\s*[0-9]*,\s*v_threshold=\s*[0-9]*\s*\}')
+WALL = re.compile(r'\{wall:\s*x=\s*[0-9]*,\s*y=\s*[0-9]*\s*\}')
+####################################################################################################
+#Maybe I can write the configuration in JSON...                                                    #
+####################################################################################################
 def read_config(filename):
     lines = None
     agents = []
@@ -68,10 +70,17 @@ def read_config(filename):
             if 'y' in p:
                 wl['y'] = int(p.replace('y=',''))
         walls.append(wl)
+    with open(filename[0:-4]+'.json','w') as f:
+        ws = '{"world":'+str(world).replace("'",'"')+','
+        print(ws,file=f)
+        astr = '"agents":'+str(agents).replace("'",'"')+','
+        print(astr,file=f)
+        wallstr = '"walls":'+str(walls).replace("'",'"')+'}'
+        print(wallstr,file=f)
 
     return world,agents,walls
 
 
 
 if __name__=='__main__':
-    read_config("config1.cfg")
+    print(read_config("config1.cfg"))

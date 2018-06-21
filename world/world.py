@@ -1,52 +1,72 @@
-from math import *
 from itertools import product
-from config_parser import *
-from node import *
+from .config_parser import read_config
+from .node import *
 #Nodes do not share any parental/inheritance relations,
 #I am relying on duck-typing
 
 
 
 class Grid:
+    ''' 
+        Container object for nodes.
+        It represents a bidimensional grid
+    ''' 
     def __init__(self,width,height):
         self.width = width
         self.height = height
         self.nodes = {}
 
-    def __getitem__(self,coord):
-        if coord.x >= self.width or coord.x <0:
-            print("x= %d y=%d"%(coord.x,coord.y))
+    def __getitem__(self,xy):
+        '''
+        input: (x,y) tuple
+        output: Node object at coordinates x,y or an EmptyNode if x,y is empty
+        errors: IndexError if x and/or y are out of bounds
+        '''
+        if xy[0] >= self.width or xy[0] <0:
+            #print("x= %d y=%d"%(xy[0],xy[1]))
             raise IndexError("x coordinate out of bounds")
-        if coord.y >= self.height or coord.y <0:
-            print("x= %d y=%d"%(coord.x,coord.y))
+        if xy[1] >= self.height or xy[1] <0:
+            #print("x= %d y=%d"%(xy[0],xy[1]))
             raise IndexError("y coordinate out of bounds")
 
-        if coord in self.nodes:
-            return self.nodes[coord]
+        if xy in self.nodes:
+            return self.nodes[xy]
         else:
-            return None
+            return EmptyNode(xy[0],xy[1])
 
-    def __setitem__(self,coord,node):
-        if coord.x >= self.width or coord.x <0:
-            print("x= %d y=%d"%(coord.x,coord.y))
+    def __setitem__(self,xy,node):
+        if xy[0] >= self.width or xy[0] <0:
+            #print("x= %d y=%d"%(xy[0],xy[1]))
             raise IndexError("x coordinate out of bounds")
-        if coord.y >= self.height or coord.y <0:
-            print("x= %d y=%d"%(coord.x,coord.y))
+        if xy[1] >= self.height or xy[1] <0:
+            #print("x= %d y=%d"%(xy[0],xy[1]))
             raise IndexError("y coordinate out of bounds")
-        self.nodes[coord] = node
+        self.nodes[xy] = node
 
     def __str__(self):
         s = ""
         for y in range(self.height):
             for x in range(self.width):
                 if Node(x,y) in self.nodes:
-                    s+= str(self.nodes[Node(x,y)])
+                    s+= str(self.nodes[(x,y)])
                 else:
                     s+='_'
             s+='\n'
         return s
 
-    def compute_neighbors(self, node):
+    def remove(self,xy):
+        if xy[0] >= self.width or xy[0] <0:
+            #print("x= %d y=%d"%(xy[0],xy[1]))
+            raise IndexError("x coordinate out of bounds")
+        if xy[1] >= self.height or xy[1] <0:
+            #print("x= %d y=%d"%(xy[0],xy[1]))
+            raise IndexError("y coordinate out of bounds")
+        try:
+            self.nodes.pop(xy)
+        except KeyError:
+            pass
+
+    def _compute_neighbors(self, node):
 
         xc = [node.x]
         yc = [node.y]
@@ -64,9 +84,9 @@ class Grid:
         neighbors.remove(Node(node.x,node.y))
         return neighbors
 
-    def breadth_first(self, start):
+    def search(self, start):
         '''Finds minimum path between start
-        node and all other nodes'''
+        node and all other agent nodes'''
 
         frontier = []
         frontier.append(start)
@@ -78,12 +98,12 @@ class Grid:
         while len(frontier) > 0:
             
             current = frontier.pop(0)
-            neighbors = self.compute_neighbors(current)
+            neighbors = self._compute_neighbors(current)
             for node in neighbors:
 
-                if  node not in came_from and (type(self[node])!= WallNode):
+                if  node not in came_from and (type(self[(node.x,node.y)])!= WallNode):
                     frontier.append(node)
-                    if type(self[node])==AgentNode:
+                    if type(self[(node.x,node.y)])==AgentNode:
                         agents.append(node)
 
                     came_from[node]=current
@@ -99,7 +119,7 @@ class Grid:
                 paths[a].append(step)
                 steps+=1
  
-        return came_from,paths
+        return paths
 
 class World:
 
@@ -108,6 +128,7 @@ class World:
         self.width = width
         self.height = height
         self.visibility_threshold = v_threshold
+        self.agents = {}
 
     def __str__(self):
         return str(self.grid)
@@ -122,9 +143,8 @@ class World:
 
         #Load agent nodes
         for ag in agents:
-            a = AgentNode(x=ag['x'], y=ag['y'],id=ag['mac'])
-            a.set_station()
-            self.add_node(a)
+            self.agents[ag['mac']] = AgentNode(x=ag['x'], y=ag['y'],id=ag['mac'])
+            
         #Load walls
         for wl in walls:
             w = WallNode(x=wl['x'], y=wl['y'])
@@ -132,29 +152,31 @@ class World:
 
 
     def add_node(self,node):
-        if type(self.grid[Node(node.x,node.y)]) in (WallNode,AgentNode):
-            raise Exception("Cell already occupied!")
-        self.grid[Node(node.x,node.y)] = node
+        if type(self.grid[(node.x,node.y)]) != EmptyNode:
+            raise Exception("Cell already occupied")
+        if type(node) == AgentNode:
+            self.agents[node.id] = node
+
+        self.grid[(node.x,node.y)] = node
 
     def kill_node(self,node):
-        print(repr(self.grid.nodes[Node(node.x,node.y)]))
-        self.grid.nodes.pop(Node(node.x,node.y))
+        self.grid.remove((node.x,node.y))
             
     def get_node(self,addr):
-        for n in self.grid.nodes:
-            if self.grid[n].address == addr:
-                return self.grid[n]
+        if addr in self.agents:
+            return self.agents[addr]
+            
         raise Exception("Node not found")
     
     def list_nodes(self):
-        return [self.grid.nodes[n] for n in self.grid.nodes if type(self.grid.nodes[n]) == AgentNode]
+        return self.agents.values()
             
     def visibility(self,node):
         '''Given a node as input, it returns a list of all visible nodes.
         Visibility is blocked by wallsself.
         The distance is evaluated as the number of steps between
         2 nodes'''
-        cm,pth = self.grid.breadth_first(node)
+        pth = self.grid.search(node)
         visibility_list = []
         for p in pth:
             
