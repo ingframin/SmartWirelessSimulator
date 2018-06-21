@@ -1,4 +1,4 @@
-from wireless import *
+from wireless import WirelessComponent
 
 class Agent:
     def __init__(self,id,position,current_status):
