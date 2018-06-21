@@ -14,7 +14,7 @@ class Agent:
     def _process_output(self,queue):
         self.wireless.send(queue)
 
-    def run(self,time_stamp,current_queue,next_queue):
+    def run(self,time_stamp,current_queue,next_queue,visibility):
         self._process_input(current_queue)
         #here goes my elaboration
         self._process_output(next_queue)

@@ -4,7 +4,44 @@ from random import randint,shuffle
 from time import gmtime, strftime
 import sys
 
+class Simulation:
 
+    def __init__(self,config_file):
+        self.current_time = 0
+        self.running = True
+        self.current_queue = []
+        self.next_queue = []
+        self.wrld = World()
+        self.wrld.load(config_file+'.cfg')
+        self.log = []
+    
+    def run(self):
+        
+        while self.running:
+            nodes = wrld.list_nodes()
+            if len(nodes)==0:
+                break
+    
+            for n in nodes:
+                node_vis[n.id]=wrld.visibility(n.position)
+                n.run(self.current_time, self.current_queue,self.next_queue,node_vis[n.address])
+        
+                
+                if n.battery <= 0:
+                    wrld.kill_node(n)
+
+                self.current_queue = self.next_queue.copy()
+                self.next_queue.clear()
+                self.current_time += 1
+        
+
+    def file_log(self,logfile):
+        with open(logfile,'w') as f:
+            for d in self.log:
+                print(d, file=f)
+
+
+        
 config_file = None
 debug_mode = False
 
