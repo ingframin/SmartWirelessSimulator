@@ -32,12 +32,13 @@ next_queue = []
 wrld = World()
 config = read_config(config_file+'.cfg')
 wrld.config(config)
+
 wrl,agents,walls = config
 agents_table = {}
 for ag in agents:
     #temporary
     agents_table[ag['mac']] = Agent(ag['mac'],ag['x'],ag['y'])
-
+    agents_table[ag['mac']].set_station()
 
 f = open(config_file+'-'+strftime("%d-%m-%Y %H_%M_%S", gmtime())+'.txt','w')
 

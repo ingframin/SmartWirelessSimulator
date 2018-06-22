@@ -53,11 +53,13 @@ class Agent:
         '''scan the visible nodes to discover available networks'''
         self.battery -= 0.25
         self.networks.clear()
+        
+        for ap in self.aps:
 
-        for v in visibility_list:
-
-            if v[0].address in self.aps:
-                self.networks.append((v[0].ssid,v[0].address,v[1]))
+            for v in visibility_list:
+                if ap[0] == v[0].id:
+                    # ap => (address, ssid)
+                    self.networks.append((ap[1],ap[0],v[1]))
 
     def set_access_point(self,ssid):
         '''turn on access point mode'''
@@ -149,7 +151,7 @@ class Agent:
                         print("candidates="+str(self.candidates))
 
             if m['type']=='beacon':
-                self.aps.append(m['sender'])
+                self.aps.append((m['sender'],m['SSID']))
 
             if m['type'] == 'solve_deadlock':
                 if m['params'] > self.bid:
@@ -266,6 +268,8 @@ class Agent:
         self.react()
         self.execute(visibility_list)
         self.send(next_queue)
+        
+        
 
     def connected(self):
         '''is the node connected?'''
