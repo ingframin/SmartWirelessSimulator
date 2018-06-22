@@ -96,8 +96,12 @@ while running:
             print('pings list='+str(agents_table[n.id].pings), file=f)
         print('input = '+str(agents_table[n.id].message_in), file=f)
         print('output = '+str(agents_table[n.id].message_out), file=f)
+    
+    for n in nodes:
         if agents_table[n.id].battery <= 0:
-           wrld.kill_node(n)
+            print(agents_table[n.id].battery)
+            input()
+            wrld.kill_node(n)
 
     current_queue = next_queue.copy()
     next_queue.clear()

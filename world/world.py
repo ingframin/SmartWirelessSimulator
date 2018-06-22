@@ -166,7 +166,9 @@ class World:
         self.grid[(node.x,node.y)] = node
 
     def kill_node(self,node):
-        self.grid.remove((node.x,node.y))
+        self.grid[(node.x,node.y)] = EmptyNode(node.x,node.y)
+        if type(node) == AgentNode:
+            self.agents.pop(node.id)
             
     def get_node(self,addr):
         if addr in self.agents:
