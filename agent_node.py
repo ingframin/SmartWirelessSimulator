@@ -1,7 +1,7 @@
 from random import randint
 from random import shuffle
 
-class AgentNode:
+class Agent:
     '''Base class for node agents'''
     def __init__(self,address=0, x=0, y=0):
         self.address = address
