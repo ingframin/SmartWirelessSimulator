@@ -1,10 +1,10 @@
 from world import *
 from agent_node import *
+#from wireless import *
 from random import randint,shuffle
 from time import gmtime, strftime
 import sys
-
-
+        
 config_file = None
 debug_mode = False
 
@@ -30,9 +30,18 @@ timer = 0
 current_queue = []
 next_queue = []
 wrld = World()
-wrld.load(config_file+'.cfg')
+config = read_config(config_file+'.cfg')
+wrld.config(config)
+
+wrl,agents,walls = config
+agents_table = {}
+for ag in agents:
+    #temporary
+    agents_table[ag['mac']] = Agent(ag['mac'],ag['x'],ag['y'])
+    agents_table[ag['mac']].set_station()
+
 f = open(config_file+'-'+strftime("%d-%m-%Y %H_%M_%S", gmtime())+'.txt','w')
-#nodes = wrld.list_nodes()
+
 node_vis={}
 while running:
     print("World map:")
@@ -48,16 +57,15 @@ while running:
     print('------------------------------------------------------------------------',file=f)
     print("World map:",file=f)
     print(wrld,file=f)
+
     nodes = wrld.list_nodes()
+
     if len(nodes)==0:
         break
-    #shuffle(nodes)
-    for n in nodes:
-        node_vis[n.address]=wrld.visibility(n)
 
     for n in nodes:
-        n.run(current_queue,next_queue,node_vis[n.address],timer)
-        # print(n.candidates)
+        agents_table[n.id].run(current_queue,next_queue,wrld.visibility(n),timer)
+
     print('-----------------------Next queue---------------------------------------',file=f)
     print('\n'.join([str(m) for m in next_queue]),file=f)
     print('------------------------------------------------------------------------',file=f)
@@ -67,29 +75,33 @@ while running:
     print('------------------------------------------------------------------------')
 
     for n in nodes:
-        print('n= %d'%n.address)
-        print('ap? '+str(n.is_ap))
-        print("Battery level= %f %%"%n.battery)
-        if n.is_sta:
-            print("Connected?"+str(n.connected()))
-        if n.is_ap:
-            print('associated nodes = '+str(n.a_nodes))
-            print('pings list='+str(n.pings))
-        print('input = '+str(n.message_in))
-        print('output = '+str(n.message_out))
+        print('n= %d'%n.id)
+        print('ap? '+str(agents_table[n.id].is_ap))
+        print("Battery level= %f %%"%agents_table[n.id].battery)
+        if agents_table[n.id].is_sta:
+            print("Connected?"+str(agents_table[n.id].connected()))
+        if agents_table[n.id].is_ap:
+            print('associated nodes = '+str(agents_table[n.id].a_nodes))
+            print('pings list='+str(agents_table[n.id].pings))
+        print('input = '+str(agents_table[n.id].message_in))
+        print('output = '+str(agents_table[n.id].message_out))
         #######################################################
-        print('n= %d'%n.address, file=f)
-        print('ap? '+str(n.is_ap), file=f)
-        print("Battery level= %f %%"%n.battery, file=f)
-        if n.is_sta:
-            print("Connected?"+str(n.connected()), file=f)
-        if n.is_ap:
-            print('associated nodes = '+str(n.a_nodes), file=f)
-            print('pings list='+str(n.pings), file=f)
-        print('input = '+str(n.message_in), file=f)
-        print('output = '+str(n.message_out), file=f)
-        if n.battery <= 0:
-           wrld.kill_node(n)
+        print('n= %d'%n.id, file=f)
+        print('ap? '+str(agents_table[n.id].is_ap), file=f)
+        print("Battery level= %f %%"%agents_table[n.id].battery, file=f)
+        if agents_table[n.id].is_sta:
+            print("Connected?"+str(agents_table[n.id].connected()), file=f)
+        if agents_table[n.id].is_ap:
+            print('associated nodes = '+str(agents_table[n.id].a_nodes), file=f)
+            print('pings list='+str(agents_table[n.id].pings), file=f)
+        print('input = '+str(agents_table[n.id].message_in), file=f)
+        print('output = '+str(agents_table[n.id].message_out), file=f)
+    
+    for n in nodes:
+        if agents_table[n.id].battery <= 0:
+            print(agents_table[n.id].battery)
+            input()
+            wrld.kill_node(n)
 
     current_queue = next_queue.copy()
     next_queue.clear()
