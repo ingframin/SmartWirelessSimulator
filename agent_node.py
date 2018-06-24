@@ -27,8 +27,11 @@ class AccessPointComponent:
         
         return response
 
-    def reset(self):
-        self.ssid = ''
+    def reset_access_point(self,ssid):
+        '''turn on access point mode'''
+        self.is_ap = True
+        self.ssid = ssid
+        self.no_conns = 0
         self.a_nodes.clear()
 
     def set_ssid(self,ssid):
@@ -78,7 +81,12 @@ class StationComponent:
     def connected(self):
         return self.current_ap != None
 
-
+    def reset_station(self):
+        '''turn on or reset station mode'''
+        self.is_sta = True
+        self.current_ap = None
+        self.networks = []
+        self.candidates = []
 ########################################################################################################
 
 class AgentNode:
