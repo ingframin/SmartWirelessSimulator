@@ -1,0 +1,3 @@
+// {type:class}
+
+[  World  |-grid:Grid; -width: int; -height: int ]

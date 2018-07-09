@@ -1,7 +1,95 @@
 from random import randint
 from random import shuffle
 
-class Agent:
+#Not active yet, started refactoring
+class AccessPointComponent:
+
+    def __init__(self,ssid,max_cons = 5):
+        self.ssid = ssid
+        self.max_cons = max_cons
+        self.a_nodes = set()
+
+    def send_beacon(self, address):
+        '''Broadcast the SSID'''
+        message = {'sender':address,'receiver':-1,'type':'beacon','SSID':self.ssid}
+        return message
+
+    def process_connection_request(self,address,request):
+        '''Process connection requests and decide to accept or refuse'''
+        response = {'sender':address,'receiver':request['sender'],
+                    'type':'response'}
+        
+        if len(self.a_nodes) < self.max_cons:
+            self.a_nodes.add(request['sender'])
+            response['params']='accept'
+        else:
+            response['params']='refuse'
+        
+        return response
+
+    def reset_access_point(self,ssid):
+        '''turn on access point mode'''
+        self.is_ap = True
+        self.ssid = ssid
+        self.no_conns = 0
+        self.a_nodes.clear()
+
+    def set_ssid(self,ssid):
+        self.ssid = ssid
+
+class StationComponent:
+    
+    def __init__(self):
+        #available networks
+        self.networks = []
+        #this indicates if the node is associated to a network
+        self.current_ap = None
+        self.wait_response = False
+        
+
+    def scan(self, visible_aps):
+        '''Adds the visible access points to the available network list.
+        Each ap is represented as a dictionary with 3 fields:
+        - ssid
+        - address
+        - distance
+        it's up to the AgentNode to remove its address'''
+
+        self.networks.clear()
+
+        for v in visible_aps:
+
+            self.networks.append((v['ssid'], v['address'], v['distance']))
+
+    def connection_request(self):
+        '''tries to connect to all avilable networks'''
+        request = {'receiver':self.networks[-1],'type':'request','params':'connect'}
+        self.wait_response = True
+        return request
+    
+    def connection_response(self,response):
+        
+        if response['params']=='accept':
+            self.current_ap = self.networks[-1]
+            self.wait_response = False
+            return
+        else:
+            self.wait_response = False
+            self.networks.pop()
+
+    
+    def connected(self):
+        return self.current_ap != None
+
+    def reset_station(self):
+        '''turn on or reset station mode'''
+        self.is_sta = True
+        self.current_ap = None
+        self.networks = []
+        self.candidates = []
+########################################################################################################
+
+class AgentNode:
     '''Base class for node agents'''
     def __init__(self,address=0, x=0, y=0):
         self.address = address
@@ -53,13 +141,11 @@ class Agent:
         '''scan the visible nodes to discover available networks'''
         self.battery -= 0.25
         self.networks.clear()
-        
-        for ap in self.aps:
 
-            for v in visibility_list:
-                if ap[0] == v[0].id:
-                    # ap => (address, ssid)
-                    self.networks.append((ap[1],ap[0],v[1]))
+        for v in visibility_list:
+
+            if v[0].address in self.aps:
+                self.networks.append((v[0].ssid,v[0].address,v[1]))
 
     def set_access_point(self,ssid):
         '''turn on access point mode'''
@@ -151,7 +237,7 @@ class Agent:
                         print("candidates="+str(self.candidates))
 
             if m['type']=='beacon':
-                self.aps.append((m['sender'],m['SSID']))
+                self.aps.append(m['sender'])
 
             if m['type'] == 'solve_deadlock':
                 if m['params'] > self.bid:
@@ -209,30 +295,26 @@ class Agent:
                 #The same criterium is not always good. Sometimes it prolongs the life of the system, 
                 #sometims it shortens it.
                 #Apply strategy pattern. Find algorithm to select the strategy.
-                
                 if len(self.candidates)==0:
                     self.scan(visibility_list)
                     
                     for n in self.networks:
-                        
+                        #connect to closest access point
                         if n[1] == self.address:
                             continue
+
                         self.candidates.append(n)
-                        
 
                 if len(self.candidates) > 0:
                     #shuffle(self.candidates)
-                    #sorted(self.candidates, key=lambda x: x[2])
-                    sorted(self.candidates)
                     self.connect(self.candidates[-1])
 
                 else:
                     self.set_access_point('Node=%d'%self.address)
 
         if self.is_ap:
-           
-            self.send_beacon()
             #intentions when in AP mode
+            self.send_beacon()
             if len(self.a_nodes) == 0:
                 self.no_conns += 1
 
@@ -247,17 +329,17 @@ class Agent:
                 pass
 
                 #if len(self.a_nodes)==0 or (len(self.a_nodes)==1 and self.current_ap[1] in self.a_nodes) :
-                if len(self.a_nodes)==0:
+                # if len(self.a_nodes)==0:
                 #     # m = {'sender':self.address,'receiver':self.current_ap[-1]}
                 #     # m['type'] = 'solve_deadlock'
                 #     # self.bid = randint(0,255)
                 #     # print(self.bid)
                 #     # m['params']=self.bid
                 #     #self.message_out.append(m)
-                    self.a_nodes.clear()
-                    self.is_ap = False
-                    self.no_conns = 0
-                    self.set_station()
+                #     self.a_nodes.clear()
+                #     self.is_ap = False
+                #     self.no_conns = 0
+                #     self.set_station()
 
 
 
@@ -268,8 +350,6 @@ class Agent:
         self.react()
         self.execute(visibility_list)
         self.send(next_queue)
-        
-        
 
     def connected(self):
         '''is the node connected?'''
