@@ -1,7 +1,7 @@
 from random import randint
 from random import shuffle
 
-<<<<<<< HEAD
+
 #Not active yet, started refactoring
 class AccessPointComponent:
 
@@ -90,10 +90,9 @@ class StationComponent:
         self.candidates = []
 ########################################################################################################
 
-class AgentNode:
-=======
+
 class Agent:
->>>>>>> 8a406e8f8caea84f94777d5aac1dbe0c4b642fd1
+
     '''Base class for node agents'''
     def __init__(self,address=0, x=0, y=0):
         self.address = address

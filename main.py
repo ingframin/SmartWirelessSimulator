@@ -96,8 +96,9 @@ while running:
             print('pings list='+str(agents_table[n.id].pings), file=f)
         print('input = '+str(agents_table[n.id].message_in), file=f)
         print('output = '+str(agents_table[n.id].message_out), file=f)
-    
-    for n in nodes:
+
+    nds = list(nodes)
+    for n in nds:
         if agents_table[n.id].battery <= 0:
             print(agents_table[n.id].battery)
             input()
