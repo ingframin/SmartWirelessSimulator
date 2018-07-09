@@ -1,6 +1,7 @@
 from random import randint
 from random import shuffle
 
+
 #Not active yet, started refactoring
 class AccessPointComponent:
 
@@ -89,7 +90,9 @@ class StationComponent:
         self.candidates = []
 ########################################################################################################
 
-class AgentNode:
+
+class Agent:
+
     '''Base class for node agents'''
     def __init__(self,address=0, x=0, y=0):
         self.address = address
@@ -141,11 +144,13 @@ class AgentNode:
         '''scan the visible nodes to discover available networks'''
         self.battery -= 0.25
         self.networks.clear()
+        
+        for ap in self.aps:
 
-        for v in visibility_list:
-
-            if v[0].address in self.aps:
-                self.networks.append((v[0].ssid,v[0].address,v[1]))
+            for v in visibility_list:
+                if ap[0] == v[0].id:
+                    # ap => (address, ssid)
+                    self.networks.append((ap[1],ap[0],v[1]))
 
     def set_access_point(self,ssid):
         '''turn on access point mode'''
@@ -237,7 +242,7 @@ class AgentNode:
                         print("candidates="+str(self.candidates))
 
             if m['type']=='beacon':
-                self.aps.append(m['sender'])
+                self.aps.append((m['sender'],m['SSID']))
 
             if m['type'] == 'solve_deadlock':
                 if m['params'] > self.bid:
@@ -295,26 +300,30 @@ class AgentNode:
                 #The same criterium is not always good. Sometimes it prolongs the life of the system, 
                 #sometims it shortens it.
                 #Apply strategy pattern. Find algorithm to select the strategy.
+                
                 if len(self.candidates)==0:
                     self.scan(visibility_list)
                     
                     for n in self.networks:
-                        #connect to closest access point
+                        
                         if n[1] == self.address:
                             continue
-
                         self.candidates.append(n)
+                        
 
                 if len(self.candidates) > 0:
                     #shuffle(self.candidates)
+                    #sorted(self.candidates, key=lambda x: x[2])
+                    sorted(self.candidates)
                     self.connect(self.candidates[-1])
 
                 else:
                     self.set_access_point('Node=%d'%self.address)
 
         if self.is_ap:
-            #intentions when in AP mode
+           
             self.send_beacon()
+            #intentions when in AP mode
             if len(self.a_nodes) == 0:
                 self.no_conns += 1
 
@@ -329,17 +338,17 @@ class AgentNode:
                 pass
 
                 #if len(self.a_nodes)==0 or (len(self.a_nodes)==1 and self.current_ap[1] in self.a_nodes) :
-                # if len(self.a_nodes)==0:
+                if len(self.a_nodes)==0:
                 #     # m = {'sender':self.address,'receiver':self.current_ap[-1]}
                 #     # m['type'] = 'solve_deadlock'
                 #     # self.bid = randint(0,255)
                 #     # print(self.bid)
                 #     # m['params']=self.bid
                 #     #self.message_out.append(m)
-                #     self.a_nodes.clear()
-                #     self.is_ap = False
-                #     self.no_conns = 0
-                #     self.set_station()
+                    self.a_nodes.clear()
+                    self.is_ap = False
+                    self.no_conns = 0
+                    self.set_station()
 
 
 
@@ -350,6 +359,8 @@ class AgentNode:
         self.react()
         self.execute(visibility_list)
         self.send(next_queue)
+        
+        
 
     def connected(self):
         '''is the node connected?'''
