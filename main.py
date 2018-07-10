@@ -9,7 +9,7 @@ config_file = None
 debug_mode = False
 
 try:
-    config_file = sys.argv[1]
+    config_file = 'config1'
 except:
     print('config file missing!')
     exit(0)
@@ -30,15 +30,12 @@ timer = 0
 current_queue = []
 next_queue = []
 wrld = World()
-config = read_config(config_file+'.cfg')
-wrld.config(config)
 
-wrl,agents,walls = config
-agents_table = {}
-for ag in agents:
-    #temporary
-    agents_table[ag['mac']] = Agent(ag['mac'],ag['x'],ag['y'])
-    agents_table[ag['mac']].set_station()
+wrld.load(config_file+'.cfg')
+
+
+agents_table = wrld.grid.nodes
+
 
 f = open(config_file+'-'+strftime("%d-%m-%Y %H_%M_%S", gmtime())+'.txt','w')
 
@@ -64,7 +61,7 @@ while running:
         break
 
     for n in nodes:
-        agents_table[n.id].run(current_queue,next_queue,wrld.visibility(n),timer)
+        agents_table[n.address].run(current_queue,next_queue,wrld.visibility(n),timer)
 
     print('-----------------------Next queue---------------------------------------',file=f)
     print('\n'.join([str(m) for m in next_queue]),file=f)
@@ -75,31 +72,32 @@ while running:
     print('------------------------------------------------------------------------')
 
     for n in nodes:
-        print('n= %d'%n.id)
-        print('ap? '+str(agents_table[n.id].is_ap))
-        print("Battery level= %f %%"%agents_table[n.id].battery)
-        if agents_table[n.id].is_sta:
-            print("Connected?"+str(agents_table[n.id].connected()))
-        if agents_table[n.id].is_ap:
-            print('associated nodes = '+str(agents_table[n.id].a_nodes))
-            print('pings list='+str(agents_table[n.id].pings))
-        print('input = '+str(agents_table[n.id].message_in))
-        print('output = '+str(agents_table[n.id].message_out))
+        print('n= %d'%n.address)
+        print('ap? '+str(agents_table[n.address].is_ap))
+        print("Battery level= %f %%"%agents_table[n.address].battery)
+        if agents_table[n.address].is_sta:
+            print("Connected?"+str(agents_table[n.address].connected()))
+        if agents_table[n.address].is_ap:
+            print('associated nodes = '+str(agents_table[n.address].a_nodes))
+            print('pings list='+str(agents_table[n.address].pings))
+        print('input = '+str(agents_table[n.address].message_in))
+        print('output = '+str(agents_table[n.address].message_out))
         #######################################################
-        print('n= %d'%n.id, file=f)
-        print('ap? '+str(agents_table[n.id].is_ap), file=f)
-        print("Battery level= %f %%"%agents_table[n.id].battery, file=f)
-        if agents_table[n.id].is_sta:
-            print("Connected?"+str(agents_table[n.id].connected()), file=f)
-        if agents_table[n.id].is_ap:
-            print('associated nodes = '+str(agents_table[n.id].a_nodes), file=f)
-            print('pings list='+str(agents_table[n.id].pings), file=f)
-        print('input = '+str(agents_table[n.id].message_in), file=f)
-        print('output = '+str(agents_table[n.id].message_out), file=f)
-    
-    for n in nodes:
-        if agents_table[n.id].battery <= 0:
-            print(agents_table[n.id].battery)
+        print('n= %d'%n.address, file=f)
+        print('ap? '+str(agents_table[n.address].is_ap), file=f)
+        print("Battery level= %f %%"%agents_table[n.address].battery, file=f)
+        if agents_table[n.address].is_sta:
+            print("Connected?"+str(agents_table[n.address].connected()), file=f)
+        if agents_table[n.address].is_ap:
+            print('associated nodes = '+str(agents_table[n.address].a_nodes), file=f)
+            print('pings list='+str(agents_table[n.address].pings), file=f)
+        print('input = '+str(agents_table[n.address].message_in), file=f)
+        print('output = '+str(agents_table[n.address].message_out), file=f)
+
+    nds = list(nodes)
+    for n in nds:
+        if agents_table[n.address].battery <= 0:
+            print(agents_table[n.address].battery)
             input()
             wrld.kill_node(n)
 
