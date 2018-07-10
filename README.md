@@ -1,4 +1,4 @@
-# SmartWirelessSimulator
+# SmartWirelessSimulator_MAS_Project2018
 
 This program simulates a self-configuring wireless network where the nodes try to find an energy optimal distribution of access point nodes and stations.
 The constraints are:
