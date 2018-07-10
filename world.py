@@ -1,5 +1,5 @@
 from math import *
-from agent_node import *
+from agent_node import AgentNode
 from collections import namedtuple
 from itertools import product
 from config_parser import *
