@@ -1,14 +1,9 @@
 from random import randint
 from random import shuffle
 
-<<<<<<< HEAD
-class Agent:
-=======
-
 
 class AgentNode:
 
->>>>>>> 65d1b1e8503ff6484f5d1138eb1f8e8517a42026
     '''Base class for node agents'''
     def __init__(self,address=0, x=0, y=0):
         self.address = address
@@ -60,7 +55,7 @@ class AgentNode:
         '''scan the visible nodes to discover available networks'''
         self.battery -= 0.25
         self.networks.clear()
-        
+
         for ap in self.aps:
 
             for v in visibility_list:
@@ -213,19 +208,19 @@ class AgentNode:
                 #Here is where the selection criteria goes
                 #Here there should be a function that selects the best criteria
                 #depending on the configuration.
-                #The same criterium is not always good. Sometimes it prolongs the life of the system, 
+                #The same criterium is not always good. Sometimes it prolongs the life of the system,
                 #sometims it shortens it.
                 #Apply strategy pattern. Find algorithm to select the strategy.
-                
+
                 if len(self.candidates)==0:
                     self.scan(visibility_list)
-                    
+
                     for n in self.networks:
-                        
+
                         if n[1] == self.address:
                             continue
                         self.candidates.append(n)
-                        
+
 
                 if len(self.candidates) > 0:
                     #shuffle(self.candidates)
@@ -237,7 +232,7 @@ class AgentNode:
                     self.set_access_point('Node=%d'%self.address)
 
         if self.is_ap:
-           
+
             self.send_beacon()
             #intentions when in AP mode
             if len(self.a_nodes) == 0:
@@ -275,8 +270,8 @@ class AgentNode:
         self.react()
         self.execute(visibility_list)
         self.send(next_queue)
-        
-        
+
+
 
     def connected(self):
         '''is the node connected?'''
