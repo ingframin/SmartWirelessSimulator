@@ -235,7 +235,7 @@ class AgentNode:
             if len(self.a_nodes) == 0:
                 self.no_conns += 1
 
-                if self.no_conns > 3:
+                if self.no_conns > 2:
                     self.a_nodes.clear()
                     self.is_ap = False
                     self.no_conns = 0
