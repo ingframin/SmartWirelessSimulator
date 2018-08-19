@@ -220,27 +220,27 @@ class AgentNode:
                     #self.candidates.sort(key=lambda x: x[2])
                     #self.connect(self.candidates[0])
                     #Connect to random
-                    #shuffle(self.candidates)
-                    #self.connect(self.candidates[-1])
+                    shuffle(self.candidates)
+                    self.connect(self.candidates[-1])
                     #connect to highest SSID
                     #calculate highest SSID
-                    max_ssid = 0
-                    index = 0
-                    final_index = 0
-                    for c in self.candidates:
-                        n = int(c[0].split('=')[1])
-                        if n > max_ssid:
-                            max_ssid = n
-                            final_index = index
-                        index += 1
-                    if self.current_ap is not None:
-                        self.disconnect()
-                    self.connect(self.candidates[final_index])
+##                    max_ssid = 0
+##                    index = 0
+##                    final_index = 0
+##                    for c in self.candidates:
+##                        n = int(c[0].split('=')[1])
+##                        if n > max_ssid:
+##                            max_ssid = n
+##                            final_index = index
+##                        index += 1
+##                    if self.current_ap is not None:
+##                        self.disconnect()
+##                    self.connect(self.candidates[final_index])
                 else:
                     #SSID based on ID
                     self.set_access_point('Node=%d'%self.address)
                     #SSID random number - connect to the highest SSID
-                    self.set_access_point('Node=%d'%randint(0,256))
+                    #self.set_access_point('Node=%d'%randint(0,256))
                     
         if self.is_ap:
            
