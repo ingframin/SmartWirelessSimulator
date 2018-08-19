@@ -51,7 +51,10 @@ class AgentNode:
         self.bid = 0
 
     def scan(self,visibility_list):
-        '''scan the visible nodes to discover available networks'''
+        '''scan the visible nodes to discover available networks
+            if there are no available candidates'''
+        if len(self.candidates)>0:
+            return
         self.battery -= 0.25
         self.networks.clear()
 
@@ -59,6 +62,12 @@ class AgentNode:
 
             if v[0].address in self.aps:
                 self.networks.append((v[0].ssid,v[0].address,v[1]))
+                
+        for n in self.networks:
+                        
+            if n[1] == self.address:
+                continue
+            self.candidates.append(n)
 
     def set_access_point(self,ssid):
         '''turn on access point mode'''
@@ -145,7 +154,7 @@ class AgentNode:
                     try:
                         self.candidates.pop()
                         print("candidates="+str(self.candidates))
-                        self.connect(self.candidates[-1])
+                        #self.connect(self.candidates[-1])
                     except:
                         print("candidates="+str(self.candidates))
 
@@ -201,31 +210,45 @@ class AgentNode:
                     print("AP Disappeared!")
                     self.set_station()
 
-            if not self.connected():
+            else:
                 #Access point selection                
-                if len(self.candidates)==0:
-                    self.scan(visibility_list)
-                    
-                    for n in self.networks:
-                        
-                        if n[1] == self.address:
-                            continue
-                        self.candidates.append(n)
-                        
+                self.scan(visibility_list)                      
 
                 if len(self.candidates) > 0:
-                    self.connect(self.candidates[-1])
-
+                    #Sort for RSSI = connect to the closest
+                    #connect to the closest
+                    #self.candidates.sort(key=lambda x: x[2])
+                    #self.connect(self.candidates[0])
+                    #Connect to random
+                    #shuffle(self.candidates)
+                    #self.connect(self.candidates[-1])
+                    #connect to highest SSID
+                    #calculate highest SSID
+                    max_ssid = 0
+                    index = 0
+                    final_index = 0
+                    for c in self.candidates:
+                        n = int(c[0].split('=')[1])
+                        if n > max_ssid:
+                            max_ssid = n
+                            final_index = index
+                        index += 1
+                    if self.current_ap is not None:
+                        self.disconnect()
+                    self.connect(self.candidates[final_index])
                 else:
+                    #SSID based on ID
                     self.set_access_point('Node=%d'%self.address)
-
+                    #SSID random number - connect to the highest SSID
+                    self.set_access_point('Node=%d'%randint(0,256))
+                    
         if self.is_ap:
            
             self.send_beacon()
-            #intentions when in AP mode
+            
             if len(self.a_nodes) == 0:
                 self.no_conns += 1
-
+                #if no one connects, AP mode goes off
                 if self.no_conns > 2:
                     self.a_nodes.clear()
                     self.is_ap = False
