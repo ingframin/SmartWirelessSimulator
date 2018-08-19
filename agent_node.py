@@ -202,13 +202,7 @@ class AgentNode:
                     self.set_station()
 
             if not self.connected():
-                #Here is where the selection criteria goes
-                #Here there should be a function that selects the best criteria
-                #depending on the configuration.
-                #The same criterium is not always good. Sometimes it prolongs the life of the system, 
-                #sometims it shortens it.
-                #Apply strategy pattern. Find algorithm to select the strategy.
-                
+                #Access point selection                
                 if len(self.candidates)==0:
                     self.scan(visibility_list)
                     
@@ -220,9 +214,6 @@ class AgentNode:
                         
 
                 if len(self.candidates) > 0:
-                    #shuffle(self.candidates)
-                    #sorted(self.candidates, key=lambda x: x[2])
-                    sorted(self.candidates)
                     self.connect(self.candidates[-1])
 
                 else:
@@ -243,20 +234,14 @@ class AgentNode:
 
         if self.is_ap and self.is_sta:
             if self.current_ap != None:
-                pass
-
-                #if len(self.a_nodes)==0 or (len(self.a_nodes)==1 and self.current_ap[1] in self.a_nodes) :
+                #If the node is connected to something else and doesn't have children,
+                #it is useless to keep the AP mode on
                 if len(self.a_nodes)==0:
-                #     # m = {'sender':self.address,'receiver':self.current_ap[-1]}
-                #     # m['type'] = 'solve_deadlock'
-                #     # self.bid = randint(0,255)
-                #     # print(self.bid)
-                #     # m['params']=self.bid
-                #     #self.message_out.append(m)
                     self.a_nodes.clear()
                     self.is_ap = False
                     self.no_conns = 0
                     self.set_station()
+
 
 
 

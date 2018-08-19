@@ -77,5 +77,3 @@ def isAP(filename):
                 ref.write(str(b)+'\n')
                 
     return buffer
-                
-                

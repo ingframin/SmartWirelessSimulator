@@ -166,7 +166,7 @@ class World:
             
     def visibility(self,node):
         '''Given a node as input, it returns a list of all visible nodes.
-        Visibility is blocked by wallsself.
+        Visibility is blocked by walls.
         The distance is evaluated as the number of steps between
         2 nodes'''
         cm,pth = self.grid.breadth_first(node)
