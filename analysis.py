@@ -28,9 +28,10 @@ def a_nodes(filename):
         raw = f.readlines()
         buffer = {}
         current = 0
- 
+        cur_t = 0
         for line in raw:
-                
+            if "timestamp =" in line:
+                cur_t = int(line.split('=')[1])
             if "n=" in line:
                 n = int(line.split('=')[1])
                 if n not in buffer:
@@ -38,8 +39,8 @@ def a_nodes(filename):
                 current = n
                     
             if 'associated nodes' in line and not ("set" in line):
-                b = line.split("=")[1]
-                buffer[current].append(b)
+                b = line.split("=")[1].strip()
+                buffer[current].append((cur_t,b))
 
     with open('a_nodes_'+filename,'w') as ref:
         
@@ -77,5 +78,3 @@ def isAP(filename):
                 ref.write(str(b)+'\n')
                 
     return buffer
-                
-                

@@ -4,7 +4,6 @@ from random import shuffle
 
 
 class AgentNode:
-
     '''Base class for node agents'''
     def __init__(self,address=0, x=0, y=0):
         self.address = address
@@ -23,11 +22,13 @@ class AgentNode:
         self.is_ap = False
         self.is_sta = False
         self.ssid = ''
+        self.wait = False
+        self.timeout = 0
 
         #associated nodes
         self.a_nodes = set()
         #max connections
-        self.max_cons = 5
+        self.max_cons = 10
 
         #this indicates if the node is associated to a network
         self.current_ap = None
@@ -40,6 +41,7 @@ class AgentNode:
 
         #current timestamp
         self.timestamp = 0
+        self.rand_timer = randint(1,3)
 
         #candidate network for association
         self.candidates = []
@@ -51,18 +53,28 @@ class AgentNode:
         self.m_count = 0
         self.no_conns = 0
         self.bid = 0
+        self.strategy = 0
+        strategies = []
+        
 
     def scan(self,visibility_list):
-        '''scan the visible nodes to discover available networks'''
+        '''scan the visible nodes to discover available networks
+            if there are no available candidates'''
+        if len(self.candidates)>0:
+            return
         self.battery -= 0.25
         self.networks.clear()
-        
-        for ap in self.aps:
 
-            for v in visibility_list:
-                if ap[0] == v[0].id:
-                    # ap => (address, ssid)
-                    self.networks.append((ap[1],ap[0],v[1]))
+        for v in visibility_list:
+
+            if v[0].address in self.aps:
+                self.networks.append((v[0].ssid,v[0].address,v[1]))
+                
+        for n in self.networks:
+                        
+            if n[1] == self.address:
+                continue
+            self.candidates.append(n)
 
     def set_access_point(self,ssid):
         '''turn on access point mode'''
@@ -71,6 +83,9 @@ class AgentNode:
         self.ssid = ssid
         self.no_conns = 0
         self.a_nodes.clear()
+        self.wait = False
+        self.timeout = 0
+        
 
     def set_station(self):
         '''turn on or reset station mode'''
@@ -79,12 +94,17 @@ class AgentNode:
         self.current_ap = None
         self.networks = []
         self.candidates = []
-
+        self.wait = False
+        self.timeout = 0
+        self.rand_timer = randint(1,3)
+        
     def connect(self,network):
         '''when in station mode, connect to the network passed as parameter'''
         self.battery -= 0.1
         m = {'sender':self.address,'receiver':network[1],'type':'request','params':'connect'}
         self.message_out.append(m)
+        self.wait = True
+        self.timeout = self.timestamp
 
     def disconnect(self):
         '''disconnect from current network'''
@@ -92,7 +112,9 @@ class AgentNode:
         m = {'sender':self.address,'receiver':self.current_ap[0],'type':'request','params':'disconnect'}
         self.current_ap = None
         self.message_out.append(m)
-
+        self.wait=False
+        self.timeout = 0
+        
     def process_connection(self,request):
         self.battery -= 0.1
         response = {'sender':self.address,'receiver':request['sender'],
@@ -123,7 +145,7 @@ class AgentNode:
 
     def react(self):
         '''Reactive part of the control loop'''
-        self.aps.clear()
+        self.aps.clear()        
         for m in self.message_in:
             self.battery -= 0.01
             if m['type'] == 'ping':
@@ -138,6 +160,7 @@ class AgentNode:
             if m['type'] == 'request':
                 if m['params']=='connect':
                     self.process_connection(m)
+                    
 
             if m['type'] == 'response':
                 if m['params']=='accept':
@@ -149,12 +172,14 @@ class AgentNode:
                     try:
                         self.candidates.pop()
                         print("candidates="+str(self.candidates))
-                        self.connect(self.candidates[-1])
+                        #self.connect(self.candidates[-1])
                     except:
                         print("candidates="+str(self.candidates))
-
+                self.wait = False
+                self.timeout = 0
             if m['type']=='beacon':
-                self.aps.append((m['sender'],m['SSID']))
+                
+                self.aps.append(m['sender'])
 
             if m['type'] == 'solve_deadlock':
                 if m['params'] > self.bid:
@@ -196,6 +221,8 @@ class AgentNode:
 
     def execute(self,visibility_list):
         '''BDI part of the control loop'''
+        if self.wait:
+            return
         if self.is_sta:
             #Intentions when in station mode
 
@@ -204,42 +231,47 @@ class AgentNode:
                 if self.current_ap not in self.networks or self.current_ap[1] not in self.aps:
                     print("AP Disappeared!")
                     self.set_station()
-
-            if not self.connected():
-                #Here is where the selection criteria goes
-                #Here there should be a function that selects the best criteria
-                #depending on the configuration.
-                #The same criterium is not always good. Sometimes it prolongs the life of the system, 
-                #sometims it shortens it.
-                #Apply strategy pattern. Find algorithm to select the strategy.
-                
-                if len(self.candidates)==0:
-                    self.scan(visibility_list)
-                    
-                    for n in self.networks:
-                        
-                        if n[1] == self.address:
-                            continue
-                        self.candidates.append(n)
-                        
+ 
+            else:
+                #Access point selection                
+                self.scan(visibility_list)                      
 
                 if len(self.candidates) > 0:
-                    #shuffle(self.candidates)
-                    #sorted(self.candidates, key=lambda x: x[2])
-                    sorted(self.candidates)
+                    #Select strategy
+                    if self.strategy == 0:
+                        #The SSID with the highest number wins
+                        self.bidding()
+                        self.strategy = 1
+                        
+                    elif self.strategy == 1:
+                        #The closest network wins
+                        self.closest()
+                        self.strategy = 2
+                        
+                    elif self.strategy == 2:
+                        #A random network is selected
+                        self.random()
+                        self.strategy = 3
+                        
+                    elif self.strategy == 3:
+                        self.sorted()
+                        self.strategy = 0
+
                     self.connect(self.candidates[-1])
-
-                else:
-                    self.set_access_point('Node=%d'%self.address)
-
+                    
+                elif self.rand_timer == 0:
+                    #SSID random number - connect to the highest SSID
+                    self.set_access_point('Node=%d'%randint(0,256))
+                    self.rand_timer = randint(1,3)
+                    
         if self.is_ap:
            
             self.send_beacon()
-            #intentions when in AP mode
+            
             if len(self.a_nodes) == 0:
                 self.no_conns += 1
-
-                if self.no_conns > 3:
+                #if no one connects, AP mode goes off
+                if self.no_conns > 2:
                     self.a_nodes.clear()
                     self.is_ap = False
                     self.no_conns = 0
@@ -247,16 +279,9 @@ class AgentNode:
 
         if self.is_ap and self.is_sta:
             if self.current_ap != None:
-                pass
-
-                #if len(self.a_nodes)==0 or (len(self.a_nodes)==1 and self.current_ap[1] in self.a_nodes) :
+                #If the node is connected to something else and doesn't have children,
+                #it is useless to keep the AP mode on
                 if len(self.a_nodes)==0:
-                #     # m = {'sender':self.address,'receiver':self.current_ap[-1]}
-                #     # m['type'] = 'solve_deadlock'
-                #     # self.bid = randint(0,255)
-                #     # print(self.bid)
-                #     # m['params']=self.bid
-                #     #self.message_out.append(m)
                     self.a_nodes.clear()
                     self.is_ap = False
                     self.no_conns = 0
@@ -264,15 +289,18 @@ class AgentNode:
 
 
 
+
     def run(self,message_queue,next_queue,visibility_list,timer):
         '''function to be called in the main loop'''
         self.timestamp = timer
+        if self.timestamp-self.timeout > 3:
+            self.timeout = 0
+            self.wait = False
+        self.rand_timer -= 1
         self.receive(message_queue)
         self.react()
         self.execute(visibility_list)
         self.send(next_queue)
-        
-        
 
     def connected(self):
         '''is the node connected?'''
@@ -293,3 +321,29 @@ class AgentNode:
         if self.is_sta and not self.is_ap:
             return 'S'
         return 'A'
+
+    def closest(self):
+        self.candidates.sort(key=lambda x: x[2])
+        self.candidates.reverse()
+        
+
+    def random(self):
+        shuffle(self.candidates)
+        
+
+    def bidding(self):
+        max_ssid = 0
+        index = 0
+        final_index = 0
+        for c in self.candidates:
+            n = int(c[0].split('=')[1])
+            if n > max_ssid:
+                max_ssid = n
+                final_index = index
+            index += 1
+        self.candidates.append(self.candidates[final_index])
+        
+
+    def sorted(self):
+        self.candidates.sort()
+        
