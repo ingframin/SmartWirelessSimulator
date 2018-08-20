@@ -4,6 +4,7 @@ from random import randint,shuffle
 from time import gmtime, strftime
 import sys
 
+strategies = ['closest','random','bidding','sorted']
 
 config_file = None
 debug_mode = False
@@ -31,8 +32,8 @@ current_queue = []
 next_queue = []
 wrld = World()
 wrld.load(config_file+'.cfg')
-fn = input("result file name= ")
-f = open(config_file+'-'+fn+'.txt','w')
+
+f = open(config_file+'-result.txt','w')
 #nodes = wrld.list_nodes()
 node_vis={}
 while running:
@@ -71,8 +72,8 @@ while running:
         print('n= %d'%n.address)
         print('ap? '+str(n.is_ap))
         print("Battery level= %f %%"%n.battery)
-        if n.is_sta:
-            print("Connected?"+str(n.connected()))
+        print("Strategy: "+strategies[n.strategy])
+        print("Current AP: "+str(n.current_ap))
         if n.is_ap:
             print('associated nodes = '+str(n.a_nodes))
             print('pings list='+str(n.pings))
@@ -82,8 +83,8 @@ while running:
         print('n= %d'%n.address, file=f)
         print('ap? '+str(n.is_ap), file=f)
         print("Battery level= %f %%"%n.battery, file=f)
-        if n.is_sta:
-            print("Connected?"+str(n.connected()), file=f)
+        print("Strategy: "+strategies[n.strategy],file=f)
+        print("Current AP: "+str(n.current_ap),file = f)
         if n.is_ap:
             print('associated nodes = '+str(n.a_nodes), file=f)
             print('pings list='+str(n.pings), file=f)
