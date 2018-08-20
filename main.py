@@ -1,6 +1,5 @@
 from world import *
 from agent_node import *
-#from wireless import *
 from random import randint,shuffle
 from time import gmtime, strftime
 import sys
