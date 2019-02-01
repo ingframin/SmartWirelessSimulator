@@ -1,23 +1,12 @@
 from math import *
 from agent_node import AgentNode
-from collections import namedtuple
 from itertools import product
 from config_parser import *
+from node import *
 
 #Nodes do not share any parental/inheritance relations,
 #I am relying on duck-typing
 
-class WallNode:
-    def __init__(self,x,y):
-        self.x = x
-        self.y = y
-    def __repr__(self):
-        return "Wall: x=%d y=%d"%(self.x,self.y)
-    
-    def __str__(self):
-        return 'W'
-
-Node = namedtuple('Node', ['x', 'y'])
 
 def geom_distance(node1,node2):
         return sqrt((node2.x-node1.x)**2 + (node2.y-node1.y)**2)

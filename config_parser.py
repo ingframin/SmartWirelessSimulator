@@ -14,6 +14,7 @@ def read_config(filename):
 
     with open(filename) as f:
         lines = f.readlines()
+        
     for l in lines:
 
         if AGENT.match(l):
@@ -70,7 +71,6 @@ def read_config(filename):
         walls.append(wl)
 
     return world,agents,walls
-
 
 
 if __name__=='__main__':
