@@ -147,13 +147,13 @@ class World:
 
 
     def add_node(self,node):
-        if type(self.grid[Node(node.x,node.y)]) in (WallNode,AgentNode):
+        if type(self.grid[node]) in (WallNode,AgentNode):
             raise Exception("Cell already occupied!")
-        self.grid[Node(node.x,node.y)] = node
+        self.grid[node] = node
 
     def kill_node(self,node):
-        print(repr(self.grid.nodes[Node(node.x,node.y)]))
-        self.grid.nodes.pop(Node(node.x,node.y))
+        print(repr(self.grid.nodes[node]))
+        self.grid.nodes.pop(node)
             
     def get_node(self,addr):
         for n in self.grid.nodes:
