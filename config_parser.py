@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import re
 AGENT = re.compile('\{agent:\s*mac\s*=\s*[0-9]*,\s*x\s*=\s*[0-9]*,\s*y\s*=\s*[0-9]*\s*\}')
 WORLD = re.compile('\{world:\s*width=\s*[0-9]*,\s*height=\s*[0-9]*,\s*v_threshold=\s*[0-9]*\s*\}')

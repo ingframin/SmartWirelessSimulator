@@ -6,7 +6,7 @@ The constraints are:
  - each access point can serve at most N stations
  - each node has limited battery life
 
- ## Dependencies:
+ ## Dependencies
  Python3
 
  ## Run
@@ -14,7 +14,8 @@ The constraints are:
  *$: python3 main.py my_config debug*
 
  Where my_config.cfg is the name of a text file containing the configuration required
- by the current experiment.
+ by the current experiment. All the configuration files have to be placed in ./config/ folder.
+
  You do not need to add .cfg on the command line when you start the program,
  just the name (i.e. my_config) is fine.
 
@@ -60,4 +61,4 @@ The constraints are:
  
  -------------------------------------------------------------------------------
 License:
- See license.pdf
+ **See ./documents/license.pdf**

@@ -1,8 +1,11 @@
+# -*- coding: utf-8 -*-
 from world import *
 from agent_node import *
 from random import randint,shuffle
 from time import gmtime, strftime
 import sys
+
+#Map representation must be made graphical with Pyglet or Pygame or something else
 
 strategies = ['closest','random','bidding','sorted']
 

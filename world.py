@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from agent_node import AgentNode
 from config_parser import *
 from node import *

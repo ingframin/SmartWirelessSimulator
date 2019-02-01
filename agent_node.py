@@ -1,7 +1,9 @@
+# -*- coding: utf-8 -*-
 from random import randint
 from random import shuffle
 
-
+#needs to be split in separate components
+#and multiple classes
 
 class AgentNode:
     '''Base class for node agents'''
@@ -53,9 +55,7 @@ class AgentNode:
         self.m_count = 0
         self.no_conns = 0
         self.bid = 0
-        self.strategy = 0
-        strategies = []
-        
+        self.strategy = 0        
 
     def scan(self,visibility_list):
         '''scan the visible nodes to discover available networks

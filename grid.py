@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from node import *
 from agent_node import *
 from itertools import product

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 def battery(filename):
     with open(filename) as f:
         raw = f.readlines()
