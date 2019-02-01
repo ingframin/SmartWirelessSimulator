@@ -12,7 +12,7 @@ def read_config(filename):
     walls = []
     wls = []
 
-    with open(filename) as f:
+    with open('./config/'+filename) as f:
         lines = f.readlines()
         
     for l in lines:
