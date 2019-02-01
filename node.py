@@ -1,8 +1,12 @@
+from math import sqrt
 
 class Node():
     def __init__(self, x,y):
         self.x = x
         self.y = y
+    
+    def distance(self,node2):
+        return sqrt((node2.x-self.x)**2 + (node2.y-self.y)**2)
     
     def __eq__(self, n):
         if n.x == self.x and n.y == self.y:
@@ -30,6 +34,7 @@ class WallNode(Node):
         return 'W'
 
 if __name__=='__main__':
-    wn = WallNode(2,3)
+    wn = WallNode(*(2,3))
     print(wn)
     print(repr(wn))
+    print()

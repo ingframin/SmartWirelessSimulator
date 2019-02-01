@@ -4,12 +4,6 @@ from itertools import product
 from config_parser import *
 from node import *
 
-#Nodes do not share any parental/inheritance relations,
-#I am relying on duck-typing
-
-
-def geom_distance(node1,node2):
-        return sqrt((node2.x-node1.x)**2 + (node2.y-node1.y)**2)
 
 class Grid:
     def __init__(self,width,height):
@@ -65,7 +59,7 @@ class Grid:
             yc.append(node.y-1)
 
         neighbors = [Node(*n) for n in product(xc,yc)]
-        neighbors.remove(Node(node.x,node.y))
+        neighbors.remove(node)
         return neighbors
 
     def breadth_first(self, start):
