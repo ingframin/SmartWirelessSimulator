@@ -1,10 +1,12 @@
-# SmartWirelessSimulator_MAS_Project2018
+# Smart Wireless Simulator
 
-This program simulates a self-configuring wireless network where the nodes try to find an energy optimal distribution of access point nodes and stations.
+This program simulates a self-configuring wireless network where the nodes try to find an energy optimal distribution of access point nodes and stations and to achieve full connectivity (all nodes reachable from any other).
+
 The constraints are:
  - limited visibility between nodes
  - each access point can serve at most N stations
  - each node has limited battery life
+ - each node can act as both station and access point at the same time.
 
  ## Dependencies
  Python3
