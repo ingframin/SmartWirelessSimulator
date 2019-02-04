@@ -5,6 +5,7 @@ from random import shuffle
 #needs to be split in separate components
 #and multiple classes
 
+
 class AgentNode:
     '''Base class for node agents'''
     def __init__(self,address=0, x=0, y=0):
