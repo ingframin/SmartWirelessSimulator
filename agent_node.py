@@ -5,7 +5,6 @@ from random import shuffle
 #needs to be split in separate components
 #and multiple classes
 
-
 class AgentNode:
     '''Base class for node agents'''
     def __init__(self,address=0, x=0, y=0):
@@ -186,8 +185,6 @@ class AgentNode:
                 
                 self.aps.append(m['sender'])
 
-
-
         self.message_in = []
 
     def send(self,message_queue):
@@ -220,7 +217,7 @@ class AgentNode:
         self.message_out.append(bm)
 
     def execute(self,visibility_list):
-        '''BDI part of the control loop'''
+        
         if self.wait:
             return
         for v in visibility_list:
@@ -259,10 +256,6 @@ class AgentNode:
                     elif self.strategy == 2:
                         #A random network is selected
                         self.random()
-                        self.strategy = 3
-                        
-                    elif self.strategy == 3:
-                        self.sorted()
                         self.strategy = 0
 
                     self.connect(self.candidates[-1])
@@ -339,7 +332,4 @@ class AgentNode:
             index += 1
         self.candidates.append(self.candidates[final_index])
         
-
-    def sorted(self):
-        self.candidates.sort()
         
