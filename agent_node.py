@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
 from random import randint,shuffle
 
-#needs to be split in separate components
-#and multiple classes
-
 class AgentNode:
     '''Base class for node agents'''
     def __init__(self,address=0, x=0, y=0):
