@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from agent_node import AgentNode
-from config_parser import *
-from node import *
-from grid import *
+from config_parser import read_config
+from node import Node,WallNode
+from grid import Grid
 
 class World:
 
@@ -57,7 +57,8 @@ class World:
         Visibility is blocked by walls.
         The distance is evaluated as the number of steps between
         2 nodes'''
-        cm,pth = self.grid.breadth_first(node)
+        
+        pth = self.grid.breadth_first(node)
         visibility_list = []
         for p in pth:
             

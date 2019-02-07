@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from node import *
-from agent_node import *
+from node import Node,WallNode
+from agent_node import AgentNode
 from itertools import product
 
 class Grid:
@@ -12,10 +12,10 @@ class Grid:
     def __getitem__(self,coord):
         if coord.x >= self.width or coord.x <0:
             print("x= %d y=%d"%(coord.x,coord.y))
-            raise IndexError("x coordinate out of bounds")
+            raise IndexError("x coordinate out of bounds: x= %d"%coord.x)
         if coord.y >= self.height or coord.y <0:
             print("x= %d y=%d"%(coord.x,coord.y))
-            raise IndexError("y coordinate out of bounds")
+            raise IndexError("y coordinate out of bounds: y= %d"%coord.y)
 
         if coord in self.nodes:
             return self.nodes[coord]
@@ -25,10 +25,10 @@ class Grid:
     def __setitem__(self,coord,node):
         if coord.x >= self.width or coord.x <0:
             print("x= %d y=%d"%(coord.x,coord.y))
-            raise IndexError("x coordinate out of bounds")
+            raise IndexError("x coordinate out of bounds: x= %d"%coord.x)
         if coord.y >= self.height or coord.y <0:
             print("x= %d y=%d"%(coord.x,coord.y))
-            raise IndexError("y coordinate out of bounds")
+            raise IndexError("y coordinate out of bounds: y= %d"%coord.y)
         self.nodes[coord] = node
 
     def __str__(self):
@@ -69,7 +69,7 @@ class Grid:
         agents = []
         paths = {}
         came_from = {}
-        came_from[start]=None
+        came_from[start] = None
 
         while len(frontier) > 0:
             
@@ -83,7 +83,7 @@ class Grid:
                         agents.append(node)
 
                     came_from[node]=current
-
+        #Should this be computed here or should only came_from be returned?
         for a in agents:
             step = a
             paths[a] = []
@@ -95,4 +95,4 @@ class Grid:
                 paths[a].append(step)
                 steps+=1
  
-        return came_from,paths
+        return paths

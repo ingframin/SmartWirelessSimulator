@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-from random import randint
-from random import shuffle
+from random import randint,shuffle
 
 #needs to be split in separate components
 #and multiple classes
@@ -54,6 +53,7 @@ class AgentNode:
         #Message counter
         self.m_count = 0
         self.no_conns = 0
+        #Strategies variables 
         self.bid = 0
         self.strategy = 0        
 

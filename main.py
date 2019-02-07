@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from world import *
-from agent_node import *
+from world import World
+from agent_node import AgentNode
 from random import randint,shuffle
 from time import gmtime, strftime
 import sys
