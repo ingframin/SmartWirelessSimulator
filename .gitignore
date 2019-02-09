@@ -38,6 +38,7 @@
 ehthumbs.db
 Thumbs.db
 .vscode
+settings.json
 
 #Python cache
 #############
