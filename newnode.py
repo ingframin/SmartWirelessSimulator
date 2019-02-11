@@ -1,8 +1,8 @@
 from math import sqrt,log10,pi
 from random import gauss
-#needs to be split in separate components
-#and multiple classes
+from typing import Tuple
 
+Coordinate = Tuple[float,float]
 class Agent:
     def __init__(self,address):
         self.address = address
@@ -11,8 +11,9 @@ class Agent:
         self.sta = False
         self.current_ap = None
 
-#This can be refined with breadth first search
-def distance(coord1,coord2):
+
+def distance(coord1: Coordinate,coord2: Coordinate) -> float: 
+    '''Geometric distance'''
     return sqrt((coord1[0]-coord2[0])**2+(coord1[1]-coord2[1])**2)
 
 #See chapter2 of "Wireless Communication" by Andrea Goldsmith
