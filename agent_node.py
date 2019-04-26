@@ -210,7 +210,7 @@ class AgentNode:
 
     def send_beacon(self):
         '''When in AP mode, broadcast the SSID'''
-        bm = {'sender':self.address,'receiver':-1,'type':'beacon','SSID':self.ssid}
+        bm = {'sender':self.address,'receiver':-1,'type':'beacon','SSID':self.ssid,'associated nodes':len(self.a_nodes),'free slots':self.max_cons-len(self.a_nodes)}
         self.message_out.append(bm)
 
     def execute(self,visibility_list):
